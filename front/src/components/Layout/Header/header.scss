@@ -2,8 +2,8 @@
 
 #header {
     box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
     #header-social {
         background-color: vars.$violet;
         display: flex;
@@ -106,10 +106,58 @@
                 justify-content: center;
                 align-items: center;
                 box-sizing: border-box;
+                cursor: pointer;
+                position: relative;
+                color: vars.$lightGrey;
 
                 &:hover {
                     background-color: vars.$lightGrey;
                     color: vars.$violet;
+                    
+                    span {
+                        height: 100%;
+                        margin: auto 0.5rem;
+                        display: flex;
+                        align-items: center;
+                        color: vars.$violet;
+                    }
+                    
+                }
+                
+                    span {
+                        height: 100%;
+                        margin: auto 0.5rem;
+                        display: flex;
+                        align-items: center;
+                        color: vars.$lightGrey;
+                    }
+                
+
+                .subnav {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    top: 0 + 4rem;
+                    width: 100%;
+                    background-color: vars.$violet;
+                    opacity: 0.95;
+                    border-radius: 0 0 25px 25px;
+
+                    .subnav-link:hover {
+                        width: 100%;
+                        background-color: transparent;
+                        color: vars.$lightGrey;
+                        border-top: vars.$lightGrey solid 1px;
+                        border-bottom: vars.$lightGrey solid 1px;
+                        box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+                    }
+
+                    .subnav-link:hover:last-child {
+                        border-bottom: none;
+                        border-radius: 0 0 25px 25px;
+                    }
                 }
             }
         }

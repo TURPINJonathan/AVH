@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "./header.scss";
 
@@ -8,9 +8,19 @@ import Volunteer from "../../../assets/img/devenir_benevole.png";
 import Donate from "../../../assets/img/faire_un_don.png";
 
 // Feather
-import { Facebook, Instagram, Linkedin, Mail, Twitter, Youtube } from "react-feather";
+import { ArrowDown, ArrowUp, ChevronDown, ChevronsUp, ChevronUp, Facebook, Instagram, Linkedin, Mail, Twitter, Youtube } from "react-feather";
+
+// functions
+import dropdown from "../../../functions/dropdown";
 
 const Header = () => {
+
+    const ref = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+    const [listening, setListening] = useState(false);
+
+    useEffect(dropdown(listening, setListening, ref, setIsOpen));
+
     return (
         <header id="header">
             <div id="header-social">
@@ -41,8 +51,42 @@ const Header = () => {
             </section>
             <nav id="header-nav">
                 <ul>
-                    <li>
-                        <a href="#">Association Valentin Haüy</a>
+                    <li
+                        onClick={() => setIsOpen(!isOpen)}
+                        ref={ref}>
+
+                        <span>
+                            {isOpen
+                                &&
+                                <ChevronUp className="arrow" />
+                            }
+                            {!isOpen
+                                &&
+
+                                <ChevronDown className="arrow" />
+                            }
+                        </span>
+                        <p>
+                            Association Valentin Haüy
+                        </p>
+                        <span>
+                            {isOpen
+                                &&
+                                <ChevronUp className="arrow" />
+                            }
+                            {!isOpen
+                                &&
+
+                                <ChevronDown className="arrow" />
+                            }
+                        </span>
+                        {isOpen
+                            &&
+                            <ul className="subnav">
+                                <li className="subnav-link">AVH Paris</li>
+                                <li className="subnav-link">AVH Caen Calvados</li>
+                            </ul>
+                        }
                     </li>
                     <li>
                         <a href="#">Actualités</a>
