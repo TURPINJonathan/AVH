@@ -6,13 +6,9 @@ footer {
     background-color: vars.$violet;
     color: vars.$lightGrey;
     height: 17rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
 
     #footer {
         display: flex;
