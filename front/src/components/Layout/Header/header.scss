@@ -1,0 +1,116 @@
+@use 'src/styles/vars';
+
+#header {
+    #header-social {
+        background-color: vars.$violet;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0.5rem;
+
+        .header-social__item {
+            margin-left: 0.5rem;
+        }
+    }
+
+    #header-main-main {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0.5rem;
+
+        #header-main__logo {
+            img {
+                width: 15rem;
+            }
+        }
+
+        #header-main__title {
+            margin: 1rem 0;
+            margin-left: -15rem;
+
+            #title-assoc {
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 0.2rem;
+            }
+
+            #title-vh {
+                font-size: 3.5rem;
+                font-weight: bold;
+                margin-bottom: 0.2rem;
+                margin-left: 1rem;
+            }
+
+            #title-cc {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 0.2rem;
+                margin-left: 1rem;
+            }
+
+            #title-orga {
+                font-size: 1rem;
+                font-style: italic;
+            }
+        }
+
+        #header-main__join {
+            display: flex;
+
+            .join-picture {
+                width: 8rem;
+                height: 8rem;
+                -moz-transform: rotate(341deg);
+                -webkit-transform: rotate(341deg);
+                -o-transform: rotate(341deg);
+                -ms-transform: rotate(341deg);
+                transform: rotate(341deg);
+
+            &:last-child {
+                margin-left: -1rem;
+            }
+            }
+
+        }
+
+    }
+        #header-main__bg {
+            width: 100vw;
+            height: 15px;
+            background-color: vars.$orange;
+            margin: -8.5rem 0 8.5rem
+        }
+
+    #header-nav {
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: vars.$lightGrey;
+            background-color: vars.$violet;
+
+            li {
+                padding: 0.5rem;
+                // width: 100%;
+                text-align: center;
+                vertical-align: middle;
+                height: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+
+                &:hover {
+                    background-color: vars.$lightGrey;
+                    color: vars.$violet;
+                }
+            }
+        }
+    }
+
+    margin-bottom: 1rem;
+}
