@@ -10,7 +10,9 @@ const Footer = () => {
     return (
         <footer>
             <div id="footer">
-                <img src={Logo} alt="logo association Valentin Haüy" id="footer__logo" />
+                <div id="footer__logo">
+                    <img src={Logo} alt="logo association Valentin Haüy" />
+                </div>
                 <div className="footer-content">
                     <p className="footer-content__title">Adresse</p>
                     <p className="footer-content__text">Association Valentin Haüy Caen Calvados</p>

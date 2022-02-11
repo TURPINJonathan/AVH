@@ -1,4 +1,4 @@
-function dropdown(listening, setListening, menuRef, setIsOpen) {
+function dropdown(listening, setListening, menuRef, setAvhIsOpen) {
     return () => {
         if (listening) return;
         if (!menuRef.current) return;
@@ -6,7 +6,7 @@ function dropdown(listening, setListening, menuRef, setIsOpen) {
         [`click`, `touchstart`].forEach((type) => {
             document.addEventListener(`click`, (evt) => {
                 if (menuRef.current.contains(evt.target)) return;
-                setIsOpen(false);
+                setAvhIsOpen(false);
             });
         });
     }
