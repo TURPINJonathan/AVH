@@ -4,7 +4,8 @@ import "./footer.scss";
 
 // pictures
 import Logo from "../../../assets/img/logo.png";
-import { Heart, Mail, Phone } from "react-feather";
+import { Heart, Mail, MessageCircle, Phone } from "react-feather";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -35,12 +36,22 @@ const Footer = () => {
                     <p className="footer-content__text"><Mail /> contact@avhcaen.fr</p>
                 </div>
                 <div className="footer-content">
-                    <p className="footer-content__title">Réseaux sociaux</p>
+                    <p className="footer-content__title">Aidez-nous</p>
                     <p className="footer-content__text">Soutenez l'association en faisant un don</p>
-                    <button type="button">
-                        <Heart color="white" />
-                        <p> Faîtes un don !</p>
-                    </button>
+                    <NavLink to="/give">
+                        <button type="button">
+                            <Heart color="white" />
+                            <p> Faîtes un don !</p>
+                        </button>
+                    </NavLink>
+                    {/* <p className="footer-content__title">Contactez-nous</p>
+                    <p className="footer-content__text">Pour un soutien ou une question</p> */}
+                    <NavLink to="/contact">
+                        <button type="button">
+                            <p> Contactez-nous</p>
+                            <MessageCircle color="white" />
+                        </button>
+                    </NavLink>
                 </div>
             </div>
             <div id="legal">

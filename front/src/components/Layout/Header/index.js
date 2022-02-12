@@ -13,6 +13,7 @@ import { ChevronDown, ChevronUp, Facebook, Instagram, Linkedin, Mail, Twitter, Y
 
 // functions
 import dropdown from "../../../functions/dropdown";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
 
@@ -47,7 +48,9 @@ const Header = () => {
             <section id="header-main">
                 <div id="header-main-main">
                     <div id="header-main__logo">
-                        <img src={Logo} alt="logo association Valentin Haüy" />
+                        <NavLink to="/">
+                            <img src={Logo} alt="logo association Valentin Haüy" />
+                        </NavLink>
                     </div>
                     <div id="header-main__title">
                         <p id="title-assoc">Association</p>
@@ -56,8 +59,12 @@ const Header = () => {
                         <p id="title-orga">Organisation à but non lucratif</p>
                     </div>
                     <div id="header-main__join">
-                        <button id="join-button" className="join-click" src="#">Devenir bénévole</button>
-                        <button id="donate-button" className="join-click" src="#">Faire un don</button>
+                        <NavLink to="/come">
+                            <button id="join-button" className="join-click">Devenir bénévole</button>
+                        </NavLink>
+                        <NavLink to="/give">
+                            <button id="donate-button" className="join-click">Faire un don</button>
+                        </NavLink>
                     </div>
                 </div>
                 <div id="header-main__bg" />
@@ -93,13 +100,25 @@ const Header = () => {
                         {avhIsOpen
                             &&
                             <ul className="subnav">
-                                <li className="subnav-link">AVH Paris</li>
-                                <li className="subnav-link">AVH Caen Calvados</li>
+                                <li className="subnav-link">
+                                    <NavLink
+                                        to="/paris"
+                                    >
+                                        AVH Paris
+                                    </NavLink>
+                                </li>
+                                <li className="subnav-link">
+                                    <NavLink
+                                        to="/caen"
+                                    >
+                                        AVH Caen Calvados
+                                    </NavLink>
+                                </li>
                             </ul>
                         }
                     </li>
                     <li>
-                        <a href="#">Actualités</a>
+                        <NavLink to="/actualites">Actualités</NavLink>
                     </li>
                     <li
                         onClick={() => setActivityIsOpen(!activityIsOpen)}
@@ -129,15 +148,23 @@ const Header = () => {
                         {activityIsOpen
                             &&
                             <ul className="subnav">
-                                <li className="subnav-link">Le braille</li>
-                                <li className="subnav-link">L'informatique adapté</li>
-                                <li className="subnav-link">Formation professionnelle</li>
-                                <li className="subnav-link">Culture loisirs et sport</li>
+                                <li className="subnav-link">
+                                    <NavLink to="/activites/braille">Le braille</NavLink>
+                                </li>
+                                <li className="subnav-link">
+                                    <NavLink to="/activites/informatique">L'informatique adapté</NavLink>
+                                </li>
+                                <li className="subnav-link">
+                                    <NavLink to="/activites/formation">Formation professionnelle</NavLink>
+                                </li>
+                                <li className="subnav-link">
+                                    <NavLink to="/activites/cls">Culture loisirs et sport</NavLink>
+                                </li>
                             </ul>
                         }
                     </li>
                     <li>
-                        <a href="#">Mécénat partenariat</a>
+                        <NavLink to="/mecenat-partenariat">Mécénat & Partenariat</NavLink>
                     </li>
                     <li
                         onClick={() => setSellIsOpen(!sellIsOpen)}
@@ -167,8 +194,12 @@ const Header = () => {
                         {sellIsOpen
                             &&
                             <ul className="subnav">
-                                <li className="subnav-link">Catalogue</li>
-                                <li className="subnav-link">Matériel</li>
+                                <li className="subnav-link">
+                                    <NavLink to="/boutique/catalogue">Le catalogue</NavLink>
+                                </li>
+                                <li className="subnav-link">
+                                    <NavLink to="/boutique/materiel">Matériel</NavLink>
+                                </li>
                             </ul>
                         }
                     </li>

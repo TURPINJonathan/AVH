@@ -9,6 +9,7 @@ import where from "../../assets/img/where.png";
 import clap from "../../assets/img/clap.png";
 import give from "../../assets/img/give.png";
 import president from "../../assets/img/president.jpg";
+import { NavLink } from "react-router-dom";
 
 const Main = () => {
 
@@ -59,9 +60,9 @@ const Main = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
                     </p>
-                    <button className="main-association__content__button">
-                        Voir sur la carte
-                    </button>
+                    <NavLink to="/find-us">
+                        <button className="main-association__content__button">Voir sur la carte</button>
+                    </NavLink>
                 </div>
                 <div className="main-association__content">
                     <img src={clap} alt="Devenir bénévole" className="main-association__content__img" />
@@ -72,9 +73,9 @@ const Main = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
                     </p>
-                    <button className="main-association__content__button">
-                        S'engager
-                    </button>
+                    <NavLink to="/come">
+                        <button className="main-association__content__button">S'engager</button>
+                    </NavLink>
                 </div>
                 <div className="main-association__content">
                     <img src={give} alt="Faire un don" className="main-association__content__img" />
@@ -85,9 +86,9 @@ const Main = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
                     </p>
-                    <button className="main-association__content__button">
-                        Faire un don
-                    </button>
+                    <NavLink to="/give">
+                        <button className="main-association__content__button">Faire un don</button>
+                    </NavLink>
                 </div>
 
             </section>
