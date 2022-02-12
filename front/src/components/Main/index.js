@@ -10,6 +10,7 @@ import clap from "../../assets/img/clap.png";
 import give from "../../assets/img/give.png";
 import president from "../../assets/img/president.jpg";
 import { NavLink } from "react-router-dom";
+import { ArrowRightCircle } from "react-feather";
 
 const Main = () => {
 
@@ -31,6 +32,10 @@ const Main = () => {
                                 Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
                                 Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                             </p>
+                            <NavLink to="/actualites/#" className="main-actuality__content__item__text__read">
+                                <p>Lire la suite</p>
+                                <ArrowRightCircle className="arrow" />
+                            </NavLink>
                         </div>
                     </div>
                     <div className="main-actuality__content__item">
@@ -44,6 +49,10 @@ const Main = () => {
                                 Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
                                 Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                             </p>
+                            <NavLink to="/actualites/#" className="main-actuality__content__item__text__read">
+                                <p>Lire la suite</p>
+                                <ArrowRightCircle className="arrow" />
+                            </NavLink>
                         </div>
                     </div>
                 </div>

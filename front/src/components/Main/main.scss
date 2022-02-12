@@ -39,6 +39,20 @@
                         margin-left: 1rem;
                         line-height: 1.2rem;
                     }
+
+                    .main-actuality__content__item__text__read {
+                        margin-left: 70%;
+                        text-decoration: underline;
+                        font-style: italic;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 1rem;
+
+                        .arrow {
+                            margin-left: 0.5rem;
+                        }
+                    }
                 }
             }
         }
