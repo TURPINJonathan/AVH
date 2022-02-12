@@ -5,7 +5,7 @@ footer {
     flex-direction: column;
     background-color: vars.$violet;
     color: vars.$lightGrey;
-    height: 17rem;
+    height: auto;
     box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
@@ -15,9 +15,11 @@ footer {
         justify-content: space-evenly;
 
         #footer__logo {
+            margin: auto 0;
+            img {
                 width: 10rem;
                 height: 10rem;
-                margin: auto 0;
+            }
         }
         .footer-content {
             margin-top: 2rem;
@@ -49,6 +51,28 @@ footer {
                 font-size: 1.2rem;
                 margin: auto;
                 margin-top: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 1400px) {
+        #footer {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 2rem;
+            .footer-content {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    width: 100%;
+                    text-align: center;
+                }
             }
         }
     }

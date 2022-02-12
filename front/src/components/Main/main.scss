@@ -116,4 +116,18 @@
             }
         }
     }
+
+    @media screen and (max-width: 1000px) {
+        .main-association {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 50%;
+            margin: 1rem auto;
+        }
+        
+        .main-president {
+            width: 100%;
+        }
+    }
 }

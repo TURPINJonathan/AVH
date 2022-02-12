@@ -11,6 +11,7 @@ import give from "../../assets/img/give.png";
 import president from "../../assets/img/president.jpg";
 
 const Main = () => {
+
     return (
         <main className="main">
 

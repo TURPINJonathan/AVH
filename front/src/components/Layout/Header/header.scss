@@ -2,15 +2,20 @@
 
 #header {
     box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+    margin-bottom: 1rem;
     #header-social {
         background-color: vars.$violet;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         padding: 0.5rem;
+        padding-right: 2rem;
 
+        #header-main__join {
+            display: none;
+        }
         .header-social__item {
             margin-left: 0.5rem;
         }
@@ -60,23 +65,39 @@
 
         #header-main__join {
             display: flex;
+            
+            #join-button {
+                background-color: vars.$orange;
+                box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+            }
 
-            .join-picture {
+            #donate-button {
+                background-color: vars.$violet;
+                box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
+            }
+            .join-click {
                 width: 8rem;
                 height: 8rem;
+                border-radius: 50%;
+                border: none;
+                color: vars.$lightGrey;
+                font-weight: bold;
+                font-size: 1.2rem;
                 -moz-transform: rotate(341deg);
                 -webkit-transform: rotate(341deg);
                 -o-transform: rotate(341deg);
                 -ms-transform: rotate(341deg);
                 transform: rotate(341deg);
 
-            &:last-child {
-                margin-left: -1rem;
+                &:last-child {
+                    margin-left: -1rem;
+                }
             }
-            }
-
         }
-
     }
         #header-main__bg {
             width: 100vw;
@@ -84,36 +105,84 @@
             background-color: vars.$orange;
             margin: -8.5rem 0 8.5rem
         }
+}
 
-    #header-nav {
-
-        ul {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            text-transform: uppercase;
-            font-weight: bold;
-            color: vars.$lightGrey;
-            background-color: vars.$violet;
-
-            li {
-                padding: 0.5rem;
-                // width: 100%;
-                text-align: center;
-                vertical-align: middle;
-                height: 4rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-sizing: border-box;
-
-                &:hover {
-                    background-color: vars.$lightGrey;
-                    color: vars.$violet;
-                }
+@media screen and (max-width: 1550px) {
+    #header {
+        #header-main-main {
+            #header-main__title {
+                margin-left: 0;
             }
         }
     }
+}
 
-    margin-bottom: 1rem;
+@media screen and (max-width: 750px) {
+    #header {
+        #header-social {
+            justify-content: space-between;
+            padding-right: 0.5rem;
+            #header-main__join {
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+                height: 80%;
+
+                #join-button {
+                    background-color: vars.$orange;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 0.5rem;
+                    color: vars.$lightGrey;
+                }
+
+                #donate-button {
+                    background-color: vars.$orange;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 0.5rem;
+                    color: vars.$lightGrey;
+                }
+            }
+        }
+        #header-main-main {
+            justify-content: space-between;
+            padding-right: 0;
+            #header-main__logo {
+                img {
+                    width: 10rem;
+                }
+            }
+            #header-main__title {
+                margin-left: 0;
+            }
+        #header-main__join {
+            display: none;
+            // flex-direction: column;
+            // justify-content: flex-end;
+            // align-items: flex-end;
+            .join-click {
+                height: 2.5rem;
+                width: 7.5rem;
+                font-weight: normal;
+                font-size: 0.8rem;
+                text-align: left;
+                padding-left: 0.8rem;
+                border-radius: 25px 0 0 25px;
+                -moz-transform: rotate(0);
+                -webkit-transform: rotate(0);
+                -o-transform: rotate(0);
+                -ms-transform: rotate(0);
+                transform: rotate(0);
+
+                &:last-child {
+                    margin-left: 0;
+                    margin-top: 1rem;
+                    width: 6.5rem;
+                }
+            }
+        }
+        }
+    }
+    
 }
