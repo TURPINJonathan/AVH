@@ -72,7 +72,8 @@ const Header = () => {
             <nav id="header-nav">
                 <ul>
                     <li
-                        onClick={() => setAvhIsOpen(!avhIsOpen)}
+                        onMouseEnter={() => setAvhIsOpen(true)}
+                        onMouseLeave={() => setAvhIsOpen(false)}
                         ref={avhDropdown}
                     >
                         <span>
@@ -121,7 +122,8 @@ const Header = () => {
                         <NavLink to="/actualites">Actualités</NavLink>
                     </li>
                     <li
-                        onClick={() => setActivityIsOpen(!activityIsOpen)}
+                        onMouseEnter={() => setActivityIsOpen(true)}
+                        onMouseLeave={() => setActivityIsOpen(false)}
                         ref={activity}
                     >
                         <span>
@@ -167,7 +169,8 @@ const Header = () => {
                         <NavLink to="/mecenat-partenariat">Mécénat & Partenariat</NavLink>
                     </li>
                     <li
-                        onClick={() => setSellIsOpen(!sellIsOpen)}
+                        onMouseEnter={() => setSellIsOpen(true)}
+                        onMouseLeave={() => setSellIsOpen(false)}
                         ref={sell}
                     >
                         <span>
