@@ -177,6 +177,11 @@ const Main = () => {
                     </article>
                 </div>
             </section>
+
+            {/* MAP */}
+            <section className="main-map">
+                <img className="main-map-img" src="https://via.placeholder.com/728x90.png" alt="map" />
+            </section>
         </main >
     );
 };
