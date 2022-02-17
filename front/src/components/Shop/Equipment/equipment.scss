@@ -1,0 +1,75 @@
+@use 'src/styles/vars';
+
+.equipment__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+
+    .equipment__item {
+        text-align: center;
+        padding: 1rem ;
+        border-radius: 5px;
+        width: 35rem;
+        margin: 0.5rem;
+        box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
+
+        h3 {
+            font-weight: bold;
+        }
+        .equipment__item__description {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+
+            img {
+                width: 50%;
+            }
+
+            .equipment__item__description__text {
+                width: 50%;
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 0.5rem;
+
+                .overview {
+                    margin: auto;
+                }
+
+                .price {
+                    bottom: 0;
+                    margin-bottom: 1rem;
+                    font-style: italic;
+                }
+
+                button {
+                    width: 100%;
+                    height: 2rem;
+                    bottom: 0;
+                    background-color: vars.$green;
+                    color: vars.$lightGrey;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    border: transparent 2px solid;
+                    border-radius: 25px;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: vars.$TGrey;
+                        border: vars.$green 2px solid;
+                        box-shadow: 0px -1px 22px 0px vars.$green !important;
+                        -webkit-box-shadow: 0px -1px 22px 0px vars.$green !important;
+                        -moz-box-shadow: 0px -1px 22px 0px vars.$green !important;
+                    }
+                }
+            }
+        }
+    }
+}
