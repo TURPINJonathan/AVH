@@ -91,16 +91,26 @@ const Main = () => {
                 </div>
             </section>
 
+            {/* PRESIDENT SPEAK */}
             <section className="main-president">
-                <h2 id="actuality-title">Le mot du président</h2>
-                <div className="main-president__content">
-                    <img src={president} alt="Le mot du président" className="main-president__content__img" />
-                    <p>
-                        De nombreux obstacles se dressent sur la route des personnes déficientes visuelles. De nouveaux territoires seront conquis à force de courage, de persévérance et d'audace…
-                    </p>
+                <div className="main-president-content-img--container">
+                    <img className="main-president-content-img" src={president} alt="president" />
+                </div>
+                <div className="main-president-content">
+                    <div className="main-president-content-text">
+                        <h4 className="main-president-content-title">Le mot du président</h4>
+                        <p className="main-president-content-contentText">
+                            De nombreux obstacles se dressent sur la route des personnes déficientes visuelles. De nouveaux territoires seront conquis à force de courage, de persévérance et d'audace…
+                        </p>
+                        <aside className="main-president-content-sign">
+                            <p id="name">Jean Pierre Leclercq</p>
+                            <p>Président de l'association Valentin Haüy</p>
+                            <p>Caen Calvados</p>
+                        </aside>
+                    </div>
                 </div>
             </section>
-        </main>
+        </main >
     );
 };
 
