@@ -41,46 +41,54 @@ const Main = () => {
 
             {/* OU NOUS TROUVER, FAIRE UN DON, DEVENIR BENEVOLE */}
             <section className="main-association">
-                <div className="main-association__content">
-                    <img src={where} alt="Où nous trouver" className="main-association__content__img" />
-                    <h3 className="main-association__content__title">
-                        Où nous trouver ?
-                    </h3>
-                    <p className="main-association__content__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-                    </p>
-                    <NavLink to="/find-us">
-                        <button className="main-association__content__button">Voir sur la carte</button>
-                    </NavLink>
-                </div>
-                <div className="main-association__content">
-                    <img src={clap} alt="Devenir bénévole" className="main-association__content__img" />
-                    <h3 className="main-association__content__title">
-                        Devenir bénévole
-                    </h3>
-                    <p className="main-association__content__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-                    </p>
-                    <NavLink to="/come">
-                        <button className="main-association__content__button">S'engager</button>
-                    </NavLink>
-                </div>
-                <div className="main-association__content">
-                    <img src={give} alt="Faire un don" className="main-association__content__img" />
-                    <h3 className="main-association__content__title">
-                        Faire un don
-                    </h3>
-                    <p className="main-association__content__desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-                    </p>
-                    <NavLink to="/give">
-                        <button className="main-association__content__button">Faire un don</button>
-                    </NavLink>
-                </div>
+                <h2 className="main-association-title"> Nos missions</h2>
+                <div className="main-association-container">
+                    <article
+                        className="main-association-article"
+                        style={{ backgroundImage: `url(${defi_voile})` }}
+                    >
+                        <aside className="main-association-article-aside">
+                            <h3 className="main-association-article-aside-title">Ou nous trouver</h3>
 
+                            <NavLink to="/actualites" className="main-association-article-aside-link">
+                                <button className="main-association-article-aside-button">
+                                    En savoir plus
+                                    <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
+                                </button>
+                            </NavLink>
+                        </aside>
+                    </article>
+                    <article
+                        className="main-association-article"
+                        style={{ backgroundImage: `url(${defi_voile})` }}
+                    >
+                        <aside className="main-association-article-aside">
+                            <h3 className="main-association-article-aside-title">Ou nous trouver</h3>
+
+                            <NavLink to="/actualites" className="main-association-article-aside-link">
+                                <button className="main-association-article-aside-button">
+                                    En savoir plus
+                                    <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
+                                </button>
+                            </NavLink>
+                        </aside>
+                    </article>
+                    <article
+                        className="main-association-article"
+                        style={{ backgroundImage: `url(${defi_voile})` }}
+                    >
+                        <aside className="main-association-article-aside">
+                            <h3 className="main-association-article-aside-title">Ou nous trouver</h3>
+
+                            <NavLink to="/actualites" className="main-association-article-aside-link">
+                                <button className="main-association-article-aside-button">
+                                    En savoir plus
+                                    <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
+                                </button>
+                            </NavLink>
+                        </aside>
+                    </article>
+                </div>
             </section>
 
             <section className="main-president">
