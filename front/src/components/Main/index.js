@@ -10,7 +10,7 @@ import clap from "../../assets/img/clap.png";
 import give from "../../assets/img/give.png";
 import president from "../../assets/img/president.jpg";
 import { NavLink } from "react-router-dom";
-import { ArrowRightCircle } from "react-feather";
+import { ArrowRightCircle, Facebook, Instagram, Twitter, Youtube } from "react-feather";
 
 const Main = () => {
 
@@ -108,6 +108,73 @@ const Main = () => {
                             <p>Caen Calvados</p>
                         </aside>
                     </div>
+                </div>
+            </section>
+
+            {/* FOLLOW US */}
+            <section className="main-follow">
+                <h2 className="main-follow-title">Suivez-nous !</h2>
+                <div className="main-follow-container">
+                    <article className="main-follow-article">
+                        <aside className="main-follow-article-aside">
+                            <Facebook className="main-follow-article-aside-icon" />
+                            <div className="main-follow-article-aside-content">
+                                <NavLink to="/actualites" className="main-follow-article-aside-content-link">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Mauris euismod, lectus eget consectetur vehicula,
+                                    </p>
+                                </NavLink>
+                                <NavLink to="/actualites" className="main-follow-article-aside-link">
+                                    <p className="main-follow-article-aside-link-text">
+                                        suivez-nous sur Facebook
+                                    </p>
+                                </NavLink>
+                            </div>
+                        </aside>
+                        <aside className="main-follow-article-aside">
+                            <Instagram className="main-follow-article-aside-icon" />
+                            <div className="main-follow-article-aside-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Mauris euismod, lectus eget consectetur vehicula,
+                                </p>
+                                <NavLink to="/actualites" className="main-follow-article-aside-link">
+                                    <p className="main-follow-article-aside-link-text">
+                                        suivez-nous sur Instagram
+                                    </p>
+                                </NavLink>
+                            </div>
+                        </aside>
+                        <aside className="main-follow-article-aside">
+                            <Twitter className="main-follow-article-aside-icon" />
+                            <div className="main-follow-article-aside-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Mauris euismod, lectus eget consectetur vehicula,
+                                </p>
+                                <NavLink to="/actualites" className="main-follow-article-aside-link">
+                                    <p className="main-follow-article-aside-link-text">
+                                        suivez-nous sur Twitter
+                                    </p>
+                                </NavLink>
+                            </div>
+                        </aside>
+                        <aside className="main-follow-article-aside">
+                            <Youtube className="main-follow-article-aside-icon" />
+                            <div className="main-follow-article-aside-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Mauris euismod, lectus eget consectetur vehicula,
+                                </p>
+                                <NavLink to="/actualites" className="main-follow-article-aside-link">
+                                    <p className="main-follow-article-aside-link-text">
+                                        suivez-nous sur Youtube
+                                    </p>
+                                </NavLink>
+                            </div>
+                        </aside>
+                    </article>
                 </div>
             </section>
         </main >
