@@ -19,42 +19,23 @@ const Main = () => {
 
             {/* Actualités */}
             <section className="main-actuality">
-                <h2 id="actuality-title">Actualités</h2>
-                <div className="main-actuality__content">
-                    <div className="main-actuality__content__item">
-                        <img src={defi_voile} alt="defi voile" className="main-actuality__content__item__img" />
-                        <div className="main-actuality__content__item__text">
-                            <h3 className="main-actuality__content__item__text__title">
-                                Défi de voile
-                            </h3>
-                            <p className="main-actuality__content__item__text__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-                                Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-                            <NavLink to="/actualites/#" className="main-actuality__content__item__text__read">
-                                <p>Lire la suite</p>
-                                <ArrowRightCircle className="arrow" />
-                            </NavLink>
-                        </div>
+                <div className="main-actuality-content-text">
+                    <div className="main-actuality-content">
+                        <h2 className="main-actuality-content-title">Actualités</h2>
+                        <p className="main-actuality-content-contentText">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris euismod, lectus eget consectetur vehicula,
+                        </p>
+                        <NavLink to="/actualites" className="main-actuality-content-link">
+                            <button className="main-actuality-content-button">
+                                En savoir plus
+                                <ArrowRightCircle className="main-actuality-content-button-arrow" />
+                            </button>
+                        </NavLink>
                     </div>
-                    <div className="main-actuality__content__item">
-                        <img src={equipage} alt="equipage" className="main-actuality__content__item__img" />
-                        <div className="main-actuality__content__item__text">
-                            <h3 className="main-actuality__content__item__text__title">
-                                Défi de voile
-                            </h3>
-                            <p className="main-actuality__content__item__text__desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-                                Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-                            <NavLink to="/actualites/#" className="main-actuality__content__item__text__read">
-                                <p>Lire la suite</p>
-                                <ArrowRightCircle className="arrow" />
-                            </NavLink>
-                        </div>
-                    </div>
+                </div>
+                <div className="main-actuality-content-img--container">
+                    <img className="main-actuality-content-img" src={equipage} alt="defi_voile" />
                 </div>
             </section>
 
