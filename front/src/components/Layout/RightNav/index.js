@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import ReactTooltip from "react-tooltip";
 
 // logos
 import { Facebook, Heart, Instagram, Twitter, Youtube } from "react-feather";
@@ -11,19 +12,44 @@ const RightNav = () => {
     return (
         <aside id="rightNav">
             <NavLink to={`/`}>
-                <Facebook className="rightNav-item" />
+                <ReactTooltip
+                    place="left"
+                    type="dark"
+                    effect="float"
+                />
+                <Facebook className="rightNav-item" data-tip="Facebook" />
             </NavLink>
             <NavLink to={`/`}>
-                <Instagram className="rightNav-item" />
+                <ReactTooltip
+                    place="left"
+                    type="dark"
+                    effect="float"
+                />
+                <Instagram className="rightNav-item" data-tip="Instagram" />
             </NavLink>
             <NavLink to={`/`}>
-                <Twitter className="rightNav-item" />
+                <ReactTooltip
+                    place="left"
+                    type="dark"
+                    effect="float"
+                />
+                <Twitter className="rightNav-item" data-tip="Twitter" />
             </NavLink>
             <NavLink to={`/`}>
-                <Youtube className="rightNav-item" />
+                <ReactTooltip
+                    place="left"
+                    type="dark"
+                    effect="float"
+                />
+                <Youtube className="rightNav-item" data-tip="Youtube" />
             </NavLink>
             <NavLink to={`/`} className="heart">
-                <Heart className="heart-hover" alt="Faire un don" />
+                <ReactTooltip
+                    place="left"
+                    type="dark"
+                    effect="float"
+                />
+                <Heart className="heart-hover" data-tip="Faire un don" />
             </NavLink>
         </aside>
     );
