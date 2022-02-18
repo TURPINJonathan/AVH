@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 #header-nav {
-
+    width: 100vw;
     ul {
         display: flex;
         justify-content: space-evenly;

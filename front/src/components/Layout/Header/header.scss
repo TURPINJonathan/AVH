@@ -119,6 +119,7 @@
 
 @media screen and (max-width: 750px) {
     #header {
+        width: 100vw;
         #header-social {
             justify-content: space-between;
             padding-right: 0.5rem;
@@ -145,12 +146,15 @@
                 }
             }
         }
+        #header-main {
+            width: 100vw;
         #header-main-main {
             justify-content: space-between;
             padding-right: 0;
+            min-width: 100vw;
             #header-main__logo {
                 img {
-                    width: 10rem;
+                    max-width: 10rem;
                 }
             }
             #header-main__title {
@@ -183,6 +187,7 @@
             }
         }
         }
+    }
     }
     
 }
