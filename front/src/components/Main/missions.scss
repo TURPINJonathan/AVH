@@ -1,0 +1,80 @@
+@use 'src/styles/vars';
+
+    .main-association {
+        margin-top: 3rem;
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .main-association-title {
+            margin-bottom: 0 !important;
+            margin-left: 3rem !important;
+        }
+
+        .main-association-container {
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid vars.$orange;
+            width: 100%;
+            height: 30rem;
+
+            .main-association-article {
+                width: 31%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &:hover {
+                    box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+                    -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+                    -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+                }
+
+                .main-association-article-aside {
+                    width: 100%;
+                    height: 100%;
+                    background-color: vars.$TGrey;
+                    opacity: 0.7;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    .main-association-article-aside-title {
+                        color: white;
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+                    .main-association-article-aside-button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 25px;
+                        border: none;
+                        background-color: white;
+                        border: 2px solid transparent;
+                        color: vars.$TGrey;
+                        box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75) !important;
+                        -webkit-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75) !important;
+                        -moz-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75) !important;
+
+                        &:hover {
+                            background-color:transparent;
+                            border: 2px solid white;
+                            color: white;
+                        }
+
+                        .main-association-article-aside-content-button-arrow {
+                            margin-left: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }

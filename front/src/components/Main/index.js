@@ -5,9 +5,6 @@ import './main.scss';
 // pictures
 import defi_voile from "../../assets/img/defi_voile.jpg";
 import equipage from "../../assets/img/equipage.png";
-import where from "../../assets/img/where.png";
-import clap from "../../assets/img/clap.png";
-import give from "../../assets/img/give.png";
 import president from "../../assets/img/president.jpg";
 import { NavLink } from "react-router-dom";
 import { ArrowRightCircle, Facebook, Instagram, Twitter, Youtube } from "react-feather";

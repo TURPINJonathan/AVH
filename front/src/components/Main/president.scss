@@ -1,0 +1,66 @@
+@use 'src/styles/vars';
+
+.main-president {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    height: 20rem;
+    position: relative;
+    
+    .main-president-content {
+        height: 100%;
+        width: 75vw;
+        float: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .main-president-content-text {
+            background-color: vars.$violet;
+            color: vars.$lightGrey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 90%;
+            width: 100%;
+            padding-left: 12rem;
+            box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+            -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+            -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+
+            .main-president-content-title {
+                font-family: 'La Belle Aurore', cursive;
+                font-size: 3rem;
+
+            }
+            .main-president-content-contentText {
+                width: 80%;
+            }
+
+            .main-president-content-sign {
+                padding-left: 10rem;
+                font-style: italic;
+
+                #name {
+                    font-size: 1.5rem;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+
+    .main-president-content-img--container {
+        filter: drop-shadow(7px 0px 5px rgba(50, 50, 0, 0.5));
+        position: absolute;
+        height: 100%;
+        left: 0;
+
+        .main-president-content-img {
+            clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
+            height: 100%;
+            width: 40vw;
+            justify-self: end;
+        }
+    }
+}
