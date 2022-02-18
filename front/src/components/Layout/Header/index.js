@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 
 import "./header.scss";
 import "./nav.scss";
+import './burger.scss';
 
 // pictures
 import Logo from "../../../assets/img/logo.png";
-import Volunteer from "../../../assets/img/devenir_benevole.png";
-import Donate from "../../../assets/img/faire_un_don.png";
 
 // Feather
 import { ChevronDown, ChevronUp, Facebook, Instagram, Linkedin, Mail, Twitter, Youtube } from "react-feather";
@@ -21,6 +20,8 @@ const Header = () => {
     const avhDropdown = useRef(null);
     const sell = useRef(null);
 
+    const [isOpen, setIsOpen] = useState(false);
+    console.log(isOpen);
     const [avhIsOpen, setAvhIsOpen] = useState(false);
     const [activityIsOpen, setActivityIsOpen] = useState(false);
     const [sellIsOpen, setSellIsOpen] = useState(false);
@@ -208,6 +209,96 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
+
+            <div id="header-nav-mobile">
+                <input id="burger" type="checkbox" className="burger-check" checked={isOpen} onClick={() => setIsOpen(!isOpen)} />
+
+                <label for="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav>
+                    <ul
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        <li className="burger-title">
+                            Association Valentin Haüy
+                            <NavLink
+                                to="/paris"
+                                className="burger-subTitle"
+                            >
+                                AVH Paris
+                            </NavLink>
+                            <NavLink
+                                to="/caen"
+                                className="burger-subTitle"
+                            >
+                                AVH Caen
+                            </NavLink>
+                        </li>
+                        <li className="burger-title">
+                            <NavLink
+                                to="/actualites"
+                                className="burger-title"
+                            >
+                                Actualités
+                            </NavLink>
+                        </li>
+                        <li className="burger-title">
+                            Activités
+                            <NavLink
+                                to="/braille"
+                                className="burger-subTitle"
+                            >
+                                Le Braille
+                            </NavLink>
+                            <NavLink
+                                to="/informatique"
+                                className="burger-subTitle"
+                            >
+                                L'informatique adapté
+                            </NavLink>
+                            <NavLink
+                                to="/formation"
+                                className="burger-subTitle"
+                            >
+                                Formation Professionnelle
+                            </NavLink>
+                            <NavLink
+                                to="/cls"
+                                className="burger-subTitle"
+                            >
+                                Culture, loisirs et sports
+                            </NavLink>
+                        </li>
+                        <li className="burger-title">
+                            <NavLink
+                                to="/mecenat-partenariat"
+                                className="burger-title"
+                            >
+                                Mécenat & Partenariat
+                            </NavLink>
+                        </li>
+                        <li className="burger-title">
+                            La boutique
+                            <NavLink
+                                to="/boutique/catalogue"
+                                className="burger-subTitle"
+                            >
+                                Le catalogue
+                            </NavLink>
+                            <NavLink
+                                to="/boutique/materiel"
+                                className="burger-subTitle"
+                            >
+                                Le matériel
+                            </NavLink>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header >
     );
 };
