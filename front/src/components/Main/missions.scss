@@ -78,3 +78,39 @@
             }
         }
     }
+
+    @media screen and (max-width: 500px) {
+        .main-association {
+            margin-top: 2rem;
+            padding: 0;
+
+            .main-association-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 100%;
+                width: 100vw;
+
+                .main-association-article {
+                    width: 100%;
+                    height: auto;
+                    margin: 0.5rem auto;
+
+                    .main-association-article-aside {
+                        width: 100%;
+                        height: 100%;
+
+                        .main-association-article-aside-title {
+                            margin: 1rem;
+                        }
+
+                        .main-association-article-aside-link {
+                            margin: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
