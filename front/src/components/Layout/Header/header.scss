@@ -87,7 +87,6 @@
 
         #header-main__join {
             display: flex;
-            box-sizing: border-box;
             width: 30%;
             
             #join-button {
@@ -114,6 +113,7 @@
             .join-click {
                 width: 8rem;
                 height: 8rem;
+                margin: auto;
                 border-radius: 50%;
                 border: none;
                 color: vars.$lightGrey;
@@ -161,6 +161,26 @@
     }
 }
 
+@media screen and (max-width: 950px) {
+    #header {
+
+        #header-social {
+            display: none;
+        }
+
+        #header-main-main {
+            margin-top: 1.5rem;
+            #header-main__join {
+                .join-click {
+                    width: 6.5rem;
+                    height: 6.5rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 750px) {
     #header {
         width: 100vw;
@@ -191,7 +211,7 @@
             }
         }
         #header-main-main {
-            justify-content: space-between;
+            justify-content: space-evenly;
             padding-right: 0;
             #header-main__logo {
                 img {
@@ -230,4 +250,47 @@
         }
     }
     
+@media screen and (max-width: 550px) {
+    #header {
+        #header-main-main {
+            #header-main__title {
+                
+                // margin: 1rem 0;
+                // margin-left: -15rem;
+
+                #title-assoc {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    // margin-bottom: 0.2rem;
+                }
+
+                #title-vh {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    margin-bottom: 0.2rem;
+                    margin-left: 1rem;
+                }
+
+                #title-cc {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: 0.2rem;
+                    margin-left: 1rem;
+                }
+
+                #title-orga {
+                    font-size: 1rem;
+                    font-style: italic;
+                }
+            }
+        }
+
+        #header-main__bg {
+            width: 100vw;
+            height: 8px;
+            background-color: vars.$orange;
+            margin: -6.2rem 0 6.2rem
+        }
+    }
+}
 }

@@ -10,28 +10,30 @@ $blackColor: #020304;
 
     #header-nav-mobile {
 
-    //   background: blue;
+        #header-nav__join {
+                // position: absolute;
+                height: 60%;
+                max-height: 40px;
+                width: 300px;
+                display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+            .join-click {
+                // top: 0;
+                border: none;
+                border-radius: 0 0 5px 5px;
+                width: 120px;
+                margin-left: 0.5rem;
+                background-color: vars.$orange;
+                color: vars.$lightGrey;
+                box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) ;
+                -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) ;
+                -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) ;
+            }
+        }
         .burger-check {
             display: none;
         }
-
-        // h1 {
-        //     position: fixed;
-        //     top: 40px;
-        //     left: 40px;
-        //     z-index: 6;
-        //     font-size: 20px;
-        //     font-weight: 900;
-        //     font-family: sans-serif;
-        //     text-transform: uppercase;
-
-        //     > span {
-        //     text-transform: none;
-        //     opacity: .5;
-        //     font-weight: 300;
-        //     font-size: 12px;
-        //     }
-        // }
 
         input + label {
             position: fixed;

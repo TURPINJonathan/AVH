@@ -209,7 +209,6 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-
             <div id="header-nav-mobile">
                 <input id="burger" type="checkbox" className="burger-check" checked={isOpen} onClick={() => setIsOpen(!isOpen)} />
 
@@ -220,6 +219,10 @@ const Header = () => {
                 </label>
 
                 <nav>
+                    <div id="header-nav__join">
+                        <button id="join-button" className="join-click" src="#">Devenir bénévole</button>
+                        <button id="donate-button" className="join-click" src="#">Faire un don</button>
+                    </div>
                     <ul
                         onClick={() => setIsOpen(!isOpen)}
                     >
