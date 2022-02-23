@@ -4,6 +4,8 @@
     width: 100%;
     height: 20rem;
     position: relative;
+    display: flex;
+    justify-content: space-between;
     .main-actuality-content-text {
         height: 100%;
         width: 75vw;
@@ -21,28 +23,34 @@
             align-items: center;
             height: 90%;
             width: 100%;
-            padding-right: 12rem;
+            padding-right: 6rem;
             box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
             -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
             -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
-            .main-actuality-content-text-title {
+
+            .main-actuality-content-title {
+                margin-top: 1rem;
             }
             .main-actuality-content-contentText {
                 width: 80%;
-                // height: 100%;
-                // margin: auto;
+                height: auto;
+
             }
 
             .main-actuality-content-link {
                 bottom: 0;
                 width: 30%;
                 height: 15%;
+                min-height: 30px;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
                 .main-actuality-content-button {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     height: 100%;
                     width: 100%;
+                    min-width: 8.8rem;
                     border-radius: 25px;
                     border: none;
                     background-color: vars.$lightGrey;
@@ -77,5 +85,46 @@
             width: 40vw;
             justify-self: end;
         } 
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .main {
+        margin-top: 3rem;
+        .main-actuality {
+            // background-color: green;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .main-actuality-content-text {
+                width: 100%;
+                height: 100%;
+
+                .main-actuality-content {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                }
+            }
+ 
+            .main-actuality-content-img--container {
+                filter: none;
+                position: initial;
+                height: 100%;
+                width: 100vw;
+                margin-bottom: 5rem;
+                .main-actuality-content-img {
+                    clip-path: none;
+                    height: 100%;
+                    width: 100vw;
+                    // bottom: 0;
+                    // justify-self: end;
+                } 
+            }
+
+        }
     }
 }
