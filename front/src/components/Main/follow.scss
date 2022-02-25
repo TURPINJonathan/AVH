@@ -32,10 +32,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 2rem;
+                margin: 0.5rem;
 
                 .main-follow-article-aside-icon {
                     width: 10rem;
+                    min-width: 40px;
+                    min-height: 40px;
                     height: 10rem;
                     margin: 0.5rem;
                     margin-right: 0;
@@ -56,6 +58,36 @@
 
                     .main-follow-article-aside-link-text {
                         font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+.main-follow {
+        .main-follow-container {
+            .main-follow-article {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                .main-follow-article-aside{
+                    flex-direction: column;
+                    min-width: 250px;
+                    .main-follow-article-aside-icon {
+                    }
+
+                    .main-follow-article-aside-content {
+                        clip-path: polygon(50% 0, 60% 15%, 100% 20%, 100% 100%, 0 100%, 0 20%, 40% 15%);
+                        margin: 0.5rem;
+                        padding: 4rem 1rem 1rem;
+                        // clip-path: polygon(8% 40%, 10% 0, 100% 0, 100% 100%, 10% 100%, 8% 60%, 0 50%);
+
+                        .main-follow-article-aside-link-text {
+                        }
                     }
                 }
             }
