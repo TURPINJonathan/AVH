@@ -211,12 +211,15 @@
                 }
             }
         }
+        #header-main {
+            width: 100vw;
         #header-main-main {
             justify-content: space-evenly;
             padding-right: 0;
+            min-width: 100vw;
             #header-main__logo {
                 img {
-                    width: 10rem;
+                    max-width: 10rem;
                 }
             }
             #header-main__title {
@@ -249,6 +252,7 @@
             }
         }
         }
+    }
     }
     
 @media screen and (max-width: 550px) {
