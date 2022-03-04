@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import Pin from "../../../assets/img/list_style.png"
 import './paris.scss';
 
 const Paris = () => {
@@ -11,11 +11,34 @@ const Paris = () => {
                     Acteur historique de l’aide aux personnes déficientes visuelles, l’association Valentin Haüy, créée en 1889 par Maurice de La Sizeranne et reconnue d’utilité publique en 1891, déploie depuis plus de 130 ans un grand nombre de services et d’actions à travers toute la France afin de :
                 </p>
                 <ul>
-                    <li>défendre les droits des déficients visuels</li>
-                    <li>assurer leur formation et l’accès à l’emploi</li>
-                    <li>restaurer et développer leur autonomie</li>
-                    <li>promouvoir l’accès à l’écrit</li>
-                    <li>proposer des activités culturelles, sportives et de loisirs accessibles</li>
+                    <li>
+                        <img src={Pin} alt="Pin" className="pin" />
+                        défendre les droits des déficients visuels
+                    </li>
+                    <li>
+
+                        <img src={Pin} alt="Pin" className="pin" />
+                        assurer leur formation et l’accès à l’emploi
+
+                    </li>
+                    <li>
+
+                        <img src={Pin} alt="Pin" className="pin" />
+                        restaurer et développer leur autonomie
+
+                    </li>
+                    <li>
+
+                        <img src={Pin} alt="Pin" className="pin" />
+                        promouvoir l’accès à l’écrit
+
+                    </li>
+                    <li>
+
+                        <img src={Pin} alt="Pin" className="pin" />
+                        proposer des activités culturelles, sportives et de loisirs accessibles
+
+                    </li>
                 </ul>
                 <img src="https://via.placeholder.com/728x90.png" alt="Paris" />
                 <p>
