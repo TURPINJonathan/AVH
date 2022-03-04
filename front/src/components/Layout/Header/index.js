@@ -104,9 +104,9 @@ const Header = () => {
                             <ul className="subnav">
                                 <li className="subnav-link">
                                     <NavLink
-                                        to="/paris"
+                                        to="/AVH"
                                     >
-                                        AVH Paris
+                                        Présentation de l'AVH
                                     </NavLink>
                                 </li>
                                 <li className="subnav-link">
@@ -229,7 +229,7 @@ const Header = () => {
                         <li className="burger-title">
                             Association Valentin Haüy
                             <NavLink
-                                to="/paris"
+                                to="/AVH"
                                 className="burger-subTitle"
                             >
                                 AVH Paris

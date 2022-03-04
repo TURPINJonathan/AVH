@@ -1,9 +1,9 @@
 @use 'src/styles/vars';
 
-    .paris {
+    .avh {
         width: 100vw;
 
-        .paris__presentation {
+        .avh__presentation {
             margin: 1rem auto;
             
             p {
@@ -35,13 +35,13 @@
             }
         }
 
-        .paris__stat {
+        .avh__stat {
             display: flex;
             justify-content: space-evenly;
             height: auto;
             min-height: 210px;
 
-            .paris__stat__item {
+            .avh__stat__item {
                 width: auto;
                 min-width: 200px;
                 height: auto;
@@ -82,7 +82,7 @@
             }
         }
 
-        .paris__button {
+        .avh__button {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -95,7 +95,7 @@
                 margin: 1rem;
             }
 
-            .paris__button-link {
+            .avh__button-link {
                 width: 20vw;
                 min-width: 10rem;
                 height: 3rem;
@@ -122,9 +122,9 @@
     }
 
     @media screen and (max-width: 700px) {
-        .paris {
+        .avh {
     
-            .paris__stat {
+            .avh__stat {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;

@@ -15,7 +15,7 @@ import Main from './components/Main';
 
 // Navigate components
 import Caen from './components/Avh/Caen';
-import Paris from './components/Avh/Paris';
+import AVH from './components/Avh/AVH';
 import Actuality from './components/Actuality';
 import Braille from './components/Activity/Braille';
 import Informatique from './components/Activity/Informatique';
@@ -47,8 +47,8 @@ ReactDOM.render(
           exact
         />
         <Route
-          path="/paris"
-          element={<Paris />}
+          path="/AVH"
+          element={<AVH />}
           exact
         />
         <Route
