@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
+//styles
 import './styles/index.scss';
 
 //? imports components
@@ -27,11 +28,13 @@ import Come from './components/Other/Come';
 import Give from './components/Other/Give';
 import Contact from './components/Other/Contact';
 import Map from './components/Map';
+import RightNav from './components/Layout/RightNav';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Header />
+      <RightNav />
       <Routes>
         <Route
           path="/"
