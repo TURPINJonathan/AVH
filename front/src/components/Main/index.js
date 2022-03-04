@@ -211,6 +211,8 @@ const Main = () => {
                         className="main-map-popup"
                     >
                         <h1>AVH CAEN</h1>
+                        <p>5 rue Roger Bastion</p>
+                        <p>14000 CAEN</p>
                     </Popup>
                 </Map>
             </section>
