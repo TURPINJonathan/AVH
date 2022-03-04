@@ -9,8 +9,21 @@ import president from "../../assets/img/president.jpg";
 import { NavLink } from "react-router-dom";
 import { ArrowRightCircle, Facebook, Instagram, Twitter, Youtube } from "react-feather";
 
+import ReactMapboxGl, { Layer, Feature, Popup } from 'react-mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 const Main = () => {
 
+    const Map = ReactMapboxGl({
+        accessToken:
+            'pk.eyJ1IjoidHVycGluam9uYXRoYW4iLCJhIjoiY2t3bDg0ZHc3MWpybzJ4bWRxNXRzYzUxZyJ9.t_jtpG-4kmbii3A1mDXfNQ'
+    });
+
+    const Longitude = -0.34575;
+    const Latitude = 49.17530;
+
+    const Style = 'mapbox://styles/mapbox/outdoors-v11';
+    const Zoom = [14];
     return (
         <main className="main">
 
@@ -177,7 +190,29 @@ const Main = () => {
 
             {/* MAP */}
             <section className="main-map">
-                <img className="main-map-img" src="https://via.placeholder.com/728x90.png" alt="map" />
+                <Map className="main-map"
+                    style={Style}
+                    containerStyle={{
+                        height: '20rem',
+                        width: '100vw'
+                    }}
+                    center={[Longitude, Latitude]}
+                    zoom={Zoom}
+                >
+                    <Layer type="circle" id="marker" layout={{ 'icon-image': 'marker-15' }}>
+                        <Feature coordinates={[Longitude, Latitude]} />
+                    </Layer>
+
+                    <Popup
+                        coordinates={[Longitude, Latitude]}
+                        offset={{
+                            'bottom-left': [12, -38], bottom: [0, -10], 'bottom-right': [-12, -38],
+                        }}
+                        className="main-map-popup"
+                    >
+                        <h1>AVH CAEN</h1>
+                    </Popup>
+                </Map>
             </section>
         </main >
     );
