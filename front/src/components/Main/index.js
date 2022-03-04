@@ -23,7 +23,7 @@ const Main = () => {
     const Latitude = 49.17530;
 
     const Style = 'mapbox://styles/mapbox/outdoors-v11';
-    const Zoom = [14];
+    const Zoom = [16];
     return (
         <main className="main">
 

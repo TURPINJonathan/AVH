@@ -111,6 +111,13 @@ const Header = () => {
                                 </li>
                                 <li className="subnav-link">
                                     <NavLink
+                                        to="/history"
+                                    >
+                                        Notre histoire
+                                    </NavLink>
+                                </li>
+                                <li className="subnav-link">
+                                    <NavLink
                                         to="/caen"
                                     >
                                         AVH Caen Calvados
@@ -232,7 +239,13 @@ const Header = () => {
                                 to="/AVH"
                                 className="burger-subTitle"
                             >
-                                AVH Paris
+                                Présentation de l'AVH
+                            </NavLink>
+                            <NavLink
+                                to="/history"
+                                className="burger-subTitle"
+                            >
+                                Notre histoire
                             </NavLink>
                             <NavLink
                                 to="/caen"

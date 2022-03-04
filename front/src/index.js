@@ -29,6 +29,7 @@ import Give from './components/Other/Give';
 import Contact from './components/Other/Contact';
 import Map from './components/Map';
 import RightNav from './components/Layout/RightNav';
+import History from './components/Avh/History';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -49,6 +50,11 @@ ReactDOM.render(
         <Route
           path="/AVH"
           element={<AVH />}
+          exact
+        />
+        <Route
+          path="/history"
+          element={<History />}
           exact
         />
         <Route
