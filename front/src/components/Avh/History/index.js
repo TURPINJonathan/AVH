@@ -2,7 +2,8 @@ import React from "react";
 
 import './history.scss';
 
-//! TODO: museum picture width
+import Museum from '../../../assets/img/musee.jpg';
+import MauriceDeLaSizeranne from '../../../assets/img/MauricedeLaSizeranne .jpg';
 
 const History = () => {
     return (
@@ -18,6 +19,7 @@ const History = () => {
                         Jusqu’au 18ème siècle, l’histoire des aveugles se confond avec celle de tous les autres exclus. Les moins favorisés mendient ou vivent d’expédients. C’est la publication par Diderot, le 9 juin 1749, de sa Lettre sur les aveugles à l’usage de ceux qui voient, ouvrage évoquant notamment le mathématicien aveugle Saunderson (1682-1739), qui va changer l’image des aveugles dans la société.
                     </p>
                 </article>
+                <div className="divider" />
                 <article className="history__ourHistory__articleRight">
                     <aside className="picture">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Valentin_Ha%C3%BCy%2C_fondateur_de_l%27Institution_Nationale_des_Jeunes_aveugles.jpg/260px-Valentin_Ha%C3%BCy%2C_fondateur_de_l%27Institution_Nationale_des_Jeunes_aveugles.jpg" alt="Valentin Haüy" />
@@ -39,6 +41,7 @@ const History = () => {
                         </p>
                     </aside>
                 </article>
+                <div className="divider" />
                 <article className="history__ourHistory__articleLeft">
                     <aside className="text">
                         <p>
@@ -63,9 +66,10 @@ const History = () => {
                         <p className="picture_date">(1809 - 1852)</p>
                     </aside>
                 </article>
+                <div className="divider" />
                 <article className="history__ourHistory__articleRight">
                     <aside className="picture">
-                        <img src="https://www.avh.asso.fr/sites/default/files/louis_braille.jpg" alt="Maurice de La Sizeranne" />
+                        <img src={MauriceDeLaSizeranne} alt="Maurice de La Sizeranne" />
                         <p className="picture_name">Maurice de La Sizeranne</p>
                         <p className="picture_date">(1857 - 1924)</p>
                     </aside>
@@ -88,6 +92,7 @@ const History = () => {
 
                     </aside>
                 </article>
+                <div className="divider" />
             </section>
             <section>
                 <article>
@@ -95,7 +100,7 @@ const History = () => {
                     <p>
                         Par le biais d’objets ou d’ouvrages en vitrines et en exposition tactile, vous pourrez découvrir au Musée Valentin Haüy ainsi que dans sa Bibliothèque patrimoniale, l'histoire de la cécité et de sa représentation en France et dans le monde, ainsi que celle de la prise en charge des aveugles et leurs combats pour accéder à la culture, à l’éducation et à la citoyenneté.
                     </p>
-                    <img src="https://via.placeholder.com/728x90.png" alt="Musée de Paris" id="museum" />
+                    <img src={Museum} alt="Musée de Paris" id="museum" />
                     <p>
                         Fondé en 1886 par un aveugle, Edgard Guilbeau, en vue de valoriser l’invention du braille et de la situer dans son contexte historique, le musée est aujourd’hui dévolu à l’histoire des aveugles. Cette histoire a des spécificités françaises.
                     </p>
@@ -112,6 +117,7 @@ const History = () => {
                     </p>
                 </article>
             </section>
+            <div className="divider" />
             <section>
                 <article>
                     <h2>Bibliothèque patrimoniale Valentin Haüy</h2>
