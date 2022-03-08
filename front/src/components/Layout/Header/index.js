@@ -35,7 +35,7 @@ const Header = () => {
             <div id="header-social">
                 <div id="header-main__join">
                     <button id="join-button" className="join-click" src="#">Devenir bénévole</button>
-                    <button id="donate-button" className="join-click" src="#">Faire un don</button>
+                    <button id="donate-button" className="join-click" src="#">Faites un don</button>
                 </div>
                 <div id="header-social__icons">
                     <Facebook className="header-social__item" color="white" />
@@ -64,7 +64,7 @@ const Header = () => {
                             <button id="join-button" className="join-click">Devenir bénévole</button>
                         </NavLink>
                         <NavLink to="/give">
-                            <button id="donate-button" className="join-click">Faire un don</button>
+                            <button id="donate-button" className="join-click">Faites un don</button>
                         </NavLink>
                     </div>
                 </div>
@@ -228,7 +228,7 @@ const Header = () => {
                 <nav>
                     <div id="header-nav__join">
                         <button id="join-button" className="join-click" src="#">Devenir bénévole</button>
-                        <button id="donate-button" className="join-click" src="#">Faire un don</button>
+                        <button id="donate-button" className="join-click" src="#">Faites un don</button>
                     </div>
                     <ul
                         onClick={() => setIsOpen(!isOpen)}
