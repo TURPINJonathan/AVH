@@ -61,7 +61,7 @@ const AVH = () => {
             </section>
             <section className="avh__button">
                 <p>Pour en savoir plus</p>
-                <a className="avh__button-link" href="https://www.avh.asso.fr" target="_blank" rel="noopener noreferrer">AVH Paris</a>
+                <a className="avh__button-link" href="https://www.avh.asso.fr" target="_blank" rel="noopener noreferrer">AVH</a>
             </section>
 
         </main>

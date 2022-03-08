@@ -2,7 +2,7 @@
 
 #rightNav {
     width: 2.5rem;
-    height: 20rem;
+    height: 17rem;
     margin-right: 1rem;
     position: fixed;
     right: 0;
@@ -67,4 +67,10 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 500px) {
+    #rightNav {
+        display: none;
+    }    
 }
