@@ -116,13 +116,23 @@ const Header = () => {
                                         Notre histoire
                                     </NavLink>
                                 </li>
-                                <li className="subnav-link">
-                                    <NavLink
-                                        to="/caen"
-                                    >
-                                        AVH Caen Calvados
-                                    </NavLink>
-                                </li>
+                                <ul className="subnav-link AVHCC">
+                                    <span>AVH Caen Calvados</span>
+                                    <li className="subsubnav-link">
+                                        <NavLink
+                                            to="/1"
+                                        >
+                                            Nos ressources humaines
+                                        </NavLink>
+                                    </li>
+                                    <li className="subsubnav-link">
+                                        <NavLink
+                                            to="/2"
+                                        >
+                                            Bénévoles
+                                        </NavLink>
+                                    </li>
+                                </ul>
                             </ul>
                         }
                     </li>

@@ -72,11 +72,39 @@
                         -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
                         -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
                     } 
+
+                    // .subsubnav-link {
+                    //     font-size: 0.5rem;
+                    // }
                 }
 
                 .subnav-link:hover:last-child {
                     border-bottom: none;
                     border-radius: 0 0 25px 25px;
+                }
+
+                .AVHCC {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 2rem;
+                    border-radius: 0 0 25px 25px;
+
+                    span {
+                        margin-bottom: 1rem;
+                    }
+
+                    .subsubnav-link {
+                        font-size: 0.8rem;
+                        font-style: italic;
+                        width: 100%;
+                        background-color: transparent;
+                        color: vars.$lightGrey;
+
+                        &:hover {
+                            font-style: normal;
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
         }
