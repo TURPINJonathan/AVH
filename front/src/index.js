@@ -14,7 +14,8 @@ import Header from './components/Layout/Header';
 import Main from './components/Main';
 
 // Navigate components
-import Caen from './components/Avh/Caen';
+import Rh from './components/Avh/Caen/RH';
+import Volunteers from './components/Avh/Caen/Volunteers';
 import AVH from './components/Avh/AVH';
 import Actuality from './components/Actuality';
 import Braille from './components/Activity/Braille';
@@ -43,8 +44,13 @@ ReactDOM.render(
           exact
         />
         <Route
-          path="/caen"
-          element={<Caen />}
+          path="/caen/rh"
+          element={<Rh />}
+          exact
+        />
+        <Route
+          path="/caen/benevoles"
+          element={<Volunteers />}
           exact
         />
         <Route

@@ -14,6 +14,8 @@ import { ChevronDown, ChevronUp, Facebook, Instagram, Linkedin, Mail, Twitter, Y
 import dropdown from "../../../functions/dropdown";
 import { NavLink } from "react-router-dom";
 
+// TODO: add Human Ressources && volunteers on burger menu
+
 const Header = () => {
 
     const activity = useRef(null);
@@ -120,14 +122,14 @@ const Header = () => {
                                     <span>AVH Caen Calvados</span>
                                     <li className="subsubnav-link">
                                         <NavLink
-                                            to="/1"
+                                            to="/caen/rh"
                                         >
                                             Nos ressources humaines
                                         </NavLink>
                                     </li>
                                     <li className="subsubnav-link">
                                         <NavLink
-                                            to="/2"
+                                            to="/caen/benevoles"
                                         >
                                             Bénévoles
                                         </NavLink>
