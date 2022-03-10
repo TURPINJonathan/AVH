@@ -17,9 +17,12 @@ footer {
 
         #footer__logo {
             margin: auto 0;
+            margin-top: 2rem;
             img {
                 width: 10rem;
                 height: 10rem;
+                border: 5px vars.$lightGrey solid;
+                border-radius: 50%;
             }
         }
         .footer-content {
