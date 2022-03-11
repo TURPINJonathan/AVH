@@ -128,4 +128,17 @@
             }
         }
     }
+    
+    .desk-orange {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+
+        article {
+            max-width: 45%;
+            aside {
+                background-color: vars.$orange;
+            }
+        }
+    }
 }

@@ -3,6 +3,8 @@
 .history {
     section {
         margin: 1rem;
+        margin-right: 6rem;
+        margin-left: 2rem;
 
         h2 {
             margin: 3rem;
@@ -105,6 +107,15 @@
                 justify-content: center;
                 align-items: center;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .history {
+        section {
+            margin-left: 1rem;
+            margin-right: 1rem;
         }
     }
 }

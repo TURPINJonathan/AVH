@@ -50,7 +50,7 @@ const Braille = () => {
             <article>
                 <h3>Un système novateur</h3>
                 <div id="firstSystem">
-                    <img src={firstBraille} alt="Premier système de braille" />
+                    <img src={firstBraille} alt="Alphabet braille" />
                     <p>
                         Dans cette école, la lecture et l’écriture se pratiquent avec le système initié par Valentin Haüy : des lettres noires (c’est ainsi qu’on nomme l’écriture imprimée, utilisée par les voyants) en relief. Elles sont cependant très difficiles à lire au toucher et ne permettent pas d’écrire.
                     </p>
@@ -59,7 +59,7 @@ const Braille = () => {
                     </p>
                 </div>
                 <div id="secondSystem">
-                    <img src={secondBraille} alt="Second système de braille" />
+                    <img src={secondBraille} alt="Numérotation et autres caractères en braille" />
                     <p>
                         Il est enthousiasmé par ce nouveau code bien plus facile à lire et à écrire, mais qui présente l’inconvénient d’être uniquement phonétique (proche du texto) et d’avoir une hauteur trop élevée pour être lue immédiatement par le doigt.
                     </p>
