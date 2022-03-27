@@ -188,11 +188,17 @@ const Header = () => {
                     <li>
                         <NavLink to="/mecenat-partenariat">Mécénat & Partenariat</NavLink>
                     </li>
+
+                    <li>
+                        <NavLink to="/boutique/catalogue">La boutique</NavLink>
+                    </li>
+                    {/*
                     <li
                         onMouseEnter={() => setSellIsOpen(true)}
                         onMouseLeave={() => setSellIsOpen(false)}
                         ref={sell}
                     >
+                        
                         <span>
                             {sellIsOpen
                                 &&
@@ -204,7 +210,7 @@ const Header = () => {
                             }
                         </span>
                         <p>La boutique</p>
-                        <span>
+                         <span>
                             {sellIsOpen
                                 &&
                                 <ChevronUp className="arrow" />
@@ -224,8 +230,9 @@ const Header = () => {
                                     <NavLink to="/boutique/materiel">Matériel</NavLink>
                                 </li>
                             </ul>
-                        }
+                        } 
                     </li>
+                    */}
                 </ul>
             </nav>
             <div id="header-nav-mobile">
