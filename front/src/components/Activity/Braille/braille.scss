@@ -1,6 +1,12 @@
 @use 'src/styles/vars';
 
 .braille {
+    #josiannePerkins {
+        display: block;
+        margin: auto;
+        width: 70vw;
+        margin-bottom: 1rem;
+    }
     article {
         margin: 2rem 6rem 2rem 2rem;
         display: inline-block;

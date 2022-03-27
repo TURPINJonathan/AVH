@@ -184,6 +184,7 @@ const Braille = () => {
                     </p>
                 </div>
             </article>
+            <img src="https://via.placeholder.com/728x90.png" alt="Machine Perkins utilisée par Josianne" id="josiannePerkins" />
         </main>
     );
 }
