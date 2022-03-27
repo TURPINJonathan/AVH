@@ -3,11 +3,20 @@
 .braille {
     article {
         margin: 2rem 6rem 2rem 2rem;
-        #biography {
+        display: inline-block;
+        #biography, #know, #cebf, #world {
             img {
                 float: left;
                 margin: auto 1rem;
                 max-width: 20rem;
+            }
+
+            #braille_touch {
+                float: none;
+                display: block;
+                margin: auto;
+                margin-bottom: 1rem;
+                min-width: 80vw;
             }
 
             p {
