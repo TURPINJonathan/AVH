@@ -85,7 +85,7 @@ const Braille = () => {
             <article>
                 <h3>Tout savoir sur le braille</h3>
                 <div id="know">
-                    <img src={brailleTouch} alt="lecture du braille au touché" id="braille_touch" />
+                    <img src={brailleTouch} alt="lecture du braille au touché" />
                     <p>
                         Le braille est un système d’écriture tactile à points saillants à l’usage des personnes aveugles ou très malvoyantes mis au point par Louis Braille en 1829. L’un des objectifs principaux de l’association Valentin Haüy depuis sa création, en 1889, est de promouvoir le système d'écriture braille.
                     </p>
@@ -151,25 +151,25 @@ const Braille = () => {
                         En 1992, la CEBF publiait un premier document, fruit de ses cinq années de travail, le "Code de Transcription en braille des textes imprimés". Cet ouvrage formalise un ensemble de règles à observer par les centres de transcription braille (dont la plupart étaient d'ailleurs appliquées de fait) et apporte quelques modifications au système braille de base, notamment en vue de simplifier la transcription automatique par ordinateur. En particulier :
                         <ul>
                             <li>
-                                •	des règles relatives aux majuscules, aux sigles, aux chiffres romains, ainsi qu'aux changements de typographies ont été précisées.
+                                des règles relatives aux majuscules, aux sigles, aux chiffres romains, ainsi qu'aux changements de typographies ont été précisées.
                             </li>
                             <li>
-                                •	les ponctuations "parenthèses" et "guillemets" ont été permutées.
+                                les ponctuations "parenthèses" et "guillemets" ont été permutées.
                             </li>
                             <li>
-                                •	on ne distingue plus de tirets ouvrants ou fermants. En septembre 1999, la CEBF publiait une deuxième édition de ce "Code" apportant de nouvelles précisions dans l'emploi de certains signes, supprimant certaines ambiguïtés et assouplissant encore davantage certaines règles dans le cas de transcriptions automatiques. En particulier :
+                                on ne distingue plus de tirets ouvrants ou fermants. En septembre 1999, la CEBF publiait une deuxième édition de ce "Code" apportant de nouvelles précisions dans l'emploi de certains signes, supprimant certaines ambiguïtés et assouplissant encore davantage certaines règles dans le cas de transcriptions automatiques. En particulier :
                             </li>
                             <li>
-                                •	la ponctuation "point" peut être représentée par la combinaison des points 256 ou par le point 3.
+                                la ponctuation "point" peut être représentée par la combinaison des points 256 ou par le point 3.
                             </li>
                             <li>
-                                •	les tirets peuvent être espacés des mots qu'ils précèdent ou qu'ils suivent si tel est le cas dans le document imprimé.
+                                les tirets peuvent être espacés des mots qu'ils précèdent ou qu'ils suivent si tel est le cas dans le document imprimé.
                             </li>
                             <li>
-                                •	les chiffres dits "Antoine" sont obligatoires dans le cas d'une transcription de documents à caractère scolaire ou technique, tandis que le choix de la notation dite "numérique" ou "Antoine" est laissé aux soins du transcripteur dans le cas de textes à caractère général (romans, revues, documents non techniques).
+                                les chiffres dits "Antoine" sont obligatoires dans le cas d'une transcription de documents à caractère scolaire ou technique, tandis que le choix de la notation dite "numérique" ou "Antoine" est laissé aux soins du transcripteur dans le cas de textes à caractère général (romans, revues, documents non techniques).
                             </li>
                             <li>
-                                •	deux notes générales ont été ajoutées : la première indiquant qu'il appartient au transcripteur de faire un compromis entre la nécessité de ne pas surcharger le texte et le souci de conserver des informations utiles au lecteur, la seconde précisant qu'à chaque fois qu'il peut y avoir ambiguïté du fait de l'emploi de l'abrégé braille français, on doit utiliser l'intégral.
+                                deux notes générales ont été ajoutées : la première indiquant qu'il appartient au transcripteur de faire un compromis entre la nécessité de ne pas surcharger le texte et le souci de conserver des informations utiles au lecteur, la seconde précisant qu'à chaque fois qu'il peut y avoir ambiguïté du fait de l'emploi de l'abrégé braille français, on doit utiliser l'intégral.
                             </li>
                         </ul>
                     </p>
