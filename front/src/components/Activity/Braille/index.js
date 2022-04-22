@@ -6,6 +6,7 @@ import LouisBrailleEnfant from "../../../assets/img/louisBraille_enfant.jpg";
 import firstBraille from "../../../assets/img/firstBraille.jpg";
 import secondBraille from "../../../assets/img/secondBraille.jpg";
 import brailleTouch from "../../../assets/img/braille_touch.jpg";
+import josianePerkins from "../../../assets/img/josiane_perkins.jpg";
 
 const Braille = () => {
     return (
@@ -184,7 +185,7 @@ const Braille = () => {
                     </p>
                 </div>
             </article>
-            <img src="https://via.placeholder.com/728x90.png" alt="Machine Perkins utilisée par Josianne" id="josiannePerkins" />
+            <img src={josianePerkins} alt="Machine Perkins utilisée par Josianne" id="josiannePerkins" />
         </main>
     );
 }
