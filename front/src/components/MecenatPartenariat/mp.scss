@@ -1,5 +1,32 @@
-// @use 'src/styles/vars';
+@use 'src/styles/vars';
 
+.mp {
+    #mp_section {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+
+        .mp_article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+
+            .mp_img {
+                max-width: 20rem;
+                min-width: 10rem;
+            }
+
+            .mp_name {
+                font-size: 1.5rem;
+                font-style: italic;
+                margin: 0.5rem
+            }
+        }
+    }
+}
 
 // @media screen and (max-width: 500px) {
 //     .braille {
