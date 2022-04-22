@@ -2,7 +2,7 @@
 
 .rh {
     section {
-        .rh-left{
+        .rh-left {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,6 +18,7 @@
                     height: 10rem;
                 }
             }
+
             aside {
                 margin-left: 2rem;
                 font-size: 1.5rem;
@@ -33,9 +34,9 @@
                 flex-direction: column;
                 justify-content: center;
                 color: vars.$lightGrey;
-                box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
-                -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
-                -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+                box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
+                -webkit-box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
+                -moz-box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
 
                 .function {
                     font-style: italic;
@@ -58,8 +59,8 @@
             }
         }
 
-        
-        .rh-right{
+
+        .rh-right {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -75,6 +76,7 @@
                     height: 10rem;
                 }
             }
+
             aside {
                 margin-left: 2rem;
                 font-size: 1.5rem;
@@ -90,9 +92,9 @@
                 flex-direction: column;
                 justify-content: center;
                 color: vars.$lightGrey;
-                box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
-                -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
-                -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+                box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
+                -webkit-box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
+                -moz-box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
 
                 .function {
                     font-style: italic;
@@ -123,12 +125,13 @@
 
         article {
             max-width: 45%;
+
             aside {
                 background-color: vars.$violet;
             }
         }
     }
-    
+
     .desk-orange {
         width: 100%;
         display: flex;
@@ -136,6 +139,7 @@
 
         article {
             max-width: 45%;
+
             aside {
                 background-color: vars.$orange;
             }
@@ -143,6 +147,21 @@
     }
 }
 
+@media screen and (max-width: 1250px) {
+    .rh {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        section {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+    }
+}
 
 @media screen and (max-width: 500px) {
     .rh {
