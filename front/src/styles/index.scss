@@ -55,6 +55,11 @@ body {
       margin-bottom: 1rem;
       line-height: 1.5rem;
 
+      .loading {
+        margin: auto;
+        display: block;
+      }
+
       .divider {
         height: 3px;
         width: 80vw;
