@@ -21,6 +21,7 @@ import Actuality from './components/Actuality';
 import Braille from './components/Activity/Braille';
 import Informatique from './components/Activity/Informatique';
 import Cls from './components/Activity/Cls';
+import Sensibilisation from './components/Activity/Sensibilisation';
 import Formation from './components/Activity/Formation';
 import Mp from './components/MecenatPartenariat';
 import Book from './components/Shop/Book';
@@ -76,6 +77,11 @@ ReactDOM.render(
         <Route
           path="/activites/informatique"
           element={<Informatique />}
+          exact
+        />
+        <Route
+          path="/activites/sensibilisation"
+          element={<Sensibilisation />}
           exact
         />
         <Route

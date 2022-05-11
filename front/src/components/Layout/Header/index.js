@@ -180,6 +180,9 @@ const Header = () => {
                                     <NavLink to="/activites/formation">Formation professionnelle</NavLink>
                                 </li>
                                 <li className="subnav-link">
+                                    <NavLink to="/activites/sensibilisation"> La sensibilisation</NavLink>
+                                </li>
+                                <li className="subnav-link">
                                     <NavLink to="/activites/cls">Culture loisirs et sport</NavLink>
                                 </li>
                             </ul>
