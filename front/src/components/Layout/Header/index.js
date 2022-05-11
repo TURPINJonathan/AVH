@@ -177,7 +177,7 @@ const Header = () => {
                                     <NavLink to="/activites/informatique">L'informatique adapté</NavLink>
                                 </li>
                                 <li className="subnav-link">
-                                    <NavLink to="/activites/formation">Formation professionnelle</NavLink>
+                                    <NavLink to="/activites/accessibility">L'accessibilité</NavLink>
                                 </li>
                                 <li className="subnav-link">
                                     <NavLink to="/activites/sensibilisation"> La sensibilisation</NavLink>

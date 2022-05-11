@@ -22,7 +22,7 @@ import Braille from './components/Activity/Braille';
 import Informatique from './components/Activity/Informatique';
 import Cls from './components/Activity/Cls';
 import Sensibilisation from './components/Activity/Sensibilisation';
-import Formation from './components/Activity/Formation';
+import Accessibility from './components/Activity/Accessibility';
 import Mp from './components/MecenatPartenariat';
 import Book from './components/Shop/Book';
 import Equipment from './components/Shop/Equipment';
@@ -85,8 +85,8 @@ ReactDOM.render(
           exact
         />
         <Route
-          path="/activites/formation"
-          element={<Formation />}
+          path="/activites/accessibility"
+          element={<Accessibility />}
           exact
         />
         <Route
