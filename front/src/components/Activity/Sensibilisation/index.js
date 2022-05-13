@@ -3,8 +3,6 @@ import React from "react";
 import './sensibilisation.scss';
 import Pin from "../../../assets/img/list_style.png"
 
-import loading from '../../../assets/img/page_developping.png';
-
 const Sensibilitation = () => {
     return (
         <main className="sensibilisation">
@@ -29,22 +27,35 @@ const Sensibilitation = () => {
                 <ul>
                     <li>
                         <img src={Pin} alt="Pin" className="pin" />
-                        Module de présentation du handicap visuel pour tout public ;
+                        <p>Module de présentation du handicap visuel pour tout public</p>
                     </li>
                     <li>
                         <img src={Pin} alt="Pin" className="pin" />
-                        Module de prise en charge et accompagnement d’une personne déficiente visuelle au travail, dans un service de santé, une maison de retraite, pour une aide à domicile…
+                        <p>Module de prise en charge et accompagnement d’une personne déficiente visuelle au travail, dans un service de santé, une maison de retraite, pour une aide à domicile…</p>
                     </li>
                     <li>
                         <img src={Pin} alt="Pin" className="pin" />
-                        Module de présentation et formation à l’usage de matériels adaptés
+                        <p>Module de présentation et formation à l’usage de matériels adaptés</p>
                     </li>
                     <li>
                         <img src={Pin} alt="Pin" className="pin" />
-                        Module de sensibilisation à l’accessibilité numérique
+                        <p>Module de sensibilisation à l’accessibilité numérique</p>
                     </li>
                 </ul>
-
+                <img src="https://via.placeholder.com/150" alt="Déficient visuel dans le tramway" />
+                <p>
+                    Toutes ces sensibilisations étant bien entendu adaptables selon les besoins de votre établissement, entreprise ou service, ses spécificités, dans le cadre de votre activité professionnelle ou de votre environnement urbain...
+                </p>
+                <p>
+                    Kéolis Caen et Orange nous ont fait confiance.
+                </p>
+                <div className="sensibilisation_picture">
+                    <img src="https://via.placeholder.com/150" alt="logo KEOLIS" />
+                    <img src="https://via.placeholder.com/150" alt="logo ORANGE" />
+                </div>
+                <p>
+                    Le catalogue des sensibilisations peut vous être envoyé par mail sur simple demande.
+                </p>
             </article>
         </main>
     );

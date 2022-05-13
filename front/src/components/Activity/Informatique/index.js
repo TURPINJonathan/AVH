@@ -26,22 +26,28 @@ const Informatique = () => {
                         <ul>
                             <li>
                                 <img src={Pin} alt="Pin" className="pin" />
-                                Accéder à Internet et correspondre par messagerie avec d’autres personnes</li>
+                                Accéder à Internet et correspondre par messagerie avec d’autres personnes
+                            </li>
                             <li>
                                 <img src={Pin} alt="Pin" className="pin" />
-                                Lire des documents en noir (document classique non transcrit en braille)</li>
+                                Lire des documents en noir (document classique non transcrit en braille)
+                            </li>
                             <li>
                                 <img src={Pin} alt="Pin" className="pin" />
-                                Écrire et imprimer du courrier</li>
+                                Écrire et imprimer du courrier
+                            </li>
                             <li>
                                 <img src={Pin} alt="Pin" className="pin" />
-                                Classer et retrouver des documents sur support numérique</li>
+                                Classer et retrouver des documents sur support numérique
+                            </li>
                             <li>
                                 <img src={Pin} alt="Pin" className="pin" />
-                                Se constituer un agenda ou une liste d’adresses</li>
+                                Se constituer un agenda ou une liste d’adresses
+                            </li>
                             <li>
                                 <img src={Pin} alt="Pin" className="pin" />
-                                Consulter un dictionnaire ou une encyclopédie numérique</li>
+                                Consulter un dictionnaire ou une encyclopédie numérique
+                            </li>
                         </ul>
                     </div>
                 </div>
