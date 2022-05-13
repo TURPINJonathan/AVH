@@ -1,0 +1,29 @@
+@use 'src/styles/vars';
+
+.accessibility {
+
+    ul {
+        margin: 20px;
+    }
+
+    img {
+        width: 15rem;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    .except {
+        font-weight: bolder;
+        font-size: 1.5rem;
+        color: red;
+        text-align: center;
+        margin: 1rem auto;
+    }
+}
+
+
+// @media screen and (max-width: 500px) {
+//     .braille {
+//         padding-right: 2rem !important;
+//     }
+// }

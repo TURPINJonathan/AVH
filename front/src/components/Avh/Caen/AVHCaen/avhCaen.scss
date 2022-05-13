@@ -1,0 +1,66 @@
+@use 'src/styles/vars';
+
+.AVHCaen {
+
+    article {
+        margin: 1.5rem auto;
+
+        .double_picture {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            img {
+                width: 20rem;
+                margin: 1.5rem auto;
+            }
+        }
+
+        .definition {
+            font-style: italic;
+            font-size: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        img {
+            width: 20rem;
+            margin: 1.5rem auto;
+            display: block;
+        }
+
+        .picture_comment {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem auto;
+
+            p,
+            img {
+                margin: 0.2rem;
+                font-style: italic;
+                font-size: 0.8rem;
+            }
+        }
+
+        #join_us {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 4rem auto;
+            font-size: 2rem;
+            font-weight: bold;
+
+            p {
+                margin: 0.5rem;
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: 500px) {
+//     .braille {
+//         padding-right: 2rem !important;
+//     }
+// }

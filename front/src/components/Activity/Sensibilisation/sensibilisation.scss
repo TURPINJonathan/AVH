@@ -1,0 +1,48 @@
+.sensibilisation {
+    h2 {
+        margin: 1rem;
+    }
+
+    article {
+        .sensibilisation_picture {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            img {
+                width: 15rem;
+                margin: 1rem;
+            }
+        }
+
+        p {
+            margin: 1rem;
+        }
+
+        ul {
+            margin: 20px;
+            text-align: left;
+
+            li {
+                margin: 0 auto -1rem 1rem;
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        img {
+            display: block;
+            margin: 1.5rem auto;
+        }
+    }
+}
+
+// @media screen and (max-width: 500px) {
+//     .braille {
+//         padding-right: 2rem !important;
+//     }
+// }

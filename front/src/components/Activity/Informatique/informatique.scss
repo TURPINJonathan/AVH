@@ -1,0 +1,25 @@
+.informatique {
+
+    article {
+
+        .informatique_content {
+            display: flex;
+            justify-content: space-evenly;
+
+            img {
+                width: 20rem;
+                margin-right: 1rem;
+            }
+        }
+
+        ul {
+            margin: 20px;
+        }
+    }
+}
+
+// @media screen and (max-width: 500px) {
+//     .braille {
+//         padding-right: 2rem !important;
+//     }
+// }

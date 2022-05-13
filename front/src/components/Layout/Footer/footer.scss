@@ -9,6 +9,7 @@ footer {
     box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
+    width: 100vw;
 
     #footer {
         display: flex;
@@ -16,9 +17,15 @@ footer {
 
         #footer__logo {
             margin: auto 0;
+            margin-top: 2rem;
             img {
                 width: 10rem;
                 height: 10rem;
+                // border: 5px vars.$lightGrey solid;
+                border-radius: 50%;
+                box-shadow: 0px -1px 22px 0px vars.$lightGrey;
+                -webkit-box-shadow: 0px -1px 22px 0px vars.$lightGrey;
+                -moz-box-shadow: 0px -1px 22px 0px vars.$lightGrey;
             }
         }
         .footer-content {

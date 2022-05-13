@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 
 import "./header.scss";
 import "./nav.scss";
+import './burger.scss';
 
 // pictures
 import Logo from "../../../assets/img/logo.png";
-import Volunteer from "../../../assets/img/devenir_benevole.png";
-import Donate from "../../../assets/img/faire_un_don.png";
 
 // Feather
 import { ChevronDown, ChevronUp, Facebook, Instagram, Linkedin, Mail, Twitter, Youtube } from "react-feather";
@@ -15,12 +14,16 @@ import { ChevronDown, ChevronUp, Facebook, Instagram, Linkedin, Mail, Twitter, Y
 import dropdown from "../../../functions/dropdown";
 import { NavLink } from "react-router-dom";
 
+// TODO: add Human Ressources && volunteers on burger menu
+
 const Header = () => {
 
     const activity = useRef(null);
     const avhDropdown = useRef(null);
     const sell = useRef(null);
 
+    const [isOpen, setIsOpen] = useState(false);
+    console.log(isOpen);
     const [avhIsOpen, setAvhIsOpen] = useState(false);
     const [activityIsOpen, setActivityIsOpen] = useState(false);
     const [sellIsOpen, setSellIsOpen] = useState(false);
@@ -34,7 +37,7 @@ const Header = () => {
             <div id="header-social">
                 <div id="header-main__join">
                     <button id="join-button" className="join-click" src="#">Devenir bénévole</button>
-                    <button id="donate-button" className="join-click" src="#">Faire un don</button>
+                    <button id="donate-button" className="join-click" src="#">Faites un don</button>
                 </div>
                 <div id="header-social__icons">
                     <Facebook className="header-social__item" color="white" />
@@ -63,7 +66,7 @@ const Header = () => {
                             <button id="join-button" className="join-click">Devenir bénévole</button>
                         </NavLink>
                         <NavLink to="/give">
-                            <button id="donate-button" className="join-click">Faire un don</button>
+                            <button id="donate-button" className="join-click">Faites un don</button>
                         </NavLink>
                     </div>
                 </div>
@@ -103,18 +106,41 @@ const Header = () => {
                             <ul className="subnav">
                                 <li className="subnav-link">
                                     <NavLink
-                                        to="/paris"
+                                        to="/AVH"
                                     >
-                                        AVH Paris
+                                        Présentation de l'AVH
                                     </NavLink>
                                 </li>
                                 <li className="subnav-link">
                                     <NavLink
-                                        to="/caen"
+                                        to="/history"
                                     >
-                                        AVH Caen Calvados
+                                        Notre histoire
                                     </NavLink>
                                 </li>
+                                <ul className="subnav-link AVHCC">
+                                    <span>
+                                        <NavLink
+                                            to="/caen/AVH"
+                                        >
+                                            AVH Caen Calvados
+                                        </NavLink>
+                                    </span>
+                                    <li className="subsubnav-link">
+                                        <NavLink
+                                            to="/caen/rh"
+                                        >
+                                            Nos ressources humaines
+                                        </NavLink>
+                                    </li>
+                                    <li className="subsubnav-link">
+                                        <NavLink
+                                            to="/caen/benevoles"
+                                        >
+                                            Bénévoles
+                                        </NavLink>
+                                    </li>
+                                </ul>
                             </ul>
                         }
                     </li>
@@ -157,7 +183,10 @@ const Header = () => {
                                     <NavLink to="/activites/informatique">L'informatique adapté</NavLink>
                                 </li>
                                 <li className="subnav-link">
-                                    <NavLink to="/activites/formation">Formation professionnelle</NavLink>
+                                    <NavLink to="/activites/accessibility">L'accessibilité</NavLink>
+                                </li>
+                                <li className="subnav-link">
+                                    <NavLink to="/activites/sensibilisation"> La sensibilisation</NavLink>
                                 </li>
                                 <li className="subnav-link">
                                     <NavLink to="/activites/cls">Culture loisirs et sport</NavLink>
@@ -168,11 +197,17 @@ const Header = () => {
                     <li>
                         <NavLink to="/mecenat-partenariat">Mécénat & Partenariat</NavLink>
                     </li>
+
+                    <li>
+                        <NavLink to="/boutique/catalogue">La boutique</NavLink>
+                    </li>
+                    {/*
                     <li
                         onMouseEnter={() => setSellIsOpen(true)}
                         onMouseLeave={() => setSellIsOpen(false)}
                         ref={sell}
                     >
+                        
                         <span>
                             {sellIsOpen
                                 &&
@@ -184,7 +219,7 @@ const Header = () => {
                             }
                         </span>
                         <p>La boutique</p>
-                        <span>
+                         <span>
                             {sellIsOpen
                                 &&
                                 <ChevronUp className="arrow" />
@@ -204,10 +239,110 @@ const Header = () => {
                                     <NavLink to="/boutique/materiel">Matériel</NavLink>
                                 </li>
                             </ul>
-                        }
+                        } 
                     </li>
+                    */}
                 </ul>
             </nav>
+            <div id="header-nav-mobile">
+                <input id="burger" type="checkbox" className="burger-check" checked={isOpen} onClick={() => setIsOpen(!isOpen)} />
+
+                <label for="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav>
+                    <div id="header-nav__join">
+                        <button id="join-button" className="join-click" src="#">Devenir bénévole</button>
+                        <button id="donate-button" className="join-click" src="#">Faites un don</button>
+                    </div>
+                    <ul
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        <li className="burger-title">
+                            Association Valentin Haüy
+                            <NavLink
+                                to="/AVH"
+                                className="burger-subTitle"
+                            >
+                                Présentation de l'AVH
+                            </NavLink>
+                            <NavLink
+                                to="/history"
+                                className="burger-subTitle"
+                            >
+                                Notre histoire
+                            </NavLink>
+                            <NavLink
+                                to="/caen"
+                                className="burger-subTitle"
+                            >
+                                AVH Caen
+                            </NavLink>
+                        </li>
+                        <li className="burger-title">
+                            <NavLink
+                                to="/actualites"
+                                className="burger-title"
+                            >
+                                Actualités
+                            </NavLink>
+                        </li>
+                        <li className="burger-title">
+                            Activités
+                            <NavLink
+                                to="/braille"
+                                className="burger-subTitle"
+                            >
+                                Le Braille
+                            </NavLink>
+                            <NavLink
+                                to="/informatique"
+                                className="burger-subTitle"
+                            >
+                                L'informatique adapté
+                            </NavLink>
+                            <NavLink
+                                to="/formation"
+                                className="burger-subTitle"
+                            >
+                                Formation Professionnelle
+                            </NavLink>
+                            <NavLink
+                                to="/cls"
+                                className="burger-subTitle"
+                            >
+                                Culture, loisirs et sports
+                            </NavLink>
+                        </li>
+                        <li className="burger-title">
+                            <NavLink
+                                to="/mecenat-partenariat"
+                                className="burger-title"
+                            >
+                                Mécenat & Partenariat
+                            </NavLink>
+                        </li>
+                        <li className="burger-title">
+                            La boutique
+                            <NavLink
+                                to="/boutique/catalogue"
+                                className="burger-subTitle"
+                            >
+                                Le catalogue
+                            </NavLink>
+                            <NavLink
+                                to="/boutique/materiel"
+                                className="burger-subTitle"
+                            >
+                                Le matériel
+                            </NavLink>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header >
     );
 };

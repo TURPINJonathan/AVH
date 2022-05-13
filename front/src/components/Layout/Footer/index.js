@@ -32,8 +32,6 @@ const Footer = () => {
                     <p className="footer-content__text"><Phone /> 02 31 85 71 57</p>
                     <p className="footer-content__text"><Phone /> 06 29 36 49 28</p>
                     <p className="footer-content__text"><Mail /> comite.caen@avh.asso.fr</p>
-                    <p className="footer-content__text"><Mail /> communication@avhcaen.fr</p>
-                    <p className="footer-content__text"><Mail /> contact@avhcaen.fr</p>
                 </div>
                 <div className="footer-content">
                     <p className="footer-content__title">Aidez-nous</p>

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
+//styles
 import './styles/index.scss';
 
 //? imports components
@@ -13,13 +14,15 @@ import Header from './components/Layout/Header';
 import Main from './components/Main';
 
 // Navigate components
-import Caen from './components/Avh/Caen';
-import Paris from './components/Avh/Paris';
+import Rh from './components/Avh/Caen/RH';
+import Volunteers from './components/Avh/Caen/Volunteers';
+import AVH from './components/Avh/AVH';
 import Actuality from './components/Actuality';
 import Braille from './components/Activity/Braille';
 import Informatique from './components/Activity/Informatique';
 import Cls from './components/Activity/Cls';
-import Formation from './components/Activity/Formation';
+import Sensibilisation from './components/Activity/Sensibilisation';
+import Accessibility from './components/Activity/Accessibility';
 import Mp from './components/MecenatPartenariat';
 import Book from './components/Shop/Book';
 import Equipment from './components/Shop/Equipment';
@@ -27,11 +30,15 @@ import Come from './components/Other/Come';
 import Give from './components/Other/Give';
 import Contact from './components/Other/Contact';
 import Map from './components/Map';
+import RightNav from './components/Layout/RightNav';
+import History from './components/Avh/History';
+import AVHCaen from './components/Avh/Caen/AVHCaen';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Header />
+      <RightNav />
       <Routes>
         <Route
           path="/"
@@ -39,13 +46,28 @@ ReactDOM.render(
           exact
         />
         <Route
-          path="/caen"
-          element={<Caen />}
+          path="/caen/rh"
+          element={<Rh />}
           exact
         />
         <Route
-          path="/paris"
-          element={<Paris />}
+          path="/caen/benevoles"
+          element={<Volunteers />}
+          exact
+        />
+        <Route
+          path="/AVH"
+          element={<AVH />}
+          exact
+        />
+        <Route
+          path="caen/AVH"
+          element={<AVHCaen />}
+          exact
+        />
+        <Route
+          path="/history"
+          element={<History />}
           exact
         />
         <Route
@@ -64,8 +86,13 @@ ReactDOM.render(
           exact
         />
         <Route
-          path="/activites/formation"
-          element={<Formation />}
+          path="/activites/sensibilisation"
+          element={<Sensibilisation />}
+          exact
+        />
+        <Route
+          path="/activites/accessibility"
+          element={<Accessibility />}
           exact
         />
         <Route
