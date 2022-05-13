@@ -119,7 +119,13 @@ const Header = () => {
                                     </NavLink>
                                 </li>
                                 <ul className="subnav-link AVHCC">
-                                    <span>AVH Caen Calvados</span>
+                                    <span>
+                                        <NavLink
+                                            to="/caen/AVH"
+                                        >
+                                            AVH Caen Calvados
+                                        </NavLink>
+                                    </span>
                                     <li className="subsubnav-link">
                                         <NavLink
                                             to="/caen/rh"

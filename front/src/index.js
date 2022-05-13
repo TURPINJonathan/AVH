@@ -32,6 +32,7 @@ import Contact from './components/Other/Contact';
 import Map from './components/Map';
 import RightNav from './components/Layout/RightNav';
 import History from './components/Avh/History';
+import AVHCaen from './components/Avh/Caen/AVHCaen';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -57,6 +58,11 @@ ReactDOM.render(
         <Route
           path="/AVH"
           element={<AVH />}
+          exact
+        />
+        <Route
+          path="caen/AVH"
+          element={<AVHCaen />}
           exact
         />
         <Route
