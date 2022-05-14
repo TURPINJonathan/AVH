@@ -4,7 +4,7 @@ import './sensibilisation.scss';
 import Pin from "../../../assets/img/list_style.png"
 import Orange from "../../../assets/img//partnership/orange_logo.png"
 import Keolis from "../../../assets/img//partnership/keolis_logo.png"
-import Tramway from "../../../assets/sensibilisation/tramway.jpg"
+import Tramway from "../../../assets/img/sensibilisation/tramway.jpg"
 
 const Sensibilitation = () => {
     return (
