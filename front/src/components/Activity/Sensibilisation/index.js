@@ -2,6 +2,9 @@ import React from "react";
 
 import './sensibilisation.scss';
 import Pin from "../../../assets/img/list_style.png"
+import Orange from "../../../assets/img//partnership/orange_logo.png"
+import Keolis from "../../../assets/img//partnership/keolis_logo.png"
+import Tramway from "../../../assets/sensibilisation/tramway.jpg"
 
 const Sensibilitation = () => {
     return (
@@ -42,7 +45,7 @@ const Sensibilitation = () => {
                         <p>Module de sensibilisation à l’accessibilité numérique</p>
                     </li>
                 </ul>
-                <img src="https://via.placeholder.com/150" alt="Déficient visuel dans le tramway" />
+                <img src={Tramway} alt="Déficient visuel dans le tramway" />
                 <p>
                     Toutes ces sensibilisations étant bien entendu adaptables selon les besoins de votre établissement, entreprise ou service, ses spécificités, dans le cadre de votre activité professionnelle ou de votre environnement urbain...
                 </p>
@@ -50,8 +53,8 @@ const Sensibilitation = () => {
                     Kéolis Caen et Orange nous ont fait confiance.
                 </p>
                 <div className="sensibilisation_picture">
-                    <img src="https://via.placeholder.com/150" alt="logo KEOLIS" />
-                    <img src="https://via.placeholder.com/150" alt="logo ORANGE" />
+                    <img src={Orange} alt="logo KEOLIS" />
+                    <img src={Keolis} alt="logo ORANGE" />
                 </div>
                 <p>
                     Le catalogue des sensibilisations peut vous être envoyé par mail sur simple demande.

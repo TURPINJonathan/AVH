@@ -5,6 +5,17 @@
         .informatique_content {
             display: flex;
             justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            .picture {
+                width: auto;
+                min-width: 25%;
+                height: auto;
+            }
+
+            div {
+                max-width: 50%;
+            }
 
             img {
                 width: 20rem;
