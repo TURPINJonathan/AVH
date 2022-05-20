@@ -7,13 +7,24 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Actualite;
+use App\Entity\AvhCaen;
+use App\Entity\AvhCompteRendu;
+use App\Entity\AvhNational;
+use App\Entity\Boutique;
+use App\Entity\Faq;
+use App\Entity\Legal;
+use App\Entity\Mission;
+use App\Entity\Partenaire;
+use App\Entity\User;
+
 
 class DashboardController extends AbstractDashboardController
 {
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        return parent::index();
+        // return parent::index();
 
         // Option 1. You can make your dashboard redirect to some common page of your backend
         //
@@ -29,18 +40,28 @@ class DashboardController extends AbstractDashboardController
         // Option 3. You can render some custom template to display a proper dashboard with widgets, etc.
         // (tip: it's easier if your template extends from @EasyAdmin/page/content.html.twig)
         //
-        // return $this->render('some/path/my-dashboard.html.twig');
+        return $this->render('back/home.html.twig');
     }
 
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Back');
+            ->setTitle('Back Office');
     }
 
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linkToCrud('Actualité', 'fa fa-newspaper', Actualite::class);
+        yield MenuItem::linkToCrud('AVH Caen', 'fa fa-duotone fa-location-crosshairs', AvhCaen::class);
+        yield MenuItem::linkToCrud('AVH Compte Rendu', 'fa fa-duotone fa-file-pen', AvhCompteRendu::class);
+        yield MenuItem::linkToCrud('AVH National', 'fa fa-duotone fa-earth-europe', AvhNational::class);
+        yield MenuItem::linkToCrud('Boutique', 'fa fa-duotone fa-shop', Boutique::class);
+        yield MenuItem::linkToCrud('Faq', 'fa fa-duotone fa-question', Faq::class);
+        yield MenuItem::linkToCrud('Legal', 'fa fa-duotone fa-scale-balanced', Legal::class);
+        yield MenuItem::linkToCrud('Mission', 'fa fa-duotone fa-user-secret', Mission::class);
+        yield MenuItem::linkToCrud('Partenaire', 'fa fa-duotone fa-handshake', Partenaire::class);
+        yield MenuItem::linkToCrud('Utilisateur', 'fa fa-duotone fa-user', User::class);
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }
