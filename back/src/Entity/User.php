@@ -4,45 +4,109 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-class User
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    #[ORM\Column(type: 'string', length: 100)]
-    private $nom;
-
-    #[ORM\Column(type: 'string', length: 100)]
-    private $prenom;
-
-    #[ORM\Column(type: 'json')]
-    private $fonction = [];
-
-    #[ORM\Column(type: 'string', length: 255)]
-    private $mot_de_passe;
-
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 180, unique: true)]
     private $email;
 
-    #[ORM\Column(type: 'integer', nullable: true)]
+    #[ORM\Column(type: 'json')]
+    private $roles = [];
+
+    #[ORM\Column(type: 'string')]
+    private $password;
+
+    #[ORM\Column(type: 'string', length: 20)]
+    private $nom;
+
+    #[ORM\Column(type: 'string', length: 20)]
+    private $prenom;
+
+    #[ORM\Column(type: 'string', length: 40)]
+    private $fonction;
+
+    #[ORM\Column(type: 'integer')]
     private $telephone;
 
-    #[ORM\Column(type: 'boolean')]
+    #[ORM\Column(type: 'boolean', nullable: true)]
     private $bureau;
-
-    #[ORM\Column(type: 'json')]
-    private $role = [];
-
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $liseuse;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUserIdentifier(): string
+    {
+        return (string) $this->email;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * @see PasswordAuthenticatedUserInterface
+     */
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 
     public function getNom(): ?string
@@ -69,38 +133,14 @@ class User
         return $this;
     }
 
-    public function getFonction(): ?array
+    public function getFonction(): ?string
     {
         return $this->fonction;
     }
 
-    public function setFonction(array $fonction): self
+    public function setFonction(string $fonction): self
     {
         $this->fonction = $fonction;
-
-        return $this;
-    }
-
-    public function getMotDePasse(): ?string
-    {
-        return $this->mot_de_passe;
-    }
-
-    public function setMotDePasse(string $mot_de_passe): self
-    {
-        $this->mot_de_passe = $mot_de_passe;
-
-        return $this;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(string $email): self
-    {
-        $this->email = $email;
 
         return $this;
     }
@@ -110,7 +150,7 @@ class User
         return $this->telephone;
     }
 
-    public function setTelephone(?int $telephone): self
+    public function setTelephone(int $telephone): self
     {
         $this->telephone = $telephone;
 
@@ -122,33 +162,9 @@ class User
         return $this->bureau;
     }
 
-    public function setBureau(bool $bureau): self
+    public function setBureau(?bool $bureau): self
     {
         $this->bureau = $bureau;
-
-        return $this;
-    }
-
-    public function getRole(): ?array
-    {
-        return $this->role;
-    }
-
-    public function setRole(array $role): self
-    {
-        $this->role = $role;
-
-        return $this;
-    }
-
-    public function getLiseuse(): ?string
-    {
-        return $this->liseuse;
-    }
-
-    public function setLiseuse(?string $liseuse): self
-    {
-        $this->liseuse = $liseuse;
 
         return $this;
     }
