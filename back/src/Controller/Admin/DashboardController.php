@@ -52,16 +52,16 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linkToCrud('Boutique', 'fa fa-duotone fa-shop', Boutique::class);
+        yield MenuItem::linkToCrud('Utilisateur', 'fa fa-duotone fa-user', User::class);
         yield MenuItem::linkToCrud('Actualité', 'fa fa-newspaper', Actualite::class);
+        yield MenuItem::linkToCrud('Mission', 'fa fa-duotone fa-user-secret', Mission::class);
+        yield MenuItem::linkToCrud('Partenaire', 'fa fa-duotone fa-handshake', Partenaire::class);
         yield MenuItem::linkToCrud('AVH Caen', 'fa fa-duotone fa-location-crosshairs', AvhCaen::class);
         yield MenuItem::linkToCrud('AVH Compte Rendu', 'fa fa-duotone fa-file-pen', AvhCompteRendu::class);
         yield MenuItem::linkToCrud('AVH National', 'fa fa-duotone fa-earth-europe', AvhNational::class);
-        yield MenuItem::linkToCrud('Boutique', 'fa fa-duotone fa-shop', Boutique::class);
         yield MenuItem::linkToCrud('Faq', 'fa fa-duotone fa-question', Faq::class);
         yield MenuItem::linkToCrud('Legal', 'fa fa-duotone fa-scale-balanced', Legal::class);
-        yield MenuItem::linkToCrud('Mission', 'fa fa-duotone fa-user-secret', Mission::class);
-        yield MenuItem::linkToCrud('Partenaire', 'fa fa-duotone fa-handshake', Partenaire::class);
-        yield MenuItem::linkToCrud('Utilisateur', 'fa fa-duotone fa-user', User::class);
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }
