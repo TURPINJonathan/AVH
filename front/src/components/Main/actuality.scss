@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+
     .main-actuality-content-text {
         height: 100%;
         width: 75vw;
@@ -24,13 +25,14 @@
             height: 90%;
             width: 100%;
             padding-right: 6rem;
-            box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
-            -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
-            -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75) inset;
+            box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
+            -webkit-box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
+            -moz-box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
 
             .main-actuality-content-title {
                 margin-top: 1rem;
             }
+
             .main-actuality-content-contentText {
                 width: 80%;
                 height: auto;
@@ -44,6 +46,7 @@
                 min-height: 30px;
                 margin-top: 1rem;
                 margin-bottom: 1rem;
+
                 .main-actuality-content-button {
                     display: flex;
                     justify-content: center;
@@ -56,12 +59,12 @@
                     background-color: vars.$lightGrey;
                     border: 2px solid transparent;
                     color: vars.$TGrey;
-                    box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
-                    -webkit-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
-                    -moz-box-shadow: 0px -1px 22px 0px rgba(0,0,0,0.75);
+                    box-shadow: 0px -1px 22px 0px rgba(0, 0, 0, 0.75);
+                    -webkit-box-shadow: 0px -1px 22px 0px rgba(0, 0, 0, 0.75);
+                    -moz-box-shadow: 0px -1px 22px 0px rgba(0, 0, 0, 0.75);
 
                     &:hover {
-                        background-color:transparent;
+                        background-color: transparent;
                         border: 2px solid vars.$lightGrey;
                         color: vars.$lightGrey;
                     }
@@ -79,21 +82,23 @@
         position: absolute;
         height: 100%;
         right: 0;
+
         .main-actuality-content-img {
             clip-path: polygon(20% 0%, 100% 0, 100% 100%, 20% 100%, 0% 50%);
             height: 100%;
             width: 40vw;
             justify-self: end;
-        } 
+        }
     }
 }
 
 @media screen and (max-width: 950px) {
     .main {
-        margin-top: 3rem;
+        margin-top: 7rem;
+
         .main-actuality {
             // background-color: green;
-
+            width: 85vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -109,20 +114,21 @@
                     padding: 0;
                 }
             }
- 
+
             .main-actuality-content-img--container {
                 filter: none;
                 position: initial;
                 height: 100%;
                 width: 100vw;
                 margin-bottom: 5rem;
+
                 .main-actuality-content-img {
                     clip-path: none;
                     height: 100%;
                     width: 100vw;
                     // bottom: 0;
                     // justify-self: end;
-                } 
+                }
             }
 
         }

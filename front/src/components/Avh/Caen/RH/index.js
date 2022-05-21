@@ -6,6 +6,13 @@ import './rh.scss';
 import President from "../../../../assets/img/president.jpg";
 import Logo from "../../../../assets/img/logo.png";
 
+//photos
+import jeanPierreLeclercq from "../../../../assets/img/desk/jeanPierreLeclercq.jpg";
+import josianePacary from "../../../../assets/img/desk/josianePacary.jpg";
+import damienGuillemette from "../../../../assets/img/desk/damienGuillemette.jpg";
+import francoiseThomas from "../../../../assets/img/desk/francoiseThomas.jpg";
+import maryseLesur from "../../../../assets/img/desk/maryseLesur.jpg";
+
 const Rh = () => {
     return (
         <main className="rh">
@@ -14,7 +21,7 @@ const Rh = () => {
             <section>
                 <article className="rh-left">
                     <div className="img-container">
-                        <img src={Logo} alt="Jean Pierre LECLERCQ, président de l'association Valentin Haüy Caen Calvados" />
+                        <img src={jeanPierreLeclercq} alt="Jean Pierre LECLERCQ, président de l'association Valentin Haüy Caen Calvados" />
                     </div>
                     <aside>
                         <p className="name">Jean-Pierre LECLERCQ</p>
@@ -38,7 +45,7 @@ const Rh = () => {
                 </article>
                 <article className="rh-left">
                     <div className="img-container">
-                        <img src={Logo} alt="Josiane PACARY, responsable braille de l'association Valentin Haüy Caen Calvados" />
+                        <img src={josianePacary} alt="Josiane PACARY, responsable braille de l'association Valentin Haüy Caen Calvados" />
                     </div>
                     <aside>
                         <p className="name">Josiane PACARY</p>
@@ -57,7 +64,7 @@ const Rh = () => {
                         <p className="phone">06 15 30 88 96</p>
                     </aside>
                     <div className="img-container">
-                        <img src={Logo} alt="Françoise THOMAS, responsable administrative de l'association Valentin Haüy Caen Calvados" />
+                        <img src={francoiseThomas} alt="Françoise THOMAS, responsable administrative de l'association Valentin Haüy Caen Calvados" />
                     </div>
                 </article>
                 <article className="rh-left">
@@ -86,7 +93,7 @@ const Rh = () => {
                 </article>
                 <article className="rh-left">
                     <div className="img-container">
-                        <img src={Logo} alt="Damien GUILLEMETTE, responsable matériel adapté de l'association Valentin Haüy Caen Calvados" />
+                        <img src={damienGuillemette} alt="Damien GUILLEMETTE, responsable matériel adapté de l'association Valentin Haüy Caen Calvados" />
                     </div>
                     <aside>
                         <p className="name">Damien GUILLEMETTE</p>
@@ -110,7 +117,7 @@ const Rh = () => {
                 </article>
                 <article className="rh-left">
                     <div className="img-container">
-                        <img src={Logo} alt="Maryse LESUR, responsable accueil de l'association Valentin Haüy Caen Calvados" />
+                        <img src={maryseLesur} alt="Maryse LESUR, responsable accueil de l'association Valentin Haüy Caen Calvados" />
                     </div>
                     <aside>
                         <p className="name">Maryse LESUR</p>

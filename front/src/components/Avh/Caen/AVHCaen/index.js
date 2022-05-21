@@ -4,6 +4,14 @@ import './avhCaen.scss';
 
 import loading from '../../../../assets/img/page_developping.png';
 
+//pictures
+import Perkins from '../../../../assets/img/caen/perkins.jpg';
+import BrailleReading from '../../../../assets/img/caen/braille_reading.jpg';
+import Archery from '../../../../assets/img/caen/archery.jpg';
+import Boat from '../../../../assets/img/caen/boat.jpg';
+import Visit from '../../../../assets/img/caen/visit.jpg';
+import Meeting from '../../../../assets/img/caen/meeting.jpg';
+
 const AVHCaen = () => {
     return (
         <main className="AVHCaen">
@@ -22,8 +30,8 @@ const AVHCaen = () => {
                     Apprentissage du braille
                 </p>
                 <div className="double_picture">
-                    <img src="https://via.placeholder.com/150" alt="Machine PERKINS" />
-                    <img src="https://via.placeholder.com/150" alt="Lecture d'un livre en braille" />
+                    <img src={Perkins} alt="Machine PERKINS" />
+                    <img src={BrailleReading} alt="Lecture d'un livre en braille" />
                 </div>
             </article>
             <article>
@@ -37,7 +45,7 @@ const AVHCaen = () => {
                 <p className="definition">
                     Utilisation de matériel spécialisé, … par exemple le Lecteur Victor Stractus est le lecteur de livres audios le plus populaire car il permet d'écouter tout type de format (DAISY, audio, MP3) à partir de CD-Rom ou DVD.
                 </p>
-                <img src="https://via.placeholder.com/150" alt="Machine PERKINS" />
+                <img src="https://via.placeholder.com/150" alt="Lecteur audio Victor Stratus" />
             </article>
             <article>
                 <h3>L'AVH Caen, c'est aussi des activités</h3>
@@ -45,13 +53,13 @@ const AVHCaen = () => {
                     Sportives (voile adaptée, tir à l'arc adapté, ...)
                 </p>
                 <div className="picture_comment">
-                    <img src="https://via.placeholder.com/150" alt="Soufiane, adhérent non voyant de l'AVH Caen, à l'entrainement de tir à l'arc" />
+                    <img src={Archery} alt="Soufiane, adhérent non voyant de l'AVH Caen, à l'entrainement de tir à l'arc" />
                     <p>
                         Soufiane, adhérent non voyant de l'AVH Caen, à l'entrainement de tir à l'arc.
                     </p>
                 </div>
                 <div className="picture_comment">
-                    <img src="https://via.placeholder.com/150" alt="L'équipage du défi voile à l'entrainement sur le bâteau, avec Momo" />
+                    <img src={Boat} alt="L'équipage du défi voile à l'entrainement sur le bâteau, avec Momo" />
                     <p>
                         L'équipage du défi voile à l'entrainement sur le bâteau, avec Momo.
                     </p>
@@ -60,14 +68,14 @@ const AVHCaen = () => {
                     Culturelles et de loisirs (visites de musées, d’expositions, de sites historiques, pièces de théâtres en audiodescription, repas gastronomiques …)
                 </p>
                 <div className="picture_comment">
-                    <img src="https://via.placeholder.com/150" alt="Adhérents et bénévoles de l'AVH Caen à la visite tactile des coulisses précédent la pièce de théâtre La machine du Turing" />
+                    <img src={Visit} alt="Adhérents et bénévoles de l'AVH Caen à la visite tactile des coulisses précédent la pièce de théâtre La machine du Turing" />
                     <p>
                         Adhérents et bénévoles de l'AVH Caen à la visite tactile des coulisses précédent la pièce de théâtre "La machine du Turing".
                     </p>
                 </div>
                 <p className="definition">Des permanences hebdomadaires, moments de convivialité (quizz, jeux, goûters, ...)</p>
                 <div className="picture_comment">
-                    <img src="https://via.placeholder.com/150" alt="Adhérents et bénévoles de l'AVH Caen autour d'une table" />
+                    <img src={Meeting} alt="Adhérents et bénévoles de l'AVH Caen autour d'une table" />
                 </div>
                 <div id="join_us">
                     <p>
