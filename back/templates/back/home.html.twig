@@ -1,0 +1,48 @@
+{% extends '@!EasyAdmin/layout.html.twig'%}
+
+{% block content_title %}
+	<h1 class="text-center">
+		Administration du site de l'AVH Caen Calvados
+	</h1>
+{% endblock %}
+{% block main %}
+	{# <h3>Ce backoffice est réservé à l'administrateur du site</h3> #}
+	<p>Ici, vous pouvez :</p>
+	<ul>
+		<li>Actualité : Permet d'administrer les différents post (ajouter, éditer, supprimer)</li>
+		<li>AVH Caen : Permet d'administrer la page relative à l'AVH Caen Calvados</li>
+		<li>AVH Compte Rendu : Permet d'ajouter, éditer, ou supprimer des comptes rendu
+			<span style="color: yellow">
+				<i class="fa fa-triangle-exclamation"></i>
+				N'EST PAS ENCORE DISPONIBLE
+				<i class="fa fa-triangle-exclamation"></i>
+			</span>
+		</li>
+		<li>AVH National : Permet de gérer les statistiques nationales</li>
+		<li>Boutique : Permet d'ajouter, éditer, ou supprimer des articles
+			<span style="color: yellow">
+				<i class="fa fa-triangle-exclamation"></i>
+				N'EST PAS ENCORE DISPONIBLE
+				<i class="fa fa-triangle-exclamation"></i>
+			</span>
+		</li>
+		<li>FAQ : Permet d'ajouter, éditer, ou supprimer des questions
+			<span style="color: yellow">
+				<i class="fa fa-triangle-exclamation"></i>
+				N'EST PAS ENCORE DISPONIBLE
+				<i class="fa fa-triangle-exclamation"></i>
+			</span>
+		</li>
+		<li>Légal : Permet d'administrer la page relative aux mentions légales
+			<span style="color: yellow">
+				<i class="fa fa-triangle-exclamation"></i>
+				N'EST PAS ENCORE DISPONIBLE
+				<i class="fa fa-triangle-exclamation"></i>
+			</span>
+		</li>
+		<li>Mission : Permet d'ajouter, éditer, ou supprimer des missions</li>
+		<li>Partenaires : Permet d'ajouter, éditer, ou supprimer des partenaires</li>
+		<li>Utilisateur : Permet d'ajouter, éditer, ou supprimer des utilisateurs</li>
+	</ul>
+	{# <img style="display: block; margin-left: auto; margin-right: auto " border="0" src="https://i.imgur.com/DJCPMBR.gif"> #}
+{% endblock %}
