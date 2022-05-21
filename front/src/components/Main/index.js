@@ -5,7 +5,7 @@ import './main.scss';
 // pictures
 import defi_voile from "../../assets/img/defi_voile.jpg";
 import equipage from "../../assets/img/equipage.png";
-import president from "../../assets/img/president.jpg";
+import president from "../../assets/img/desk/jeanPierreLeclercq.jpg";
 import { NavLink } from "react-router-dom";
 import { ArrowRightCircle, Facebook, Instagram, Twitter, Youtube } from "react-feather";
 
@@ -58,7 +58,7 @@ const Main = () => {
                         style={{ backgroundImage: `url(${defi_voile})` }}
                     >
                         <aside className="main-association-article-aside">
-                            <h3 className="main-association-article-aside-title">Ou nous trouver</h3>
+                            <h3 className="main-association-article-aside-title">Défendre les droits des déficients visuels</h3>
 
                             <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">
@@ -73,7 +73,7 @@ const Main = () => {
                         style={{ backgroundImage: `url(${defi_voile})` }}
                     >
                         <aside className="main-association-article-aside">
-                            <h3 className="main-association-article-aside-title">Ou nous trouver</h3>
+                            <h3 className="main-association-article-aside-title">Restaurer et développer l'autonomie par l'accès à l'emploi, à l'écriture et à la lecture, ainsi que par la formation</h3>
 
                             <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">
@@ -88,7 +88,7 @@ const Main = () => {
                         style={{ backgroundImage: `url(${defi_voile})` }}
                     >
                         <aside className="main-association-article-aside">
-                            <h3 className="main-association-article-aside-title">Ou nous trouver</h3>
+                            <h3 className="main-association-article-aside-title">Promouvoir l'accès à l'écrit</h3>
 
                             <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">

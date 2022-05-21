@@ -4,6 +4,7 @@ import './informatique.scss';
 import Pin from "../../../assets/img/list_style.png"
 
 import loading from '../../../assets/img/page_developping.png';
+import InformatiqueBlind from "../../../assets/img/informatique/informatique_blind.png";
 
 const Informatique = () => {
     return (
@@ -12,7 +13,7 @@ const Informatique = () => {
             <article>
                 <h3>L'informatique adapté</h3>
                 <div className="informatique_content">
-                    <img src="https://via.placeholder.com/150" alt="Utiliser l'informatique" />
+                    <img src={InformatiqueBlind} alt="Utiliser l'informatique" className="picture" />
                     <div>
                         <p>
                             L’informatique représente une véritable avancée pour les déficients visuels, car cet outil leur apporte une certaine forme d’autonomie en leur (ré)ouvrant l’univers de l’écrit.
