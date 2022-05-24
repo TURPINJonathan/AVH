@@ -1,3 +1,6 @@
+<Directory />
+    Allowoverride All
+</Directory>
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
