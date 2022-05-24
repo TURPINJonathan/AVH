@@ -1,5 +1,23 @@
-// @use 'src/styles/vars';
+@use 'src/styles/vars';
 
+
+.actuality {
+    .actuality_content {
+        display: flex;
+
+        .search {
+            width: 25%;
+            height: auto;
+            border: green solid 1px;
+        }
+
+        .allArticle {
+            width: 75%;
+            height: auto;
+            border: red solid 1px;
+        }
+    }
+}
 
 // @media screen and (max-width: 500px) {
 //     .braille {
