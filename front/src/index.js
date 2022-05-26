@@ -18,6 +18,7 @@ import Rh from './components/Avh/Caen/RH';
 import Volunteers from './components/Avh/Caen/Volunteers';
 import AVH from './components/Avh/AVH';
 import Actuality from './components/Actuality';
+import Article from './components/Actuality/Article';
 import Braille from './components/Activity/Braille';
 import Informatique from './components/Activity/Informatique';
 import Cls from './components/Activity/Cls';
@@ -73,6 +74,11 @@ ReactDOM.render(
         <Route
           path="/actualites"
           element={<Actuality />}
+          exact
+        />
+        <Route
+          path="/actualites/:slug"
+          element={<Article />}
           exact
         />
         <Route

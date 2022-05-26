@@ -6,6 +6,7 @@ import { faChevronRight } from '@fortawesome/fontawesome-free-solid'
 
 import loading from '../../assets/img/page_developping.png';
 import defi_voile from "../../assets/img/defi_voile.jpg";
+import { Link } from "react-router-dom";
 
 const Actuality = () => {
     return (
@@ -53,56 +54,72 @@ const Actuality = () => {
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
                         </p>
-                        <input className="actuality_button" type="button" value="Lire la suite" />
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
                     </article>
                     <article className="actuality_article">
                         <h4>Titre</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
                         </p>
-                        <input className="actuality_button" type="button" value="Lire la suite" />
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
                     </article>
                     <article className="actuality_article">
                         <h4>Titre</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
                         </p>
-                        <input className="actuality_button" type="button" value="Lire la suite" />
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
                     </article>
                     <article className="actuality_article">
                         <h4>Titre</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
                         </p>
-                        <input className="actuality_button" type="button" value="Lire la suite" />
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
                     </article>
                     <article className="actuality_article">
                         <h4>Titre</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
                         </p>
-                        <input className="actuality_button" type="button" value="Lire la suite" />
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
                     </article>
                     <article className="actuality_article">
                         <h4>Titre</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
                         </p>
-                        <input className="actuality_button" type="button" value="Lire la suite" />
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
                     </article>
                     <article className="actuality_article">
                         <h4>Titre</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
                         </p>
-                        <input className="actuality_button" type="button" value="Lire la suite" />
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
                     </article>
                     <article className="actuality_article">
                         <h4>Titre</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
                         </p>
-                        <input className="actuality_button" type="button" value="Lire la suite" />
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
                     </article>
                 </section>
             </div>
