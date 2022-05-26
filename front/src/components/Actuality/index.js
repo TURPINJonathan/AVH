@@ -1,6 +1,8 @@
 import React from "react";
 
 import './actuality.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/fontawesome-free-solid'
 
 import loading from '../../assets/img/page_developping.png';
 import defi_voile from "../../assets/img/defi_voile.jpg";
@@ -10,31 +12,41 @@ const Actuality = () => {
         <main className="actuality">
             <h2>Actualités</h2>
             <div className="actuality_content">
-                <aside className="search">
-                    <img src={defi_voile} alt="loading" />
-                </aside>
-                <article className="allArticle">
-                    <div className="anArticle">
-                        <img className="anArticle_picture" src={loading} alt="loading" />
-                        <h4>Titre de l'article</h4>
-                        <button className="anArticle_button" />
+                <section className="search">
+                    <div className="search_section">
+                        <h5>Rechercher</h5>
+                        <input type="text" placeholder="Rechercher" />
                     </div>
-                    <div className="anArticle">
-                        <img className="anArticle_picture" src={loading} alt="loading" />
-                        <h4>Titre de l'article</h4>
-                        <button className="anArticle_button" />
+                    <div className="search_section">
+                        <h5>Catégories</h5>
+                        <select>
+                            <option value="">Toutes</option>
+                            <option value="">Sport</option>
+                            <option value="">Art</option>
+                            <option value="">&Eacute;vènement</option>
+                        </select>
                     </div>
-                    <div className="anArticle">
-                        <img className="anArticle_picture" src={loading} alt="loading" />
-                        <h4>Titre de l'article</h4>
-                        <button className="anArticle_button" />
+                    <div className="search_section">
+                        <h5>Posts récents</h5>
+                        <ul>
+                            <li>
+                                <a href="#" target="_blanck">
+                                    <p><FontAwesomeIcon icon={faChevronRight} /> 13ème édition de la Norlanda's Cup</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blanck">
+                                    <p><FontAwesomeIcon icon={faChevronRight} /> Le tir à l'arc</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blanck">
+                                    <p><FontAwesomeIcon icon={faChevronRight} /> Le Showdown</p>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div className="anArticle">
-                        <img className="anArticle_picture" src={loading} alt="loading" />
-                        <h4>Titre de l'article</h4>
-                        <button className="anArticle_button" />
-                    </div>
-                </article>
+                </section>
             </div>
         </main>
     );
