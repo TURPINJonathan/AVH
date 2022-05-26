@@ -26,6 +26,7 @@
 
                 input {
                     width: 80%;
+                    max-width: 20rem;
                     height: 1.8rem;
                     border: vars.$orange solid 1px;
                     border-radius: 10px;
@@ -46,6 +47,7 @@
 
                 select {
                     width: 80%;
+                    max-width: 20rem;
                     height: 1.8rem;
                     border: vars.$orange solid 1px;
                     border-radius: 10px;
@@ -118,8 +120,22 @@
     }
 }
 
-// @media screen and (max-width: 500px) {
-//     .braille {
-//         padding-right: 2rem !important;
-//     }
-// }
+@media screen and (max-width: 1200px) {
+    .actuality {
+        .actuality_content {
+            flex-direction: column;
+
+            .search {
+                width: 100%;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                border: none;
+                border-bottom: 1px solid vars.$orange ;
+            }
+
+            .actuality_section {
+                width: 100%;
+            }
+        }
+    }
+}
