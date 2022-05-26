@@ -47,6 +47,64 @@ const Actuality = () => {
                         </ul>
                     </div>
                 </section>
+                <section className="actuality_section">
+                    <article className="actuality_article">
+                        <h4>Titre</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        </p>
+                        <input className="actuality_button" type="button" value="Lire la suite" />
+                    </article>
+                    <article className="actuality_article">
+                        <h4>Titre</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        </p>
+                        <input className="actuality_button" type="button" value="Lire la suite" />
+                    </article>
+                    <article className="actuality_article">
+                        <h4>Titre</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        </p>
+                        <input className="actuality_button" type="button" value="Lire la suite" />
+                    </article>
+                    <article className="actuality_article">
+                        <h4>Titre</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        </p>
+                        <input className="actuality_button" type="button" value="Lire la suite" />
+                    </article>
+                    <article className="actuality_article">
+                        <h4>Titre</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        </p>
+                        <input className="actuality_button" type="button" value="Lire la suite" />
+                    </article>
+                    <article className="actuality_article">
+                        <h4>Titre</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        </p>
+                        <input className="actuality_button" type="button" value="Lire la suite" />
+                    </article>
+                    <article className="actuality_article">
+                        <h4>Titre</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        </p>
+                        <input className="actuality_button" type="button" value="Lire la suite" />
+                    </article>
+                    <article className="actuality_article">
+                        <h4>Titre</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        </p>
+                        <input className="actuality_button" type="button" value="Lire la suite" />
+                    </article>
+                </section>
             </div>
         </main>
     );
