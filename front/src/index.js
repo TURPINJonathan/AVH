@@ -36,7 +36,7 @@ import AVHCaen from './components/Avh/Caen/AVHCaen';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/' >
       <Header />
       <RightNav />
       <Routes>
