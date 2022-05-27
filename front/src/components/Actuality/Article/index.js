@@ -51,9 +51,9 @@ const Article = () => {
                         <a href="https://www.instagram.com/"><Instagram /></a>
                     </div>
                 </aside>
-                <Link className="back" to="/actualites">
+                {/* <Link className="back" to="/actualites">
                     <button className="back-button">Retour aux articles</button>
-                </Link>
+                </Link> */}
             </article>
         </main>
     );
