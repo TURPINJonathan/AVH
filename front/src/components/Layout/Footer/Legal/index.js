@@ -34,7 +34,7 @@ const Legal = () => {
 
                 <h4 className="subtitle">1.2 Éditeur (ci-après « l'éditeur »)</h4>
 
-                <p>L'association Valentin HAÜY CAEN CALVADOS, déclarée auprès de la préfecture de XXX sous le numéro XXX et dont le siège social est situé :</p>
+                <p>L'association Valentin HAÜY CAEN CALVADOS, dont l'implantation régionale est située :</p>
                 <ul className="address">
                     <li>
                         <p>5 rue Roger Bastion</p>
