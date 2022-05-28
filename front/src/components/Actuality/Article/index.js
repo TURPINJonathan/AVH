@@ -31,7 +31,7 @@ const Article = () => {
                         Le tirage au sort a eu lieu mardi 26 avril à la base nautique Bertrand Génard.
                     </p>
                     <div className="article_sign">
-                        <p className="article_date">Article du 28/05/2022</p>
+                        <p className="article_date">Article du 28/05/2022<> </></p>
                         <p className="article_author">Par<> </>
                             <span className="firstname">Jonathan</span><> </>
                             <span className="lastname">Turpin</span>
