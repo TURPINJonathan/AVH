@@ -12,6 +12,7 @@ import './styles/index.scss';
 import Footer from './components/Layout/Footer';
 import Header from './components/Layout/Header';
 import Main from './components/Main';
+import Legal from './components/Layout/Footer/Legal';
 
 // Navigate components
 import Rh from './components/Avh/Caen/RH';
@@ -44,6 +45,11 @@ ReactDOM.render(
         <Route
           path="/"
           element={<Main />}
+          exact
+        />
+        <Route
+          path="/mentions-legales"
+          element={<Legal />}
           exact
         />
         <Route

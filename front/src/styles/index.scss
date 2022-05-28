@@ -102,6 +102,11 @@ body {
         margin: 1rem auto;
       }
 
+      a {
+        color: vars.$violet;
+        text-decoration: underline;
+      }
+
       .pub {
         width: 800px;
         min-height: 100%;
@@ -136,8 +141,8 @@ body {
 
           &:hover {
             background-color: transparent !important;
-            border: 2px solid vars.$lightGrey !important;
-            color: vars.$lightGrey !important;
+            border: 2px solid vars.$lightGrey  !important;
+            color: vars.$lightGrey  !important;
 
 
             box-shadow: none;
