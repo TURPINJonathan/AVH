@@ -3,7 +3,7 @@ import React from "react";
 import './accessibility.scss';
 
 import Pin from "../../../assets/img/list_style.png"
-
+import Daisy from "../../../assets/img/accessibility/daisy.png"
 import loading from '../../../assets/img/page_developping.png';
 
 const Accessibility = () => {
@@ -40,15 +40,15 @@ const Accessibility = () => {
                 </p>
                 <ul>
                     <li>
-                        <img src={Pin} alt="Pin" className="pin" />
+                        {/* <img src={Pin} alt="Pin" className="pin" /> */}
                         Les ordinateurs, les logiciels, les sites Internet, les smartphones, les tablettes, les applications mobiles.
                     </li>
                     <li>
-                        <img src={Pin} alt="Pin" className="pin" />
+                        {/* <img src={Pin} alt="Pin" className="pin" /> */}
                         Les matériels (téléviseurs, box Internet, téléphones, terminaux de paiement, distributeurs automatiques de billets, automates de vente...), ainsi que les équipements professionnels qui de plus en plus comportent une composante numérique.
                     </li>
                     <li>
-                        <img src={Pin} alt="Pin" className="pin" />
+                        {/* <img src={Pin} alt="Pin" className="pin" /> */}
                         Les documents numériques et les courriels (e-mails)
                     </li>
                 </ul>
@@ -69,7 +69,7 @@ const Accessibility = () => {
                 <p>
                     Au sein de l’association Valentin Haüy, on distingue deux types de livres au format DAISY :
                 </p>
-                <img src="https://via.placeholder.com/150" alt="Livre audio DAISY" />
+                <img src={Daisy} alt="Livre audio DAISY" />
                 <h4>Les livres "Daisy audio voix humaine"</h4>
                 <p>Les livres Daisy audio voix humaine sont lus par des bénévoles. Une trentaine de donneurs de voix bénévoles travaillent à l 'AVH Caen Calvados.</p>
                 <h4>Les livres "Full Daisy voix de synthèse"</h4>
@@ -80,7 +80,7 @@ const Accessibility = () => {
                     Ils contiennent non seulement la version audio du livre, mais aussi le texte, dont l'affichage est synchronisé avec le son. Il est donc possible d'écouter le livre audio tout en suivant le texte sur un écran ou sur une plage braille. Il est également possible de passer de l'audio au texte en cours de lecture, ou d’effectuer une recherche dans le texte du livre.
                 </p>
 
-                <p className="except">Petit guide pour ouvrir les yeux sur les aveugles et les malvoyants (Pdf - 1.04 Mo)</p>
+                {/* <p className="except">Petit guide pour ouvrir les yeux sur les aveugles et les malvoyants (Pdf - 1.04 Mo)</p> */}
             </article>
         </main>
     );
