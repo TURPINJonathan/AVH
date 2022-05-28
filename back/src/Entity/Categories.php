@@ -18,10 +18,11 @@ class Categories
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    #[Groups(['Actualite_get'])]
+    #[Groups(['Actualite_get', 'categories_get'])]
     private $nom;
 
     #[ORM\ManyToMany(targetEntity: Actualite::class, mappedBy: 'categorie')]
+    #[Groups(['categories_get'])]
     private $actualites;
 
     public function __construct()

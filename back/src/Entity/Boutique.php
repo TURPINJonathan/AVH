@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\BoutiqueRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\BoutiqueRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: BoutiqueRepository::class)]
 class Boutique
@@ -13,36 +14,47 @@ class Boutique
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['boutique_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['boutique_get'])]
     private $titre;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['boutique_get'])]
     private $sous_titre;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['boutique_get'])]
     private $overview;
 
     #[ORM\Column(type: 'text')]
+    #[Groups(['boutique_get'])]
     private $detail;
 
     #[ORM\Column(type: 'decimal', precision: 6, scale: 2)]
+    #[Groups(['boutique_get'])]
     private $prix;
 
     #[ORM\Column(type: 'decimal', precision: 6, scale: 2)]
+    #[Groups(['boutique_get'])]
     private $prix_avh;
 
     #[ORM\Column(type: 'integer', nullable: true)]
+    #[Groups(['boutique_get'])]
     private $stock;
 
     #[ORM\Column(type: 'boolean')]
+    #[Groups(['boutique_get'])]
     private $sur_commande;
 
     #[ORM\Column(type: 'integer', nullable: true)]
+    #[Groups(['boutique_get'])]
     private $nb_vente;
 
     #[ORM\ManyToMany(targetEntity: CategoriesShop::class, inversedBy: 'boutiques')]
+    #[Groups(['boutique_get'])]
     private $CategoriesShop;
 
     public function __construct()
@@ -186,5 +198,4 @@ class Boutique
 
         return $this;
     }
-
 }
