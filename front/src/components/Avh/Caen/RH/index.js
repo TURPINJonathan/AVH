@@ -12,6 +12,7 @@ import josianePacary from "../../../../assets/img/desk/josianePacary.jpg";
 import damienGuillemette from "../../../../assets/img/desk/damienGuillemette.jpg";
 import francoiseThomas from "../../../../assets/img/desk/francoiseThomas.jpg";
 import maryseLesur from "../../../../assets/img/desk/maryseLesur.jpg";
+import lylianeAtte from "../../../../assets/img/desk/lylianeAtte.jpg";
 
 const Rh = () => {
     return (
@@ -112,7 +113,7 @@ const Rh = () => {
                         <p className="phone">06 29 99 35 76</p>
                     </aside>
                     <div className="img-container">
-                        <img src={Logo} alt="Lyliane ATTE, responsable communication de l'association Valentin Haüy Caen Calvados" />
+                        <img src={lylianeAtte} alt="Lyliane ATTE, responsable communication de l'association Valentin Haüy Caen Calvados" />
                     </div>
                 </article>
                 <article className="rh-left">
