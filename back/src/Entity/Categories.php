@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\CategoriesRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CategoriesRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]
 class Categories
@@ -13,9 +14,11 @@ class Categories
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['Actualite_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['Actualite_get'])]
     private $nom;
 
     #[ORM\ManyToMany(targetEntity: Actualite::class, mappedBy: 'categorie')]
@@ -24,6 +27,11 @@ class Categories
     public function __construct()
     {
         $this->actualites = new ArrayCollection();
+    }
+
+    public function __toString(): string
+    {
+        return $this->nom;
     }
 
     public function getId(): ?int

@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ActualiteRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ActualiteRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: ActualiteRepository::class)]
 class Actualite
@@ -13,27 +14,35 @@ class Actualite
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['Actualite_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['Actualite_get'])]
     private $titre;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
     private $sous_titre;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
     private $lieu;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['Actualite_get'])]
     private $overview;
 
     #[ORM\Column(type: 'text')]
+    #[Groups(['Actualite_get'])]
     private $paragraphe1;
 
     #[ORM\Column(type: 'text', nullable: true)]
+    #[Groups(['Actualite_get'])]
     private $paragraphe2;
 
     #[ORM\Column(type: 'text', nullable: true)]
+    #[Groups(['Actualite_get'])]
     private $paragraphe3;
 
     #[ORM\Column(type: 'text', nullable: true)]
@@ -58,33 +67,41 @@ class Actualite
     private $paragraphe10;
 
     #[ORM\Column(type: 'boolean')]
+    #[Groups(['Actualite_get'])]
     private $focus;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['Actualite_get'])]
     private $liseuse;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['Actualite_get'])]
     private $url;
 
     #[ORM\Column(type: 'boolean')]
+    #[Groups(['Actualite_get'])]
     private $aside;
 
     #[ORM\Column(type: 'datetime_immutable')]
+    #[Groups(['Actualite_get'])]
     private $createdAt;
 
     #[ORM\Column(type: 'datetime_immutable', nullable: true)]
     private $updatedAt;
 
-    #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'actualites')]
+    #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'actualites', cascade: ['persist'])]
+    #[Groups(['Actualite_get'])]
     private $categorie;
 
-    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'actualite')]
+    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'actualite', cascade: ['persist'])]
+    #[Groups(['Actualite_get'])]
     private $users;
 
     public function __construct()
     {
         $this->categorie = new ArrayCollection();
         $this->users = new ArrayCollection();
+        $this->createdAt = new \DateTimeImmutable();
     }
 
     public function getId(): ?int

@@ -2,12 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use App\Repository\UserRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
@@ -15,37 +16,52 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['Actualite_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
+    #[Groups(['Actualite_post'])]
     private $email;
 
     #[ORM\Column(type: 'json')]
+    #[Groups(['Actualite_get'])]
     private $roles = [];
 
     #[ORM\Column(type: 'string')]
     private $password;
 
     #[ORM\Column(type: 'string', length: 20)]
+    #[Groups(['Actualite_get'])]
     private $nom;
 
     #[ORM\Column(type: 'string', length: 20)]
+    #[Groups(['Actualite_get'])]
     private $prenom;
 
     #[ORM\Column(type: 'string', length: 40)]
+    #[Groups(['Actualite_post'])]
     private $fonction;
 
     #[ORM\Column(type: 'integer')]
+    #[Groups(['Actualite_post'])]
     private $telephone;
 
     #[ORM\Column(type: 'boolean', nullable: true)]
+    #[Groups(['Actualite_post'])]
     private $bureau;
 
     #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
+    #[Groups(['Actualite_post'])]
     private $actualite;
 
     #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
+    #[Groups(['Actualite_post'])]
     private $avhCompteRendus;
+
+    public function __toString()
+    {
+        return $this->nom;
+    }
 
     public function __construct()
     {
