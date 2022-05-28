@@ -13,6 +13,7 @@ const Actuality = () => {
         <main className="actuality">
             <h2>Actualités</h2>
             <div className="actuality_content">
+                {/* //TODO A METTRE EN PLACE EN V1.1
                 <section className="search">
                     <div className="search_section">
                         <h5>Rechercher</h5>
@@ -47,75 +48,12 @@ const Actuality = () => {
                             </li>
                         </ul>
                     </div>
-                </section>
+                </section> */}
                 <section className="actuality_section">
                     <article className="actuality_article">
-                        <h4>Titre</h4>
+                        <h4>13ème édition de la Norland's Cup</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
-                        </p>
-                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
-                            <input className="actuality_button" type="button" value="Lire la suite" />
-                        </Link>
-                    </article>
-                    <article className="actuality_article">
-                        <h4>Titre</h4>
-                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
-                        </p>
-                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
-                            <input className="actuality_button" type="button" value="Lire la suite" />
-                        </Link>
-                    </article>
-                    <article className="actuality_article">
-                        <h4>Titre</h4>
-                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
-                        </p>
-                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
-                            <input className="actuality_button" type="button" value="Lire la suite" />
-                        </Link>
-                    </article>
-                    <article className="actuality_article">
-                        <h4>Titre</h4>
-                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
-                        </p>
-                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
-                            <input className="actuality_button" type="button" value="Lire la suite" />
-                        </Link>
-                    </article>
-                    <article className="actuality_article">
-                        <h4>Titre</h4>
-                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
-                        </p>
-                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
-                            <input className="actuality_button" type="button" value="Lire la suite" />
-                        </Link>
-                    </article>
-                    <article className="actuality_article">
-                        <h4>Titre</h4>
-                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
-                        </p>
-                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
-                            <input className="actuality_button" type="button" value="Lire la suite" />
-                        </Link>
-                    </article>
-                    <article className="actuality_article">
-                        <h4>Titre</h4>
-                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
-                        </p>
-                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
-                            <input className="actuality_button" type="button" value="Lire la suite" />
-                        </Link>
-                    </article>
-                    <article className="actuality_article">
-                        <h4>Titre</h4>
-                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu iaculis massa, nec congue ligula. Sed facilisis semper felis. Ut.
+                        <p className="actuality_overview">La 13ème édition de la Norlanda's Cup approche à grands pas ...
                         </p>
                         <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
                             <input className="actuality_button" type="button" value="Lire la suite" />

@@ -91,18 +91,21 @@
         }
 
         .back {
-            .back_button {
-                border: vars.$violet solid 1px !important;
-                border-radius: 25px !important;
-                width: 20rem !important;
-                height: 2rem !important;
-                font-size: 1rem !important;
-                margin: auto !important;
+            .back-button {
+                display: block;
+                border: vars.$violet solid 1px;
+                border-radius: 25px;
+                width: 20rem;
+                height: 2rem;
+                font-size: 1rem;
+                margin: auto;
+                text-decoration: none !important;
+                margin-top: 1rem;
 
                 &:hover {
-                    background-color: vars.$orange  !important;
-                    border: vars.$orange  !important;
-                    color: vars.$lightGrey  !important;
+                    background-color: vars.$orange;
+                    border: vars.$orange;
+                    color: vars.$lightGrey;
                 }
             }
         }
