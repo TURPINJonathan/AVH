@@ -1,51 +1,95 @@
 {% extends '@!EasyAdmin/layout.html.twig'%}
 
 {% block content_title %}
-	<h1 class="text-center" style="margin: 5rem">
+	<h1 class="text-center" style="margin:3rem">
+
 		Administration du site de l'AVH Caen Calvados
 	</h1>
 {% endblock %}
 {% block main %}
 	{# <h3>Ce backoffice est réservé à l'administrateur du site</h3> #}
-	<div style="width: 100%; display: flex; flex-direction: center">
-		<img src="http://localhost:3000/static/media/logo.d272c8bbb18a1edb56ad.png" alt="AVH Caen Calvados" class="img-responsive center-block" style="max-width: 20rem; display: block; margin: auto;">
+	<div style="display:flex; justify-content: space-evenly; align-items:center">
+		<img src="https://avhcaen.fr/static/media/logo.d272c8bbb18a1edb56ad.png" alt="logo AVH Caen" class="img-responsive center-block" style="width: 200px; height: 200px; display: block">
 		<div>
 			<p>Ici, vous pouvez :</p>
 			<ul>
-				<li>Actualité : Permet d'administrer les différents post (ajouter, éditer, supprimer)</li>
-				<li>AVH Caen : Permet d'administrer la page relative à l'AVH Caen Calvados</li>
-				<li>AVH Compte Rendu : Permet d'ajouter, éditer, ou supprimer des comptes rendu
+				<li>
+					<strong>Accueil</strong>
+					Permet de revenir à la page d'accueil du
+					<em>Back Office</em>
+				</li>
+				<li>
+					<strong>Utilisateurs :</strong>
+					Permet d'ajouter, éditer, ou supprimer des utilisateurs
+				</li>
+				<li>
+					<strong>Actualités :</strong>
+					Permet d'administrer les différents articles (ajouter, éditer, supprimer) de
+					<a href="https://avhcaen.fr/actualites" target="_blank">cette page</a>
 					<span style="color: yellow">
 						<i class="fa fa-triangle-exclamation"></i>
-						N'EST PAS ENCORE DISPONIBLE
+						EN COURS DE D&Eacute;VELOPPEMENT
 						<i class="fa fa-triangle-exclamation"></i>
 					</span>
 				</li>
-				<li>AVH National : Permet de gérer les statistiques nationales</li>
-				<li>Boutique : Permet d'ajouter, éditer, ou supprimer des articles
+				<li>
+					<strong>Boutique :</strong>
+					Permet d'ajouter, éditer, ou supprimer des articles de
+					<a href="https://avhcaen.fr/boutique/catalogue" target="_blank">cette page</a>
 					<span style="color: yellow">
 						<i class="fa fa-triangle-exclamation"></i>
-						N'EST PAS ENCORE DISPONIBLE
+						EN COURS DE D&Eacute;VELOPPEMENT
 						<i class="fa fa-triangle-exclamation"></i>
 					</span>
 				</li>
-				<li>FAQ : Permet d'ajouter, éditer, ou supprimer des questions
+				<li>
+					<strong>Mission :</strong>
+					Permet d'ajouter, éditer, ou supprimer des missions, visible notamment depuis
+					<a href="https://avhcaen.fr/" target="_blank">page d'accueil</a>
+				</li>
+				<li>
+					<strong>Partenaires :</strong>
+					Permet d'ajouter, éditer, ou supprimer des partenaires de
+					<a href="https://avhcaen.fr/mecenat-partenariat" target="_blank">cette page</a>
+				</li>
+				<li>
+					<strong>AVH Caen :</strong>
+					Permet d'administrer la page relative à la page de
+					<a href="https://avhcaen.fr/caen/AVH" target="_blank">l'AVH Caen Calvados</a>
+				</li>
+				<li>
+					<strong>AVH Compte Rendu :</strong>
+					Permet d'ajouter, éditer, ou supprimer des comptes rendu. Il n'y a pas d'affichage prévu pour le moment.
 					<span style="color: yellow">
 						<i class="fa fa-triangle-exclamation"></i>
-						N'EST PAS ENCORE DISPONIBLE
+						EN COURS DE D&Eacute;VELOPPEMENT
 						<i class="fa fa-triangle-exclamation"></i>
 					</span>
 				</li>
-				<li>Légal : Permet d'administrer la page relative aux mentions légales
+				<li>
+					<strong>AVH National :</strong>
+					Permet de gérer les statistiques nationales de
+					<a href="https://avhcaen.fr/AVH" target="_blank">l'AVH Caen Calvados</a>
+				</li>
+				<li>
+					<strong>FAQ :</strong>
+					Permet d'ajouter, éditer, ou supprimer des questions. Il n'y a pas d'affichage prévu pour le moment.
 					<span style="color: yellow">
 						<i class="fa fa-triangle-exclamation"></i>
-						N'EST PAS ENCORE DISPONIBLE
+						EN COURS DE D&Eacute;VELOPPEMENT
 						<i class="fa fa-triangle-exclamation"></i>
 					</span>
 				</li>
-				<li>Mission : Permet d'ajouter, éditer, ou supprimer des missions</li>
-				<li>Partenaires : Permet d'ajouter, éditer, ou supprimer des partenaires</li>
-				<li>Utilisateur : Permet d'ajouter, éditer, ou supprimer des utilisateurs</li>
+				<li>
+					<strong>Législation :</strong>
+					Permet d'administrer la page relative aux mentions légales. Il n'y a pas de page prévu pour le moment.
+					<span style="color: yellow">
+						<i class="fa fa-triangle-exclamation"></i>
+						EN COURS DE D&Eacute;VELOPPEMENT
+						<i class="fa fa-triangle-exclamation"></i>
+					</span>
+				</li>
+
 			</ul>
 		</div>
 	</div>

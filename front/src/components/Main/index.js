@@ -33,10 +33,9 @@ const Main = () => {
                     <div className="main-actuality-content">
                         <h2 className="main-actuality-content-title">Actualités</h2>
                         <p className="main-actuality-content-contentText">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Mauris euismod, lectus eget consectetur vehicula,
+                            La 13ème édition de la Norlanda's Cup approche à grands pas ...
                         </p>
-                        <NavLink to="/actualites" className="main-actuality-content-link">
+                        <NavLink to="/actualites/norlanda_cup_2022" className="main-actuality-content-link">
                             <button className="main-actuality-content-button">
                                 En savoir plus
                                 <ArrowRightCircle className="main-actuality-content-button-arrow" />
@@ -60,12 +59,12 @@ const Main = () => {
                         <aside className="main-association-article-aside">
                             <h3 className="main-association-article-aside-title">Défendre les droits des déficients visuels</h3>
 
-                            <NavLink to="/actualites" className="main-association-article-aside-link">
+                            {/* <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">
                                     En savoir plus
                                     <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
                                 </button>
-                            </NavLink>
+                            </NavLink> */}
                         </aside>
                     </article>
                     <article
@@ -75,12 +74,12 @@ const Main = () => {
                         <aside className="main-association-article-aside">
                             <h3 className="main-association-article-aside-title">Restaurer et développer l'autonomie par l'accès à l'emploi, à l'écriture et à la lecture, ainsi que par la formation</h3>
 
-                            <NavLink to="/actualites" className="main-association-article-aside-link">
+                            {/* <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">
                                     En savoir plus
                                     <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
                                 </button>
-                            </NavLink>
+                            </NavLink> */}
                         </aside>
                     </article>
                     <article
@@ -90,12 +89,12 @@ const Main = () => {
                         <aside className="main-association-article-aside">
                             <h3 className="main-association-article-aside-title">Promouvoir l'accès à l'écrit</h3>
 
-                            <NavLink to="/actualites" className="main-association-article-aside-link">
+                            {/* <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">
                                     En savoir plus
                                     <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
                                 </button>
-                            </NavLink>
+                            </NavLink> */}
                         </aside>
                     </article>
                 </div>
@@ -129,15 +128,17 @@ const Main = () => {
                         <aside className="main-follow-article-aside">
                             <Facebook className="main-follow-article-aside-icon" />
                             <div className="main-follow-article-aside-content">
-                                <NavLink to="/actualites" className="main-follow-article-aside-content-link">
+                                {/* <NavLink to="/actualites" className="main-follow-article-aside-content-link">
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                         Mauris euismod, lectus eget consectetur vehicula,
                                     </p>
-                                </NavLink>
+                                </NavLink> */}
                                 <NavLink to="/actualites" className="main-follow-article-aside-link">
                                     <p className="main-follow-article-aside-link-text">
-                                        suivez-nous sur Facebook
+                                        <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Facebook</a>
+
+
                                     </p>
                                 </NavLink>
                             </div>
@@ -145,13 +146,13 @@ const Main = () => {
                         <aside className="main-follow-article-aside">
                             <Instagram className="main-follow-article-aside-icon" />
                             <div className="main-follow-article-aside-content">
-                                <p>
+                                {/* <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Mauris euismod, lectus eget consectetur vehicula,
-                                </p>
+                                </p> */}
                                 <NavLink to="/actualites" className="main-follow-article-aside-link">
                                     <p className="main-follow-article-aside-link-text">
-                                        suivez-nous sur Instagram
+                                        <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Instagram</a>
                                     </p>
                                 </NavLink>
                             </div>
@@ -159,18 +160,18 @@ const Main = () => {
                         <aside className="main-follow-article-aside">
                             <Twitter className="main-follow-article-aside-icon" />
                             <div className="main-follow-article-aside-content">
-                                <p>
+                                {/* <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Mauris euismod, lectus eget consectetur vehicula,
-                                </p>
+                                </p> */}
                                 <NavLink to="/actualites" className="main-follow-article-aside-link">
                                     <p className="main-follow-article-aside-link-text">
-                                        suivez-nous sur Twitter
+                                        <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Twitter</a>
                                     </p>
                                 </NavLink>
                             </div>
                         </aside>
-                        <aside className="main-follow-article-aside">
+                        {/* <aside className="main-follow-article-aside">
                             <Youtube className="main-follow-article-aside-icon" />
                             <div className="main-follow-article-aside-content">
                                 <p>
@@ -183,7 +184,7 @@ const Main = () => {
                                     </p>
                                 </NavLink>
                             </div>
-                        </aside>
+                        </aside> */}
                     </article>
                 </div>
             </section>

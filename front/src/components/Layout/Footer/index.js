@@ -31,29 +31,34 @@ const Footer = () => {
                     <p className="footer-content__title">Contact</p>
                     <p className="footer-content__text"><Phone /> 02 31 85 71 57</p>
                     <p className="footer-content__text"><Phone /> 06 29 36 49 28</p>
-                    <p className="footer-content__text"><Mail /> comite.caen@avh.asso.fr</p>
+                    <p className="footer-content__text">
+                        <a href="mailto: comite.caen@avh.asso.fr" alt="email de l'association Valentin Haüy">
+                            <Mail /> comite.caen@avh.asso.fr
+                        </a>
+                    </p>
                 </div>
                 <div className="footer-content">
                     <p className="footer-content__title">Aidez-nous</p>
                     <p className="footer-content__text">Soutenez l'association en faisant un don</p>
-                    <NavLink to="/give">
+                    <a href="https://sensibiliser.avh.asso.fr/campagne-2018/" target="_blank" rel="noreferrer" >
                         <button type="button">
                             <Heart color="white" />
                             <p> Faîtes un don !</p>
                         </button>
-                    </NavLink>
+                    </a>
                     {/* <p className="footer-content__title">Contactez-nous</p>
                     <p className="footer-content__text">Pour un soutien ou une question</p> */}
-                    <NavLink to="/contact">
+                    <a href="mailto: comite.caen@avh.asso.fr" alt="email de l'association Valentin Haüy">
                         <button type="button">
                             <p> Contactez-nous</p>
                             <MessageCircle color="white" />
                         </button>
-                    </NavLink>
+                    </a>
                 </div>
             </div>
             <div id="legal">
                 <p>2022 - Copyright © Association Valentin Haüy Caen Calvados - Tous droits réservés</p>
+                <NavLink to="/mentions-legales">Mentions légales</NavLink>
             </div>
         </footer>
     );

@@ -12,12 +12,14 @@ import './styles/index.scss';
 import Footer from './components/Layout/Footer';
 import Header from './components/Layout/Header';
 import Main from './components/Main';
+import Legal from './components/Layout/Footer/Legal';
 
 // Navigate components
 import Rh from './components/Avh/Caen/RH';
 import Volunteers from './components/Avh/Caen/Volunteers';
 import AVH from './components/Avh/AVH';
 import Actuality from './components/Actuality';
+import Article from './components/Actuality/Article';
 import Braille from './components/Activity/Braille';
 import Informatique from './components/Activity/Informatique';
 import Cls from './components/Activity/Cls';
@@ -36,7 +38,7 @@ import AVHCaen from './components/Avh/Caen/AVHCaen';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/' >
       <Header />
       <RightNav />
       <Routes>
@@ -46,94 +48,104 @@ ReactDOM.render(
           exact
         />
         <Route
+          path="/mentions-legales"
+          element={<Legal />}
+        // exact
+        />
+        <Route
           path="/caen/rh"
           element={<Rh />}
-          exact
+        // exact
         />
         <Route
           path="/caen/benevoles"
           element={<Volunteers />}
-          exact
+        // exact
         />
         <Route
           path="/AVH"
           element={<AVH />}
-          exact
+        // exact
         />
         <Route
           path="caen/AVH"
           element={<AVHCaen />}
-          exact
+        // exact
         />
         <Route
           path="/history"
           element={<History />}
-          exact
+        // exact
         />
         <Route
           path="/actualites"
           element={<Actuality />}
-          exact
+        // exact
+        />
+        <Route
+          path="/actualites/:slug"
+          element={<Article />}
+        // exact
         />
         <Route
           path="/activites/braille"
           element={<Braille />}
-          exact
+        // exact
         />
         <Route
           path="/activites/informatique"
           element={<Informatique />}
-          exact
+        // exact
         />
         <Route
           path="/activites/sensibilisation"
           element={<Sensibilisation />}
-          exact
+        // exact
         />
         <Route
           path="/activites/accessibility"
           element={<Accessibility />}
-          exact
+        // exact
         />
         <Route
           path="/activites/cls"
           element={<Cls />}
-          exact
+        // exact
         />
         <Route
           path="/mecenat-partenariat"
           element={<Mp />}
-          exact
+        // exact
         />
         <Route
           path="/boutique/catalogue"
           element={<Book />}
-          exact
+        // exact
         />
         <Route
           path="/boutique/materiel"
           element={<Equipment />}
-          exact
+        // exact
         />
         <Route
           path="/come"
           element={<Come />}
-          exact
+        // exact
         />
         <Route
           path="/give"
           element={<Give />}
-          exact
+        // exact
         />
         <Route
           path="/contact"
           element={<Contact />}
-          exact
+        // exact
         />
         <Route
           path="/find-us"
           element={<Map />}
-          exact
+        // exact
         />
       </Routes>
       <Footer />

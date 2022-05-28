@@ -40,12 +40,20 @@ const Header = () => {
                     <button id="donate-button" className="join-click" src="#">Faites un don</button>
                 </div>
                 <div id="header-social__icons">
-                    <Facebook className="header-social__item" color="white" />
-                    <Twitter className="header-social__item" color="white" />
-                    <Youtube className="header-social__item" color="white" />
-                    <Instagram className="header-social__item" color="white" />
-                    <Linkedin className="header-social__item" color="white" />
-                    <Mail className="header-social__item" color="white" />
+                    <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer">
+                        <Facebook className="header-social__item" color="white" />
+                    </a>
+                    <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer">
+                        <Twitter className="header-social__item" color="white" />
+                    </a>
+                    {/* <Youtube className="header-social__item" color="white" /> */}
+                    <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer">
+                        <Instagram className="header-social__item" color="white" />
+                    </a>
+                    {/* <Linkedin className="header-social__item" color="white" /> */}
+                    <a href="mailto: comite.caen@avh.asso.fr" alt="email de l'association Valentin Haüy">
+                        <Mail className="header-social__item" color="white" />
+                    </a>
                 </div>
             </div>
             <section id="header-main">
@@ -62,12 +70,12 @@ const Header = () => {
                         <p id="title-orga">Organisation à but non lucratif</p>
                     </div>
                     <div id="header-main__join">
-                        <NavLink to="/come">
+                        <a href="https://www.avh.asso.fr/fr/lassociation/devenir-benevole-ou-mecenat-de-competences#:~:text=L'association%20Valentin%20Ha%C3%BCy%2C%20pr%C3%A9sente,au%20sein%20de%20l'association." target="_blank" rel="noreferrer" >
                             <button id="join-button" className="join-click">Devenir bénévole</button>
-                        </NavLink>
-                        <NavLink to="/give">
+                        </a>
+                        <a href="https://sensibiliser.avh.asso.fr/campagne-2018/" target="_blank" rel="noreferrer" >
                             <button id="donate-button" className="join-click">Faites un don</button>
-                        </NavLink>
+                        </a>
                     </div>
                 </div>
                 <div id="header-main__bg" />
