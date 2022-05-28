@@ -62,12 +62,12 @@ const Header = () => {
                         <p id="title-orga">Organisation à but non lucratif</p>
                     </div>
                     <div id="header-main__join">
-                        <NavLink to="/come">
+                        <a href="https://www.avh.asso.fr/fr/lassociation/devenir-benevole-ou-mecenat-de-competences#:~:text=L'association%20Valentin%20Ha%C3%BCy%2C%20pr%C3%A9sente,au%20sein%20de%20l'association." target="_blank" rel="noreferrer" >
                             <button id="join-button" className="join-click">Devenir bénévole</button>
-                        </NavLink>
-                        <NavLink to="/give">
+                        </a>
+                        <a href="https://sensibiliser.avh.asso.fr/campagne-2018/" target="_blank" rel="noreferrer" >
                             <button id="donate-button" className="join-click">Faites un don</button>
-                        </NavLink>
+                        </a>
                     </div>
                 </div>
                 <div id="header-main__bg" />
