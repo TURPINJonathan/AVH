@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -38,6 +40,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: 'boolean', nullable: true)]
     private $bureau;
+
+    #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
+    private $actualite;
+
+    #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
+    private $avhCompteRendus;
+
+    public function __construct()
+    {
+        $this->actualite = new ArrayCollection();
+        $this->avhCompteRendus = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -165,6 +179,57 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setBureau(?bool $bureau): self
     {
         $this->bureau = $bureau;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Actualite>
+     */
+    public function getActualite(): Collection
+    {
+        return $this->actualite;
+    }
+
+    public function addActualite(Actualite $actualite): self
+    {
+        if (!$this->actualite->contains($actualite)) {
+            $this->actualite[] = $actualite;
+        }
+
+        return $this;
+    }
+
+    public function removeActualite(Actualite $actualite): self
+    {
+        $this->actualite->removeElement($actualite);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, AvhCompteRendu>
+     */
+    public function getAvhCompteRendus(): Collection
+    {
+        return $this->avhCompteRendus;
+    }
+
+    public function addAvhCompteRendu(AvhCompteRendu $avhCompteRendu): self
+    {
+        if (!$this->avhCompteRendus->contains($avhCompteRendu)) {
+            $this->avhCompteRendus[] = $avhCompteRendu;
+            $avhCompteRendu->addUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAvhCompteRendu(AvhCompteRendu $avhCompteRendu): self
+    {
+        if ($this->avhCompteRendus->removeElement($avhCompteRendu)) {
+            $avhCompteRendu->removeUser($this);
+        }
 
         return $this;
     }

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\BoutiqueRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: BoutiqueRepository::class)]
@@ -39,6 +41,14 @@ class Boutique
 
     #[ORM\Column(type: 'integer', nullable: true)]
     private $nb_vente;
+
+    #[ORM\ManyToMany(targetEntity: CategoriesShop::class, inversedBy: 'boutiques')]
+    private $CategoriesShop;
+
+    public function __construct()
+    {
+        $this->CategoriesShop = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -152,4 +162,29 @@ class Boutique
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, CategoriesShop>
+     */
+    public function getCategoriesShop(): Collection
+    {
+        return $this->CategoriesShop;
+    }
+
+    public function addCategoriesShop(CategoriesShop $categoriesShop): self
+    {
+        if (!$this->CategoriesShop->contains($categoriesShop)) {
+            $this->CategoriesShop[] = $categoriesShop;
+        }
+
+        return $this;
+    }
+
+    public function removeCategoriesShop(CategoriesShop $categoriesShop): self
+    {
+        $this->CategoriesShop->removeElement($categoriesShop);
+
+        return $this;
+    }
+
 }
