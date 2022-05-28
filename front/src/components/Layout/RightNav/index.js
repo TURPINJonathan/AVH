@@ -35,14 +35,14 @@ const RightNav = () => {
                 />
                 <Twitter className="rightNav-item" data-tip="Twitter" />
             </a>
-            <NavLink to={`/`}>
+            {/* <NavLink to={`/`}>
                 <ReactTooltip
                     place="left"
                     type="dark"
                     effect="float"
                 />
                 <Youtube className="rightNav-item" data-tip="Youtube" />
-            </NavLink>
+            </NavLink> */}
             <a href="https://sensibiliser.avh.asso.fr/campagne-2018/" target="_blank" rel="noreferrer" className="heart">
                 <ReactTooltip
                     place="left"

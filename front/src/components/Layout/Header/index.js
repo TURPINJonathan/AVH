@@ -40,12 +40,20 @@ const Header = () => {
                     <button id="donate-button" className="join-click" src="#">Faites un don</button>
                 </div>
                 <div id="header-social__icons">
-                    <Facebook className="header-social__item" color="white" />
-                    <Twitter className="header-social__item" color="white" />
-                    <Youtube className="header-social__item" color="white" />
-                    <Instagram className="header-social__item" color="white" />
-                    <Linkedin className="header-social__item" color="white" />
-                    <Mail className="header-social__item" color="white" />
+                    <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer">
+                        <Facebook className="header-social__item" color="white" />
+                    </a>
+                    <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer">
+                        <Twitter className="header-social__item" color="white" />
+                    </a>
+                    {/* <Youtube className="header-social__item" color="white" /> */}
+                    <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer">
+                        <Instagram className="header-social__item" color="white" />
+                    </a>
+                    {/* <Linkedin className="header-social__item" color="white" /> */}
+                    <a href="mailto: comite.caen@avh.asso.fr" alt="email de l'association Valentin Haüy">
+                        <Mail className="header-social__item" color="white" />
+                    </a>
                 </div>
             </div>
             <section id="header-main">
