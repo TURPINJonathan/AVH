@@ -54,6 +54,7 @@ const Footer = () => {
             </div>
             <div id="legal">
                 <p>2022 - Copyright © Association Valentin Haüy Caen Calvados - Tous droits réservés</p>
+                <NavLink to="/mentions-legales">Mentions légales</NavLink>
             </div>
         </footer>
     );

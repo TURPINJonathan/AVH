@@ -6,12 +6,14 @@ import { faChevronRight } from '@fortawesome/fontawesome-free-solid'
 
 import loading from '../../assets/img/page_developping.png';
 import defi_voile from "../../assets/img/defi_voile.jpg";
+import { Link } from "react-router-dom";
 
 const Actuality = () => {
     return (
         <main className="actuality">
             <h2>Actualités</h2>
             <div className="actuality_content">
+                {/* //TODO A METTRE EN PLACE EN V1.1
                 <section className="search">
                     <div className="search_section">
                         <h5>Rechercher</h5>
@@ -46,6 +48,17 @@ const Actuality = () => {
                             </li>
                         </ul>
                     </div>
+                </section> */}
+                <section className="actuality_section">
+                    <article className="actuality_article">
+                        <h4>13ème édition de la Norland's Cup</h4>
+                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                        <p className="actuality_overview">La 13ème édition de la Norlanda's Cup approche à grands pas ...
+                        </p>
+                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
+                            <input className="actuality_button" type="button" value="Lire la suite" />
+                        </Link>
+                    </article>
                 </section>
             </div>
         </main>
