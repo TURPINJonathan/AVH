@@ -66,23 +66,23 @@ const Mp = () => {
                 </article>
                 <article className="mp_article">
                     <img src={Reux} alt="logo de la ville de Reux" className="mp_img" />
-                    <h4 className="mp_name">Caen Yacht Club</h4>
+                    <h4 className="mp_name">Ville de Reux</h4>
                 </article>
                 <article className="mp_article">
                     <img src={Trouville} alt="logo de la ville de Trouville sur Mer" className="mp_img" />
-                    <h4 className="mp_name">Caen Yacht Club</h4>
+                    <h4 className="mp_name">Ville de Trouville sur Mer</h4>
                 </article>
                 <article className="mp_article">
                     <img src={Blainville} alt="logo de la ville de Blainville sur Orne" className="mp_img" />
-                    <h4 className="mp_name">Caen Yacht Club</h4>
+                    <h4 className="mp_name">Ville de Blainville sur Orne</h4>
                 </article>
                 <article className="mp_article">
                     <img src={Ccas} alt="logo du CCAS" className="mp_img" />
-                    <h4 className="mp_name">Caen Yacht Club</h4>
+                    <h4 className="mp_name">C.C.A.S.</h4>
                 </article>
                 <article className="mp_article">
                     <img src={Orange} alt="logo de l'opérateur téléphonique Orange" className="mp_img" />
-                    <h4 className="mp_name">Caen Yacht Club</h4>
+                    <h4 className="mp_name">Orange</h4>
                 </article>
             </section>
         </main>
