@@ -8,11 +8,16 @@ import carollesLogo from '../../assets/img/partnership/carolles_logo.png';
 import decathlonLogo from '../../assets/img/partnership/decathlon_logo.png';
 import franceBleuLogo from '../../assets/img/partnership/france_bleu_logo.png';
 import keolisLogo from '../../assets/img/partnership/keolis_logo.png';
-import lyceeLaplaceLogo from '../../assets/img/partnership/lycee_laplace_logo.jpg';
+import lyceeLaplaceLogo from '../../assets/img/partnership/lycee_laplace_logo.png';
 import mdphLogo from '../../assets/img/partnership/mdph_logo.png';
 import pontLevequeLogo from '../../assets/img/partnership/pont_leveque_logo.png';
-import regionNormandieLogo from '../../assets/img/partnership/region_normandie_logo.jpg';
+import regionNormandieLogo from '../../assets/img/partnership/region_normandie_logo.png';
 import yachtClubLogo from '../../assets/img/partnership/yacht_club_logo.png';
+import Reux from '../../assets/img/partnership/reux_logo.png';
+import Trouville from '../../assets/img/partnership/trouville_logo.png';
+import Blainville from '../../assets/img/partnership/blainville_logo.png';
+import Ccas from '../../assets/img/partnership/ccas_logo.png';
+import Orange from '../../assets/img/partnership/orange_logo.png';
 
 const Mp = () => {
     return (
@@ -58,6 +63,26 @@ const Mp = () => {
                 <article className="mp_article">
                     <img src={yachtClubLogo} alt="logo de Caen Yacht Club" className="mp_img" />
                     <h4 className="mp_name">Caen Yacht Club</h4>
+                </article>
+                <article className="mp_article">
+                    <img src={Reux} alt="logo de la ville de Reux" className="mp_img" />
+                    <h4 className="mp_name">Ville de Reux</h4>
+                </article>
+                <article className="mp_article">
+                    <img src={Trouville} alt="logo de la ville de Trouville sur Mer" className="mp_img" />
+                    <h4 className="mp_name">Ville de Trouville sur Mer</h4>
+                </article>
+                <article className="mp_article">
+                    <img src={Blainville} alt="logo de la ville de Blainville sur Orne" className="mp_img" />
+                    <h4 className="mp_name">Ville de Blainville sur Orne</h4>
+                </article>
+                <article className="mp_article">
+                    <img src={Ccas} alt="logo du CCAS" className="mp_img" />
+                    <h4 className="mp_name">C.C.A.S.</h4>
+                </article>
+                <article className="mp_article">
+                    <img src={Orange} alt="logo de l'opérateur téléphonique Orange" className="mp_img" />
+                    <h4 className="mp_name">Orange</h4>
                 </article>
             </section>
         </main>

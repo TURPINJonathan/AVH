@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\MissionRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\MissionRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: MissionRepository::class)]
 class Mission
@@ -11,15 +12,19 @@ class Mission
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['Mission_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 100)]
+    #[Groups(['Mission_get'])]
     private $nom;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['Mission_get'])]
     private $overview;
 
     #[ORM\Column(type: 'text')]
+    #[Groups(['Mission_get'])]
     private $detail;
 
     public function getId(): ?int

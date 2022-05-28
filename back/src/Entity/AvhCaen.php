@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\AvhCaenRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\AvhCaenRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: AvhCaenRepository::class)]
 class AvhCaen
@@ -11,21 +12,27 @@ class AvhCaen
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['AvhCaen_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['AvhCaen_get'])]
     private $horaires;
 
     #[ORM\Column(type: 'string', length: 100)]
+    #[Groups(['AvhCaen_get'])]
     private $mail;
 
     #[ORM\Column(type: 'integer')]
+    #[Groups(['AvhCaen_get'])]
     private $telephone1;
 
     #[ORM\Column(type: 'integer', nullable: true)]
+    #[Groups(['AvhCaen_get'])]
     private $telephone2;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['AvhCaen_get'])]
     private $adresse;
 
     public function getId(): ?int

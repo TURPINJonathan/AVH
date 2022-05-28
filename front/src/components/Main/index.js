@@ -171,20 +171,20 @@ const Main = () => {
                                 </NavLink>
                             </div>
                         </aside>
-                        <aside className="main-follow-article-aside">
+                        {/* <aside className="main-follow-article-aside">
                             <Youtube className="main-follow-article-aside-icon" />
                             <div className="main-follow-article-aside-content">
-                                {/* <p>
+                                <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Mauris euismod, lectus eget consectetur vehicula,
-                                </p> */}
+                                </p>
                                 <NavLink to="/actualites" className="main-follow-article-aside-link">
                                     <p className="main-follow-article-aside-link-text">
                                         suivez-nous sur Youtube
                                     </p>
                                 </NavLink>
                             </div>
-                        </aside>
+                        </aside> */}
                     </article>
                 </div>
             </section>

@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\PartenaireRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PartenaireRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: PartenaireRepository::class)]
 class Partenaire
@@ -11,18 +12,23 @@ class Partenaire
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['Partenaire_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 100)]
+    #[Groups(['Partenaire_get'])]
     private $nom;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Partenaire_get'])]
     private $url;
 
     #[ORM\Column(type: 'string', length: 255)]
+    #[Groups(['Partenaire_get'])]
     private $liseuse;
 
     #[ORM\Column(type: 'boolean')]
+    #[Groups(['Partenaire_get'])]
     private $actif;
 
     public function getId(): ?int

@@ -2,10 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use App\Repository\UserRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
@@ -13,31 +16,58 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['Actualite_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
+    #[Groups(['Actualite_post'])]
     private $email;
 
     #[ORM\Column(type: 'json')]
+    #[Groups(['Actualite_get'])]
     private $roles = [];
 
     #[ORM\Column(type: 'string')]
     private $password;
 
     #[ORM\Column(type: 'string', length: 20)]
+    #[Groups(['Actualite_get'])]
     private $nom;
 
     #[ORM\Column(type: 'string', length: 20)]
+    #[Groups(['Actualite_get'])]
     private $prenom;
 
     #[ORM\Column(type: 'string', length: 40)]
+    #[Groups(['Actualite_post'])]
     private $fonction;
 
     #[ORM\Column(type: 'integer')]
+    #[Groups(['Actualite_post'])]
     private $telephone;
 
     #[ORM\Column(type: 'boolean', nullable: true)]
+    #[Groups(['Actualite_post'])]
     private $bureau;
+
+    #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
+    #[Groups(['Actualite_post'])]
+    private $actualite;
+
+    #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
+    #[Groups(['Actualite_post'])]
+    private $avhCompteRendus;
+
+    public function __toString()
+    {
+        return $this->nom;
+    }
+
+    public function __construct()
+    {
+        $this->actualite = new ArrayCollection();
+        $this->avhCompteRendus = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -165,6 +195,57 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setBureau(?bool $bureau): self
     {
         $this->bureau = $bureau;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Actualite>
+     */
+    public function getActualite(): Collection
+    {
+        return $this->actualite;
+    }
+
+    public function addActualite(Actualite $actualite): self
+    {
+        if (!$this->actualite->contains($actualite)) {
+            $this->actualite[] = $actualite;
+        }
+
+        return $this;
+    }
+
+    public function removeActualite(Actualite $actualite): self
+    {
+        $this->actualite->removeElement($actualite);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, AvhCompteRendu>
+     */
+    public function getAvhCompteRendus(): Collection
+    {
+        return $this->avhCompteRendus;
+    }
+
+    public function addAvhCompteRendu(AvhCompteRendu $avhCompteRendu): self
+    {
+        if (!$this->avhCompteRendus->contains($avhCompteRendu)) {
+            $this->avhCompteRendus[] = $avhCompteRendu;
+            $avhCompteRendu->addUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAvhCompteRendu(AvhCompteRendu $avhCompteRendu): self
+    {
+        if ($this->avhCompteRendus->removeElement($avhCompteRendu)) {
+            $avhCompteRendu->removeUser($this);
+        }
 
         return $this;
     }

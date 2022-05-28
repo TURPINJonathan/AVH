@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\AvhNationalRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\AvhNationalRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: AvhNationalRepository::class)]
 class AvhNational
@@ -11,18 +12,23 @@ class AvhNational
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
+    #[Groups(['AvhNational_get'])]
     private $id;
 
     #[ORM\Column(type: 'integer')]
+    #[Groups(['AvhNational_get'])]
     private $nb_benevoles;
 
     #[ORM\Column(type: 'integer')]
+    #[Groups(['AvhNational_get'])]
     private $nb_salaries;
 
     #[ORM\Column(type: 'integer')]
+    #[Groups(['AvhNational_get'])]
     private $nb_implantations;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['AvhNational_get'])]
     private $liseuse;
 
     public function getId(): ?int
