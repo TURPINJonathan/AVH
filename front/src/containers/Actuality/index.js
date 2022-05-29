@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import Actuality from '../../components/Actuality';
-import { fetchActuality } from '../../actions/actuality.js';
+import { fetchActuality } from '../../actions/actuality';
 
 const mapStateToProps = (state) => {
     return {

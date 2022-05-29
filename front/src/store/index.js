@@ -4,15 +4,19 @@ import reducer from '../reducers';
 
 import actualityMiddleware from '../middlewares/actualityMiddleware';
 
-const enhancer = composeWithDevTools(
-    applyMiddleware(
-        actualityMiddleware
-    ),
-);
+//! N'EXISTE PLUS DEPUIS configureStore
+//! const enhancer = composeWithDevTools(
+//!     applyMiddleware(
+//!         actualityMiddleware
+//!     ),
+//! );
 
 const store = configureStore({
     reducer,
-    enhancer,
+    middleware: [
+        actualityMiddleware,
+    ],
+    // enhancer,
 });
 
 export default store;

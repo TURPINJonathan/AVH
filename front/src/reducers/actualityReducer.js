@@ -9,7 +9,7 @@ function actualityReducer(state = initialState, action = {}) {
         case SAVE_ACTUALITY:
             return {
                 ...state,
-                actuality: action.payload,
+                actuality: action.actuality,
             };
         default:
             return state;
