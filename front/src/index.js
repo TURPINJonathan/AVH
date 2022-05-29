@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+
+// import store
+import store from './store';
 
 //styles
 import './styles/index.scss';
@@ -18,7 +22,8 @@ import Legal from './components/Layout/Footer/Legal';
 import Rh from './components/Avh/Caen/RH';
 import Volunteers from './components/Avh/Caen/Volunteers';
 import AVH from './components/Avh/AVH';
-import Actuality from './components/Actuality';
+// import Actuality from './components/Actuality';
+import Actuality from './containers/Actuality';
 import Article from './components/Actuality/Article';
 import Braille from './components/Activity/Braille';
 import Informatique from './components/Activity/Informatique';
@@ -38,118 +43,120 @@ import AVHCaen from './components/Avh/Caen/AVHCaen';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename='/' >
-      <Header />
-      <RightNav />
-      <Routes>
-        <Route
-          path="/"
-          element={<Main />}
-          exact
-        />
-        <Route
-          path="/mentions-legales"
-          element={<Legal />}
-        // exact
-        />
-        <Route
-          path="/caen/rh"
-          element={<Rh />}
-        // exact
-        />
-        <Route
-          path="/caen/benevoles"
-          element={<Volunteers />}
-        // exact
-        />
-        <Route
-          path="/AVH"
-          element={<AVH />}
-        // exact
-        />
-        <Route
-          path="caen/AVH"
-          element={<AVHCaen />}
-        // exact
-        />
-        <Route
-          path="/history"
-          element={<History />}
-        // exact
-        />
-        <Route
-          path="/actualites"
-          element={<Actuality />}
-        // exact
-        />
-        <Route
-          path="/actualites/:slug"
-          element={<Article />}
-        // exact
-        />
-        <Route
-          path="/activites/braille"
-          element={<Braille />}
-        // exact
-        />
-        <Route
-          path="/activites/informatique"
-          element={<Informatique />}
-        // exact
-        />
-        <Route
-          path="/activites/sensibilisation"
-          element={<Sensibilisation />}
-        // exact
-        />
-        <Route
-          path="/activites/accessibility"
-          element={<Accessibility />}
-        // exact
-        />
-        <Route
-          path="/activites/cls"
-          element={<Cls />}
-        // exact
-        />
-        <Route
-          path="/mecenat-partenariat"
-          element={<Mp />}
-        // exact
-        />
-        <Route
-          path="/boutique/catalogue"
-          element={<Book />}
-        // exact
-        />
-        <Route
-          path="/boutique/materiel"
-          element={<Equipment />}
-        // exact
-        />
-        <Route
-          path="/come"
-          element={<Come />}
-        // exact
-        />
-        <Route
-          path="/give"
-          element={<Give />}
-        // exact
-        />
-        <Route
-          path="/contact"
-          element={<Contact />}
-        // exact
-        />
-        <Route
-          path="/find-us"
-          element={<Map />}
-        // exact
-        />
-      </Routes>
-      <Footer />
-    </Router>
+    <Provider store={store}>
+      <Router basename='/' >
+        <Header />
+        <RightNav />
+        <Routes>
+          <Route
+            path="/"
+            element={<Main />}
+            exact
+          />
+          <Route
+            path="/mentions-legales"
+            element={<Legal />}
+          // exact
+          />
+          <Route
+            path="/caen/rh"
+            element={<Rh />}
+          // exact
+          />
+          <Route
+            path="/caen/benevoles"
+            element={<Volunteers />}
+          // exact
+          />
+          <Route
+            path="/AVH"
+            element={<AVH />}
+          // exact
+          />
+          <Route
+            path="caen/AVH"
+            element={<AVHCaen />}
+          // exact
+          />
+          <Route
+            path="/history"
+            element={<History />}
+          // exact
+          />
+          <Route
+            path="/actualites"
+            element={<Actuality />}
+          // exact
+          />
+          <Route
+            path="/actualites/:slug"
+            element={<Article />}
+          // exact
+          />
+          <Route
+            path="/activites/braille"
+            element={<Braille />}
+          // exact
+          />
+          <Route
+            path="/activites/informatique"
+            element={<Informatique />}
+          // exact
+          />
+          <Route
+            path="/activites/sensibilisation"
+            element={<Sensibilisation />}
+          // exact
+          />
+          <Route
+            path="/activites/accessibility"
+            element={<Accessibility />}
+          // exact
+          />
+          <Route
+            path="/activites/cls"
+            element={<Cls />}
+          // exact
+          />
+          <Route
+            path="/mecenat-partenariat"
+            element={<Mp />}
+          // exact
+          />
+          <Route
+            path="/boutique/catalogue"
+            element={<Book />}
+          // exact
+          />
+          <Route
+            path="/boutique/materiel"
+            element={<Equipment />}
+          // exact
+          />
+          <Route
+            path="/come"
+            element={<Come />}
+          // exact
+          />
+          <Route
+            path="/give"
+            element={<Give />}
+          // exact
+          />
+          <Route
+            path="/contact"
+            element={<Contact />}
+          // exact
+          />
+          <Route
+            path="/find-us"
+            element={<Map />}
+          // exact
+          />
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

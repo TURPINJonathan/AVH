@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import './actuality.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,7 +8,10 @@ import loading from '../../assets/img/page_developping.png';
 import defi_voile from "../../assets/img/defi_voile.jpg";
 import { Link } from "react-router-dom";
 
-const Actuality = () => {
+const Actuality = ({ loadActuality }) => {
+    useEffect(() => {
+        loadActuality();
+    }, []);
     return (
         <main className="actuality">
             <h2>Actualités</h2>
