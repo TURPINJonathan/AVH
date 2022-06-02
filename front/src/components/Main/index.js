@@ -52,7 +52,7 @@ const Main = ({ loadMission, mission }) => {
             </section>
 
             {/* OU NOUS TROUVER, FAIRE UN DON, DEVENIR BENEVOLE */}
-            <section className="main-association">
+            {/* <section className="main-association">
                 <h2 className="main-association-title"> Nos missions</h2>
                 <div className="main-association-container">
                     {mission.map(oneMission => {
@@ -73,13 +73,13 @@ const Main = ({ loadMission, mission }) => {
                                     <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
                                 </button>
                             </NavLink> */}
-                                    </aside>
+            {/* </aside>
                                 </article>
                             )
                         }
                     })}
                 </div>
-            </section>
+            </section> */}
 
             {/* PRESIDENT SPEAK */}
             <section className="main-president">

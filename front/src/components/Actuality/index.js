@@ -53,7 +53,7 @@ const Actuality = ({ loadActuality, actuality }) => {
                         </ul>
                     </div>
                 </section> */}
-                {/* <section className="actuality_section">
+                <section className="actuality_section">
                     {actuality.map(actu => (
                         <article className="actuality_article" key={actu.id}>
                             <h4>{actu.titre}</h4>
@@ -73,7 +73,7 @@ const Actuality = ({ loadActuality, actuality }) => {
                             <input className="actuality_button" type="button" value="Lire la suite" />
                         </Link>
                     </article>
-                </section> */}
+                </section>
             </div>
         </main>
     );
