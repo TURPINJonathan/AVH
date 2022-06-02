@@ -15,7 +15,8 @@ import './styles/index.scss';
 // Main components
 import Footer from './components/Layout/Footer';
 import Header from './components/Layout/Header';
-import Main from './components/Main';
+import Main from './containers/Main';
+// import Main from './components/Main';
 import Legal from './components/Layout/Footer/Legal';
 
 // Navigate components

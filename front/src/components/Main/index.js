@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import './main.scss';
 
@@ -7,12 +7,15 @@ import defi_voile from "../../assets/img/defi_voile.jpg";
 import equipage from "../../assets/img/equipage.png";
 import president from "../../assets/img/desk/jeanPierreLeclercq.jpg";
 import { NavLink } from "react-router-dom";
-import { ArrowRightCircle, Facebook, Instagram, Twitter, Youtube } from "react-feather";
+import { ArrowRightCircle, Facebook, Instagram, Twitter } from "react-feather";
 
 import ReactMapboxGl, { Layer, Feature, Popup } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const Main = () => {
+const Main = ({ loadMission, mission }) => {
+    useEffect(() => {
+        loadMission();
+    }, []);
 
     const Map = ReactMapboxGl({
         accessToken:
@@ -52,51 +55,29 @@ const Main = () => {
             <section className="main-association">
                 <h2 className="main-association-title"> Nos missions</h2>
                 <div className="main-association-container">
-                    <article
-                        className="main-association-article"
-                        style={{ backgroundImage: `url(${defi_voile})` }}
-                    >
-                        <aside className="main-association-article-aside">
-                            <h3 className="main-association-article-aside-title">Défendre les droits des déficients visuels</h3>
+                    {mission.map(oneMission => {
+                        if (oneMission.show_main === true) {
+                            return (
+                                <article
+                                    className="main-association-article"
+                                    style={{ backgroundImage: `url(${defi_voile})` }}
+                                    key={oneMission.id}
+                                >
+                                    <aside className="main-association-article-aside">
+                                        <h3 className="main-association-article-aside-title"
+                                        >{oneMission.nom}</h3>
 
-                            {/* <NavLink to="/actualites" className="main-association-article-aside-link">
+                                        {/* <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">
                                     En savoir plus
                                     <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
                                 </button>
                             </NavLink> */}
-                        </aside>
-                    </article>
-                    <article
-                        className="main-association-article"
-                        style={{ backgroundImage: `url(${defi_voile})` }}
-                    >
-                        <aside className="main-association-article-aside">
-                            <h3 className="main-association-article-aside-title">Restaurer et développer l'autonomie par l'accès à l'emploi, à l'écriture et à la lecture, ainsi que par la formation</h3>
-
-                            {/* <NavLink to="/actualites" className="main-association-article-aside-link">
-                                <button className="main-association-article-aside-button">
-                                    En savoir plus
-                                    <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
-                                </button>
-                            </NavLink> */}
-                        </aside>
-                    </article>
-                    <article
-                        className="main-association-article"
-                        style={{ backgroundImage: `url(${defi_voile})` }}
-                    >
-                        <aside className="main-association-article-aside">
-                            <h3 className="main-association-article-aside-title">Promouvoir l'accès à l'écrit</h3>
-
-                            {/* <NavLink to="/actualites" className="main-association-article-aside-link">
-                                <button className="main-association-article-aside-button">
-                                    En savoir plus
-                                    <ArrowRightCircle className="main-association-article-aside-content-button-arrow" />
-                                </button>
-                            </NavLink> */}
-                        </aside>
-                    </article>
+                                    </aside>
+                                </article>
+                            )
+                        }
+                    })}
                 </div>
             </section>
 

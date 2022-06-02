@@ -55,7 +55,7 @@ const Actuality = ({ loadActuality, actuality }) => {
                 </section> */}
                 <section className="actuality_section">
                     {actuality.map(actu => (
-                        <article className="actuality_article">
+                        <article className="actuality_article" key={actu.id}>
                             <h4>{actu.titre}</h4>
                             <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                             <p className="actuality_overview">{actu.overview}</p>
