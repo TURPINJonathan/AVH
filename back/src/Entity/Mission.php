@@ -27,6 +27,10 @@ class Mission
     #[Groups(['Mission_get'])]
     private $detail;
 
+    #[ORM\Column(type: 'boolean', nullable: true)]
+    #[Groups(['Mission_get'])]
+    private $show_main;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -64,6 +68,18 @@ class Mission
     public function setDetail(string $detail): self
     {
         $this->detail = $detail;
+
+        return $this;
+    }
+
+    public function isShowMain(): ?bool
+    {
+        return $this->show_main;
+    }
+
+    public function setShowMain(?bool $show_main): self
+    {
+        $this->show_main = $show_main;
 
         return $this;
     }
