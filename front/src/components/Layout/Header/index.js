@@ -23,7 +23,6 @@ const Header = () => {
     const sell = useRef(null);
 
     const [isOpen, setIsOpen] = useState(false);
-    console.log(isOpen);
     const [avhIsOpen, setAvhIsOpen] = useState(false);
     const [activityIsOpen, setActivityIsOpen] = useState(false);
     const [sellIsOpen, setSellIsOpen] = useState(false);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import './actuality.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,7 +8,11 @@ import loading from '../../assets/img/page_developping.png';
 import defi_voile from "../../assets/img/defi_voile.jpg";
 import { Link } from "react-router-dom";
 
-const Actuality = () => {
+const Actuality = ({ loadActuality, actuality }) => {
+    useEffect(() => {
+        loadActuality();
+        console.log(loadActuality());
+    }, []);
     return (
         <main className="actuality">
             <h2>Actualités</h2>
@@ -50,6 +54,16 @@ const Actuality = () => {
                     </div>
                 </section> */}
                 <section className="actuality_section">
+                    {actuality.map(actu => (
+                        <article className="actuality_article" key={actu.id}>
+                            <h4>{actu.titre}</h4>
+                            <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                            <p className="actuality_overview">{actu.overview}</p>
+                            <Link to={`/actualites/${actu.url}`} className="actuality_link">
+                                <input className="actuality_button" type="button" value="Lire la suite" />
+                            </Link>
+                        </article>
+                    ))}
                     <article className="actuality_article">
                         <h4>13ème édition de la Norland's Cup</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
