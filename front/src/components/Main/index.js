@@ -60,7 +60,7 @@ const Main = ({ loadMission, mission }) => {
                             return (
                                 <article
                                     className="main-association-article"
-                                    style={{ backgroundImage: `url(${defi_voile})` }}
+                                    style={{ backgroundImage: `url(http://localhost:8080/uploads/mission_image/${oneMission.file})` }}
                                     key={oneMission.id}
                                 >
                                     <aside className="main-association-article-aside">
