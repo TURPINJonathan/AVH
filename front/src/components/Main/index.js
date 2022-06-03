@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 
 import './main.scss';
 
+// import picture URL
+import picture from "../../data/pictureURL";
+
 // pictures
 import defi_voile from "../../assets/img/defi_voile.jpg";
 import equipage from "../../assets/img/equipage.png";
@@ -60,7 +63,7 @@ const Main = ({ loadMission, mission }) => {
                             return (
                                 <article
                                     className="main-association-article"
-                                    style={{ backgroundImage: `url(http://localhost:8080/uploads/mission_image/${oneMission.file})` }}
+                                    style={{ backgroundImage: `url(${picture}mission_image/${oneMission.file})` }}
                                     key={oneMission.id}
                                 >
                                     <aside className="main-association-article-aside">
