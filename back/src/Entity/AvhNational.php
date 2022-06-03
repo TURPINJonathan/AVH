@@ -83,4 +83,9 @@ class AvhNational
 
         return $this;
     }
+    
+    public function __toString()
+    {
+        return $this->nom;
+    }
 }

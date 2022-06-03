@@ -20,3 +20,6 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+###> upload files ###
+/public/uploads/

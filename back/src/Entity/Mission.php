@@ -5,8 +5,11 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\MissionRepository;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: MissionRepository::class)]
+#[Vich\Uploadable]
 class Mission
 {
     #[ORM\Id]
@@ -30,6 +33,14 @@ class Mission
     #[ORM\Column(type: 'boolean', nullable: true)]
     #[Groups(['Mission_get'])]
     private $show_main;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Mission_get'])]
+    private $file;
+
+    #[Vich\UploadableField(mapping: 'mission_image', fileNameProperty: 'file')]
+    #[Groups(['Mission_get'])]
+    private $imageFile;
 
     public function getId(): ?int
     {
@@ -82,5 +93,38 @@ class Mission
         $this->show_main = $show_main;
 
         return $this;
+    }
+
+    public function getFile(): ?string
+    {
+        return $this->file;
+    }
+
+    public function setFile(?string $file): self
+    {
+        $this->file = $file;
+
+        return $this;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(File $file = null): self
+    {
+        $this->imageFile = $file;
+
+        if ($file) {
+            $this->updatedAt = new \DateTimeImmutable('now');
+        }
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->nom;
     }
 }
