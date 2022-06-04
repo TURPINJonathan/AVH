@@ -28,6 +28,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            filter: grayscale(90%);
 
             &:hover {
                 box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75) inset;
