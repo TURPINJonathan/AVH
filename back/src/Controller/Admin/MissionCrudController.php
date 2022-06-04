@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
@@ -30,6 +31,7 @@ class MissionCrudController extends AbstractCrudController
             BooleanField::new('show_main'),
             TextField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex(),
             ImageField::new('file')->setBasePath('/uploads/mission_image')->onlyOnIndex(),
+            SlugField::new('slug')->setTargetFieldName('nom'),
         ];
     }
 }

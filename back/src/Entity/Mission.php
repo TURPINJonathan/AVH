@@ -42,6 +42,10 @@ class Mission
     #[Groups(['Mission_get'])]
     private $imageFile;
 
+    #[ORM\Column(type: 'string', length: 100)]
+    #[Groups(['Mission_get'])]
+    private $slug;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -126,5 +130,17 @@ class Mission
     public function __toString()
     {
         return $this->nom;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
     }
 }
