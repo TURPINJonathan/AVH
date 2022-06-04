@@ -1,2 +1,2 @@
-const picture = 'http://localhost:8080/uploads/';
+const picture = 'https://avhcaen.fr/back/uploads/';
 export default picture;

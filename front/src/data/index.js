@@ -1,2 +1,2 @@
-const url = 'http://localhost:8080/api';
+const url = 'https://avhcaen.fr/back/api';
 export default url;
