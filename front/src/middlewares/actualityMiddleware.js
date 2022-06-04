@@ -1,24 +1,25 @@
 import axios from 'axios';
 import { FETCH_ACTUALITY, saveActuality } from '../actions/actuality';
 
-import url from '../data';
+import { DEV_URL } from '../data';
 
 const actualityMiddleware = (store) => (next) => (action) => {
     switch (action.type) {
-        case FETCH_ACTUALITY:
-            axios.get(`${url}/actualite/list`)
+        case FETCH_ACTUALITY: {
+            axios.get(`${DEV_URL}/actualite/list`)
                 .then((response) => {
-                    console.log('Middleware : ');
+                    console.log('actualityMiddleware' + response.data);
                     store.dispatch(saveActuality(response.data));
                 })
                 .catch((error) => {
                     console.log(error);
                 });
             break;
+        }
         default:
             break;
     }
     next(action);
-}
+};
 
 export default actualityMiddleware;

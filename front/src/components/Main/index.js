@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import './main.scss';
 
 // import picture URL
-import picture from "../../data/pictureURL";
+import { picture } from "../../data";
 
 // pictures
 import defi_voile from "../../assets/img/defi_voile.jpg";
