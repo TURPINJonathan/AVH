@@ -117,7 +117,7 @@ class Actualite
     {
         $this->categorie = new ArrayCollection();
         $this->users = new ArrayCollection();
-        $this->createdAt = new \DateTimeImmutable();
+        $this->createdAt = new \DateTimeImmutable('dd-mm-YYYY');
     }
 
     public function getFile(): ?string
@@ -147,7 +147,7 @@ class Actualite
 
         return $this;
     }
-    
+
     public function getId(): ?int
     {
         return $this->id;
@@ -446,7 +446,7 @@ class Actualite
     
     public function __toString()
     {
-        return $this->nom;
+        return $this->titre;
     }
 
     public function getTag(): ?string
