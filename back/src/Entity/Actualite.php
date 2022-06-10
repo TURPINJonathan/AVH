@@ -117,7 +117,7 @@ class Actualite
     {
         $this->categorie = new ArrayCollection();
         $this->users = new ArrayCollection();
-        $this->createdAt = new \DateTimeImmutable('dd-mm-YYYY');
+        $this->createdAt = new \DateTimeImmutable();
     }
 
     public function getFile(): ?string

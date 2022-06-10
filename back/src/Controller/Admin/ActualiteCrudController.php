@@ -45,7 +45,7 @@ class ActualiteCrudController extends AbstractCrudController
             TextEditorField::new('paragraphe1')->setLabel('Premier paragraphe')->hideOnIndex(),
             TextEditorField::new('paragraphe2')->setLabel('Second paragraphe')->hideOnIndex(),
             TextEditorField::new('paragraphe3')->setLabel('Troisième paragraphe')->hideOnIndex(),
-            SlugField::new('url')->setTargetFieldName('titre')->setLabel('Slug')->setHelp('Apparaîtra dans l\'URL de la page de l\'actualité')->hideOnIndex(),
+            SlugField::new('url')->setTargetFieldName('titre')->setLabel('Slug')->setHelp('! RESERVE AU DEVELOPPEUR ! Apparaîtra dans l\'URL de la page de l\'actualité')->hideOnIndex(),
             // AssociationField::new('categories')->setLabel('Catégories')->setHelp('Choisissez les catégories dans lesquelles l\'actualité apparaîtra.'),
             // AssociationField::new('tags')->setLabel('Tags')->setHelp('Choisissez les tags qui apparaîtront sur l\'actualité.'),
             // AssociationField::new('users')->setLabel('Auteur')->setHelp('Choisissez l\'auteur de l\'actualité.')->hideOnForm(),
