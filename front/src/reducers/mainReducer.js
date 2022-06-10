@@ -2,6 +2,7 @@ import { SAVE_MISSION, SAVE_ACTUALITY } from "../actions/main";
 
 const initialState = {
     mission: [],
+    actuality: [],
 };
 
 function mainReducer(state = initialState, action = {}) {

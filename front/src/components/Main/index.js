@@ -57,11 +57,18 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                             }
                         })
                         }
-
+                        DEV_PICTURE + 'actualite_image/' + actu.file
                     </div>
                 </div>
                 <div className="main-actuality-content-img--container">
-                    <img className="main-actuality-content-img" src={equipage} alt="defi_voile" />
+                    {actuality.map((item) => {
+                        if (item.focus === true) {
+                            console.log(item);
+                            return (
+                                <img className="main-actuality-content-img" src={`http://localhost:8080/uploads/actualite_image/${item.file}`} alt={item.liseuse} />
+                            )
+                        }
+                    })}
                 </div>
             </section>
 
