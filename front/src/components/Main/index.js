@@ -57,7 +57,6 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                             }
                         })
                         }
-                        DEV_PICTURE + 'actualite_image/' + actu.file
                     </div>
                 </div>
                 <div className="main-actuality-content-img--container">
