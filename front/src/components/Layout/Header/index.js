@@ -283,10 +283,22 @@ const Header = () => {
                                 Notre histoire
                             </NavLink>
                             <NavLink
-                                to="/caen"
+                                to="/caen/AVH"
                                 className="burger-subTitle"
                             >
-                                AVH Caen
+                                AVH Caen Calvados
+                            </NavLink>
+                            <NavLink
+                                to="/caen/rh"
+                                className="burger-subTitle"
+                            >
+                                Nos ressources humaines
+                            </NavLink>
+                            <NavLink
+                                to="/caen/benevoles"
+                                className="burger-subTitle"
+                            >
+                                Bénévoles
                             </NavLink>
                         </li>
                         <li className="burger-title">
@@ -300,25 +312,31 @@ const Header = () => {
                         <li className="burger-title">
                             Activités
                             <NavLink
-                                to="/braille"
+                                to="/activites/braille"
                                 className="burger-subTitle"
                             >
                                 Le Braille
                             </NavLink>
                             <NavLink
-                                to="/informatique"
+                                to="/activites/informatique"
                                 className="burger-subTitle"
                             >
                                 L'informatique adapté
                             </NavLink>
                             <NavLink
-                                to="/formation"
+                                to="/activites/accessibility"
                                 className="burger-subTitle"
                             >
-                                Formation Professionnelle
+                                L'accessibilité
                             </NavLink>
                             <NavLink
-                                to="/cls"
+                                to="/activites/sensibilisation"
+                                className="burger-subTitle"
+                            >
+                                La sensibilisation
+                            </NavLink>
+                            <NavLink
+                                to="/activites/cls"
                                 className="burger-subTitle"
                             >
                                 Culture, loisirs et sports
@@ -338,14 +356,14 @@ const Header = () => {
                                 to="/boutique/catalogue"
                                 className="burger-subTitle"
                             >
-                                Le catalogue
+                                La boutique
                             </NavLink>
-                            <NavLink
+                            {/* <NavLink
                                 to="/boutique/materiel"
                                 className="burger-subTitle"
                             >
                                 Le matériel
-                            </NavLink>
+                            </NavLink> */}
                         </li>
                     </ul>
                 </nav>
