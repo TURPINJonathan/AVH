@@ -8,7 +8,6 @@ const actualityMiddleware = (store) => (next) => (action) => {
         case FETCH_ACTUALITY: {
             axios.get(`${DEV_URL}/actualite/list`)
                 .then((response) => {
-                    console.log('actualityMiddleware' + response.data);
                     store.dispatch(saveActuality(response.data));
                 })
                 .catch((error) => {

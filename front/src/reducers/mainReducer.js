@@ -1,4 +1,4 @@
-import { SAVE_MISSION } from "../actions/main";
+import { SAVE_MISSION, SAVE_ACTUALITY } from "../actions/main";
 
 const initialState = {
     mission: [],
@@ -10,6 +10,11 @@ function mainReducer(state = initialState, action = {}) {
             return {
                 ...state,
                 mission: action.mission,
+            };
+        case SAVE_ACTUALITY:
+            return {
+                ...state,
+                actuality: action.actuality,
             };
         default:
             return state;
