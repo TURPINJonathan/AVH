@@ -6,7 +6,6 @@ import './main.scss';
 import picture from "../../data/pictureURL";
 
 // pictures
-import defi_voile from "../../assets/img/defi_voile.jpg";
 import equipage from "../../assets/img/equipage.png";
 import president from "../../assets/img/desk/jeanPierreLeclercq.jpg";
 import { NavLink } from "react-router-dom";
@@ -15,21 +14,23 @@ import { ArrowRightCircle, Facebook, Instagram, Twitter } from "react-feather";
 import ReactMapboxGl, { Layer, Feature, Popup } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const Main = ({ loadMission, mission }) => {
+const Main = ({ loadMission, mission, loadActuality, actuality }) => {
     useEffect(() => {
         loadMission();
+        loadActuality();
     }, []);
 
+    // Mapbox
     const Map = ReactMapboxGl({
         accessToken:
             'pk.eyJ1IjoidHVycGluam9uYXRoYW4iLCJhIjoiY2t3bDg0ZHc3MWpybzJ4bWRxNXRzYzUxZyJ9.t_jtpG-4kmbii3A1mDXfNQ'
     });
-
     const Longitude = -0.34575;
     const Latitude = 49.17530;
 
     const Style = 'mapbox://styles/mapbox/outdoors-v11';
     const Zoom = [16];
+
     return (
         <main className="main">
 
@@ -38,15 +39,25 @@ const Main = ({ loadMission, mission }) => {
                 <div className="main-actuality-content-text">
                     <div className="main-actuality-content">
                         <h2 className="main-actuality-content-title">Actualités</h2>
-                        <p className="main-actuality-content-contentText">
-                            La 13ème édition de la Norlanda's Cup approche à grands pas ...
-                        </p>
-                        <NavLink to="/actualites/norlanda_cup_2022" className="main-actuality-content-link">
-                            <button className="main-actuality-content-button">
-                                En savoir plus
-                                <ArrowRightCircle className="main-actuality-content-button-arrow" />
-                            </button>
-                        </NavLink>
+                        {actuality.map((item) => {
+                            if (item.focus === true) {
+                                return (
+                                    <>
+                                        <p className="main-actuality-content-contentText">
+                                            {item.overview}
+                                        </p>
+                                        <NavLink to={`/actualites/${item.url}`} className="main-actuality-content-link">
+                                            <button className="main-actuality-content-button">
+                                                En savoir plus
+                                                <ArrowRightCircle className="main-actuality-content-button-arrow" />
+                                            </button>
+                                        </NavLink>
+                                    </>
+                                )
+                            }
+                        })
+                        }
+
                     </div>
                 </div>
                 <div className="main-actuality-content-img--container">
