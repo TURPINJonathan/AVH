@@ -93,6 +93,7 @@
 
                 .actuality_picture {
                     max-width: 17rem;
+                    max-height: 13rem;
                 }
 
                 .actuality_overview {
@@ -107,7 +108,7 @@
                     width: 10rem;
                     height: 2rem;
                     font-size: 1rem;
-                    margin: auto;
+                    margin: auto auto;
 
                     &:hover {
                         background-color: vars.$orange;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { FETCH_ACTUALITY, FETCH_MISSION, saveMission, saveActuality } from '../actions/main';
 
-import url from '../data';
+import { url } from '../data';
 
 const mainMiddleware = (store) => (next) => (action) => {
     switch (action.type) {
