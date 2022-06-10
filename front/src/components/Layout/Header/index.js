@@ -35,8 +35,8 @@ const Header = () => {
         <header id="header">
             <div id="header-social">
                 <div id="header-main__join">
-                    <button id="join-button" className="join-click" src="#">Devenir bénévole</button>
-                    <button id="donate-button" className="join-click" src="#">Faites un don</button>
+                    <button id="join-button" className="join-click" href="https://www.avh.asso.fr/fr/lassociation/devenir-benevole-ou-mecenat-de-competences#:~:text=L'association%20Valentin%20Ha%C3%BCy%2C%20pr%C3%A9sente,au%20sein%20de%20l'association." target="_blank" rel="noreferrer">Devenir bénévole</button>
+                    <button id="donate-button" className="join-click" href="https://sensibiliser.avh.asso.fr/campagne-2018/" target="_blank" rel="noreferrer">Faites un don</button>
                 </div>
                 <div id="header-social__icons">
                     <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer">
