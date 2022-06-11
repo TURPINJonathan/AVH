@@ -1,20 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}API de l'AVH Caen Calvados
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<style>
+		.container {
+			font: 18px / 1.5 sans-serif;
+			width: 100vw;
+			height: 100vh;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-image: url('https://avhcaen.fr/static/media/logo.d272c8bbb18a1edb56ad.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			overflow: hidden !important;
+		}
+		.text {
+			text-transform: uppercase;
+			padding: 10rem;
+			border-radius: 50px;
+			background: rgba(255, 255, 255, 0.4);
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			backdrop-filter: blur(9.5px);
+			-webkit-backdrop-filter: blur(9.5px)
+		}
+        p, a {
+            text-transform: none;
+        }
+	</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/turpi/Desktop/AVH/back/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/turpi/Desktop/AVH/back/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<div class="container">
+		<div class="text">
+			<h1>API de l'AVH Caen Calvados</h1>
+            <p>Si vous êtes perdu(e)s, vous pouvez contacter Jonathan TURPIN.</p>
+            <a href="mailto:jturpin@avhcaen.fr">jturpin@avhcaen.fr</a>
+            <p>06 48 00 19 46</p>
+		</div>
+	</div>
 {% endblock %}
