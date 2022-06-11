@@ -1,5 +1,8 @@
 import React from "react";
 
+import Moment from 'moment';
+import 'moment/locale/fr';
+
 import './article.scss';
 
 import defi_voile from "../../../assets/img/defi_voile.jpg";
@@ -15,7 +18,6 @@ const Article = ({ oneActuality }) => {
     return (
         <main className="article">
             <article>
-                <p>{article.url}</p>
                 <h3 className="article-title">13ème édition de la Norlanda's Cup</h3>
                 <div className="article_picture">
                     <img src={picture + 'actualite_image/' + article.file} alt="defi voile" />
@@ -32,7 +34,9 @@ const Article = ({ oneActuality }) => {
                         {article.paragraphe1}
                     </p>
                     <div className="article_sign">
-                        <p className="article_date">Article du {article.createdAt}</p>
+                        <p className="article_date">Article du <> </>
+                            {Moment(article.date).format('dddd MMMM YYYY')}
+                        </p>
                         <p className="article_author">Par<> </>
                             <span className="firstname">Jonathan</span><> </>
                             <span className="lastname">Turpin</span>
