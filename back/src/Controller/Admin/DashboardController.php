@@ -18,11 +18,13 @@ use App\Entity\Mission;
 use App\Entity\Partenaire;
 use App\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class DashboardController extends AbstractDashboardController
 {
     #[Route('/admin', name: 'admin')]
-    #[IsGranted("ROLE_MODERATEUR")]
+    #[Security("is_granted('ROLE_SUPERADMIN') or is_granted('ROLE_ADMIN') or is_granted('ROLE_MODERATEUR')")]
+    // #[IsGranted(["ROLE_SUPERADMIN","ROLE_ADMIN","ROLE_MODERATEUR"])]
     public function index(): Response
     {
         // return parent::index();
