@@ -85,6 +85,7 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                                     <aside className="main-association-article-aside">
                                         <h3 className="main-association-article-aside-title"
                                         >{oneMission.nom}</h3>
+                                        <p id="test">{oneMission.detail}</p>
 
                                         {/* <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">
