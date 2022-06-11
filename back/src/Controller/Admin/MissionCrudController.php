@@ -36,7 +36,7 @@ class MissionCrudController extends AbstractCrudController
             TextField::new('nom'),
             TextField::new('overview')->setLabel('Courte description')->setHelp('100 caractères maximum')->setMaxLength(100),
             TextEditorField::new('detail')->setLabel('Détails')->hideOnIndex(),
-            TextField::new('imageFile')->setLabel('Image de la mission')->setFormType(VichImageType::class)->hideOnIndex()->onlyWhenCreating()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
+            TextField::new('imageFile')->setLabel('Image de la mission')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
             BooleanField::new('show_main')->setLabel('Afficher également en page d\'accueil ?')->setHelp('Si oui, elle sera automatiquement retravailler en noir et blanc. Souhaitez-vous l\'afficher dans la page d\'accueil ?'),
             ImageField::new('file')->setBasePath('/back/uploads/mission_image')->onlyOnIndex(),
             SlugField::new('slug')->setTargetFieldName('nom')->setHelp('Apparaîtra dans l\'URL de la page de la mission')->hideOnIndex(),
