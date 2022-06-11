@@ -26,7 +26,7 @@ class PartenaireCrudController extends AbstractCrudController
             TextField::new('liseuse')->hideOnIndex()->setLabel('Description de l\'image')->setHelp('Sera lu par les liseuses d\'écran. 255 caractères maximum'),
             BooleanField::new('actif')->setLabel('Partenaire actif ?')->setHelp('Si non coché, l\'image ne sera pas affichée sur le site de l\'AVH Caen'),
             TextField::new('imageFile')->setLabel('Logo du partenaire')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
-            ImageField::new('file')->setBasePath('/uploads/partenaire_image')->onlyOnIndex(),
+            ImageField::new('file')->setBasePath('/partenaire_image')->onlyOnIndex()->setLabel('Image'),
         ];
     }
 }

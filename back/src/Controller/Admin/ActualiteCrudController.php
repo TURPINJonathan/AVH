@@ -39,7 +39,7 @@ class ActualiteCrudController extends AbstractCrudController
             TextField::new('overview')->setLabel('Courte description de l\'actualité.')->setHelp('Sera visible dans la page des actualités et sur l\'actualité en elle-même. 255 caractères maximum')->setMaxLength(255)->hideOnIndex(),
             BooleanField::new('focus')->setLabel('Mettre l\'article en avant l\'actualité ?')->setHelp('Si oui, elle sera affichée en haut de la page d\'actualités.'),
             TextField::new('imageFile')->setLabel('Image de l\'actualité')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
-            ImageField::new('file')->setBasePath('/uploads/actualite_image')->onlyOnIndex(),
+            ImageField::new('file')->setBasePath('/uploads/actualite_image')->onlyOnIndex()->setLabel('Image'),
             TextField::new('liseuse')->setLabel('Description de l\'image')->setHelp('Sera lu par les liseuses d\'écran. 255 caractères maximum')->setMaxLength(255),
             BooleanField::new('aside')->setLabel('Afficher l\'image en publicité ?')->setHelp('Si oui, elle sera affichée à certains endroits du site.'),
             TextEditorField::new('paragraphe1')->setLabel('Premier paragraphe')->hideOnIndex(),
