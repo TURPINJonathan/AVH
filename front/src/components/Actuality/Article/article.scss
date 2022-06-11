@@ -57,6 +57,9 @@
             .article_sign {
                 width: 100%;
                 display: flex;
+                font-size: 0.8rem;
+                flex-direction: column;
+                text-align: end;
                 justify-content: flex-end;
                 font-style: italic;
             }

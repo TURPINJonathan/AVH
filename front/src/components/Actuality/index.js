@@ -6,8 +6,6 @@ import './actuality.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/fontawesome-free-solid'
 
-import loading from '../../assets/img/page_developping.png';
-import defi_voile from "../../assets/img/defi_voile.jpg";
 import { Link } from "react-router-dom";
 
 const Actuality = ({ loadActuality, actuality }) => {
