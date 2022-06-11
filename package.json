@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "moment": "^2.29.3",
     "react-mapbox-gl": "^5.1.1"
   }
 }
