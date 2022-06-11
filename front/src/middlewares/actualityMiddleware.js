@@ -6,7 +6,7 @@ import { url, DEV_URL } from '../data';
 const actualityMiddleware = (store) => (next) => (action) => {
     switch (action.type) {
         case FETCH_ACTUALITY: {
-            axios.get(`${DEV_URL}actualite/list`)
+            axios.get(`${url}actualite/list`)
                 .then((response) => {
                     store.dispatch(saveActuality(response.data));
                 })
