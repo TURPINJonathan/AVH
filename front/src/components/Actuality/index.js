@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import { DEV_PICTURE, DEV_URL } from "../../data";
+
 import './actuality.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/fontawesome-free-solid'
@@ -12,6 +14,7 @@ const Actuality = ({ loadActuality, actuality }) => {
     useEffect(() => {
         loadActuality();
         console.log(loadActuality());
+        console.log(actuality);
     }, []);
     return (
         <main className="actuality">
@@ -57,14 +60,14 @@ const Actuality = ({ loadActuality, actuality }) => {
                     {actuality.map(actu => (
                         <article className="actuality_article" key={actu.id}>
                             <h4>{actu.titre}</h4>
-                            <img className="actuality_picture" src={defi_voile} alt="defi voile" />
+                            <img className="actuality_picture" src={DEV_PICTURE + 'actualite_image/' + actu.file} alt="defi voile" />
                             <p className="actuality_overview">{actu.overview}</p>
                             <Link to={`/actualites/${actu.url}`} className="actuality_link">
                                 <input className="actuality_button" type="button" value="Lire la suite" />
                             </Link>
                         </article>
                     ))}
-                    <article className="actuality_article">
+                    {/* <article className="actuality_article">
                         <h4>13ème édition de la Norland's Cup</h4>
                         <img className="actuality_picture" src={defi_voile} alt="defi voile" />
                         <p className="actuality_overview">La 13ème édition de la Norlanda's Cup approche à grands pas ...
@@ -72,7 +75,7 @@ const Actuality = ({ loadActuality, actuality }) => {
                         <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
                             <input className="actuality_button" type="button" value="Lire la suite" />
                         </Link>
-                    </article>
+                    </article> */}
                 </section>
             </div>
         </main>

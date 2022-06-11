@@ -5,6 +5,8 @@
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
     mission_image: /uploads/mission_image
+    actualite_image: /uploads/actualite_image
+    partenaire_image: /uploads/partenaire_image
     
 services:
     # default configuration for services in *this* file

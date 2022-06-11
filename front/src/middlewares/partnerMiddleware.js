@@ -1,14 +1,14 @@
 import axios from 'axios';
-import { FETCH_ACTUALITY, saveActuality } from '../actions/actuality';
+import { FETCH_PARTNER, savePartner } from '../actions/partner';
 
 import { DEV_URL } from '../data';
 
-const actualityMiddleware = (store) => (next) => (action) => {
+const partnerMiddleware = (store) => (next) => (action) => {
     switch (action.type) {
-        case FETCH_ACTUALITY: {
-            axios.get(`${DEV_URL}/actualite/list`)
+        case FETCH_PARTNER: {
+            axios.get(`${DEV_URL}/partenaire/list`)
                 .then((response) => {
-                    store.dispatch(saveActuality(response.data));
+                    store.dispatch(savePartner(response.data));
                 })
                 .catch((error) => {
                     console.log(error);
@@ -21,4 +21,4 @@ const actualityMiddleware = (store) => (next) => (action) => {
     next(action);
 };
 
-export default actualityMiddleware;
+export default partnerMiddleware;
