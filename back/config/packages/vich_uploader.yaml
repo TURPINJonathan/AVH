@@ -10,3 +10,15 @@ vich_uploader:
            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
            delete_on_update: false
            delete_on_remove: false
+       actualite_image:
+           uri_prefix: '%actualite_image%'
+           upload_destination: '%kernel.project_dir%/public%actualite_image%'
+           namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+           delete_on_update: false
+           delete_on_remove: false
+       partenaire_image:
+           uri_prefix: '%partenaire_image%'
+           upload_destination: '%kernel.project_dir%/public%partenaire_image%'
+           namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+           delete_on_update: false
+           delete_on_remove: false

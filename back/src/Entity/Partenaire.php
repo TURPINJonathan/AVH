@@ -5,8 +5,11 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\PartenaireRepository;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: PartenaireRepository::class)]
+#[Vich\Uploadable]
 class Partenaire
 {
     #[ORM\Id]
@@ -30,6 +33,14 @@ class Partenaire
     #[ORM\Column(type: 'boolean')]
     #[Groups(['Partenaire_get'])]
     private $actif;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Partenaire_get'])]
+    private $file;
+
+    #[Vich\UploadableField(mapping: 'partenaire_image', fileNameProperty: 'file')]
+    #[Groups(['Partenaire_get'])]
+    private $imageFile;
 
     public function getId(): ?int
     {
@@ -87,5 +98,33 @@ class Partenaire
     public function __toString()
     {
         return $this->nom;
+    }
+
+    public function getFile(): ?string
+    {
+        return $this->file;
+    }
+
+    public function setFile(?string $file): self
+    {
+        $this->file = $file;
+
+        return $this;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(File $file = null): self
+    {
+        $this->imageFile = $file;
+
+        if ($file) {
+            $this->updatedAt = new \DateTimeImmutable('now');
+        }
+
+        return $this;
     }
 }

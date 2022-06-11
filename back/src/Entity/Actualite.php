@@ -7,8 +7,11 @@ use App\Repository\ActualiteRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: ActualiteRepository::class)]
+#[Vich\Uploadable]
 class Actualite
 {
     #[ORM\Id]
@@ -87,6 +90,7 @@ class Actualite
     private $createdAt;
 
     #[ORM\Column(type: 'datetime_immutable', nullable: true)]
+    #[Groups(['Actualite_get'])]
     private $updatedAt;
 
     #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'actualites', cascade: ['persist'])]
@@ -97,11 +101,51 @@ class Actualite
     #[Groups(['Actualite_get'])]
     private $users;
 
+    #[ORM\Column(type: 'string', length: 50, nullable: true)]
+    #[Groups(['Actualite_get'])]
+    private $tag;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
+    private $file;
+
+    #[Vich\UploadableField(mapping: 'actualite_image', fileNameProperty: 'file')]
+    #[Groups(['Actualite_get'])]
+    private $imageFile;
+
     public function __construct()
     {
         $this->categorie = new ArrayCollection();
         $this->users = new ArrayCollection();
         $this->createdAt = new \DateTimeImmutable();
+    }
+
+    public function getFile(): ?string
+    {
+        return $this->file;
+    }
+
+    public function setFile(?string $file): self
+    {
+        $this->file = $file;
+
+        return $this;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(File $file = null): self
+    {
+        $this->imageFile = $file;
+
+        if ($file) {
+            $this->updatedAt = new \DateTimeImmutable('now');
+        }
+
+        return $this;
     }
 
     public function getId(): ?int
@@ -402,6 +446,18 @@ class Actualite
     
     public function __toString()
     {
-        return $this->nom;
+        return $this->titre;
+    }
+
+    public function getTag(): ?string
+    {
+        return $this->tag;
+    }
+
+    public function setTag(?string $tag): self
+    {
+        $this->tag = $tag;
+
+        return $this;
     }
 }

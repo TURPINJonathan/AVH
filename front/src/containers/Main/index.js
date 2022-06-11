@@ -1,16 +1,18 @@
 import { connect } from "react-redux";
 import Main from "../../components/Main";
-import { fetchMission } from "../../actions/main";
+import { fetchMission, fetchActuality } from "../../actions/main";
 
 const mapStateToProps = (state) => {
     return {
         mission: state.main.mission,
+        actuality: state.main.actuality,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         loadMission: () => dispatch(fetchMission()),
+        loadActuality: () => dispatch(fetchActuality()),
     };
 };
 
