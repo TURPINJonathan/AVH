@@ -15,7 +15,6 @@ const Article = ({ oneActuality }) => {
     return (
         <main className="article">
             <article>
-                <p>{article.url}</p>
                 <h3 className="article-title">13ème édition de la Norlanda's Cup</h3>
                 <div className="article_picture">
                     <img src={picture + 'actualite_image/' + article.file} alt="defi voile" />
