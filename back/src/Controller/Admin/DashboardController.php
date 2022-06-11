@@ -17,11 +17,12 @@ use App\Entity\Legal;
 use App\Entity\Mission;
 use App\Entity\Partenaire;
 use App\Entity\User;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 class DashboardController extends AbstractDashboardController
 {
     #[Route('/admin', name: 'admin')]
+    #[IsGranted("ROLE_MODERATEUR")]
     public function index(): Response
     {
         // return parent::index();
@@ -52,7 +53,7 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Accueil', 'fa fa-home');
-        yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-duotone fa-user', User::class);
+        yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-duotone fa-user', User::class)->setPermission('ROLE_SUPERADMIN');
         yield MenuItem::linkToCrud('Actualités', 'fa fa-newspaper', Actualite::class);
         yield MenuItem::linkToCrud('Boutique', 'fa fa-duotone fa-shop', Boutique::class);
         yield MenuItem::linkToCrud('Missions', 'fa fa-duotone fa-user-secret', Mission::class);
