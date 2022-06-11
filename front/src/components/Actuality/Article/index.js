@@ -1,8 +1,7 @@
 import React from "react";
+import Moment from "react-moment";
 
 import './article.scss';
-
-import defi_voile from "../../../assets/img/defi_voile.jpg";
 
 import { Facebook, Instagram, Twitter, Youtube } from "react-feather";
 import { Link, NavLink, useParams } from "react-router-dom";
@@ -12,6 +11,11 @@ import { picture } from "../../../data";
 const Article = ({ oneActuality }) => {
     const { slug } = useParams();
     const article = oneActuality.find(article => article.url === slug);
+
+    Moment.globalLocale = 'fr';
+    Moment.globalElement = 'span';
+    Moment.globalFormat = 'DD MMM YYYY';
+    
     return (
         <main className="article">
             <article>
