@@ -61,7 +61,6 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                 <div className="main-actuality-content-img--container">
                     {actuality.map((item) => {
                         if (item.focus === true) {
-                            console.log(item);
                             return (
                                 <img className="main-actuality-content-img" src={`${picture}actualite_image/${item.file}`} alt={item.liseuse} />
                             )
@@ -85,7 +84,6 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                                     <aside className="main-association-article-aside">
                                         <h3 className="main-association-article-aside-title"
                                         >{oneMission.nom}</h3>
-                                        <p id="test">{oneMission.detail}</p>
 
                                         {/* <NavLink to="/actualites" className="main-association-article-aside-link">
                                 <button className="main-association-article-aside-button">
