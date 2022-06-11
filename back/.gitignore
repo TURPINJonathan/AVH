@@ -22,4 +22,4 @@
 ###< phpunit/phpunit ###
 
 ###> upload files ###
-/public/uploads/
+# /public/uploads/
