@@ -6,7 +6,7 @@ import { url } from '../data';
 const mainMiddleware = (store) => (next) => (action) => {
     switch (action.type) {
         case FETCH_MISSION:
-            axios.get(`${url}/mission/list`)
+            axios.get(`${url}mission/list`)
                 .then((response) => {
                     // console.log('Middleware : ' + response.data);
                     store.dispatch(saveMission(response.data));
@@ -17,7 +17,7 @@ const mainMiddleware = (store) => (next) => (action) => {
                 });
             break;
         case FETCH_ACTUALITY:
-            axios.get('http://localhost:8080/api/actualite/list')
+            axios.get(`${url}actualite/list`)
                 .then((response) => {
                     console.log('Middleware main.actuality : ' + response.data);
                     store.dispatch(saveActuality(response.data));

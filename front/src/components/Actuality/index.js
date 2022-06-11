@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { DEV_PICTURE, DEV_URL } from "../../data";
+import { picture } from "../../data";
 
 import './actuality.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -60,7 +60,7 @@ const Actuality = ({ loadActuality, actuality }) => {
                     {actuality.map(actu => (
                         <article className="actuality_article" key={actu.id}>
                             <h4>{actu.titre}</h4>
-                            <img className="actuality_picture" src={DEV_PICTURE + 'actualite_image/' + actu.file} alt="defi voile" />
+                            <img className="actuality_picture" src={picture + 'actualite_image/' + actu.file} alt="defi voile" />
                             <p className="actuality_overview">{actu.overview}</p>
                             <Link to={`/actualites/${actu.url}`} className="actuality_link">
                                 <input className="actuality_button" type="button" value="Lire la suite" />

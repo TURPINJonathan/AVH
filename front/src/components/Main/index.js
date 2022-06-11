@@ -6,7 +6,6 @@ import './main.scss';
 import { picture } from "../../data";
 
 // pictures
-import equipage from "../../assets/img/equipage.png";
 import president from "../../assets/img/desk/jeanPierreLeclercq.jpg";
 import { NavLink } from "react-router-dom";
 import { ArrowRightCircle, Facebook, Instagram, Twitter } from "react-feather";
@@ -64,7 +63,7 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                         if (item.focus === true) {
                             console.log(item);
                             return (
-                                <img className="main-actuality-content-img" src={`http://localhost:8080/uploads/actualite_image/${item.file}`} alt={item.liseuse} />
+                                <img className="main-actuality-content-img" src={`${picture}actualite_image/${item.file}`} alt={item.liseuse} />
                             )
                         }
                     })}
@@ -138,8 +137,6 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                                 <NavLink to="/actualites" className="main-follow-article-aside-link">
                                     <p className="main-follow-article-aside-link-text">
                                         <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Facebook</a>
-
-
                                     </p>
                                 </NavLink>
                             </div>
