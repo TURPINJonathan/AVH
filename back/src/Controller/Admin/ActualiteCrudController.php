@@ -43,7 +43,7 @@ class ActualiteCrudController extends AbstractCrudController
             ImageField::new('file')->setBasePath('https://avhcaen.fr/back/uploads/actualite_image')->onlyOnIndex()->setLabel('Image'),
             TextField::new('liseuse')->setLabel('Description de l\'image')->setHelp('Sera lu par les liseuses d\'écran. 255 caractères maximum')->setMaxLength(255),
             BooleanField::new('aside')->setLabel('Afficher l\'image en publicité ?')->setHelp('Si oui, elle sera affichée à certains endroits du site.'),
-            TextareaField::new('paragraphe1')->setLabel('Premier paragraphe')->hideOnIndex(),
+            TextEditorField::new('paragraphe1')->setLabel('Premier paragraphe')->hideOnIndex(),
             TextEditorField::new('paragraphe2')->setLabel('Second paragraphe')->hideOnIndex(),
             TextEditorField::new('paragraphe3')->setLabel('Troisième paragraphe')->hideOnIndex(),
             SlugField::new('url')->setTargetFieldName('titre')->setLabel('Slug')->setHelp('! RESERVE AU DEVELOPPEUR ! Apparaîtra dans l\'URL de la page de l\'actualité')->hideOnIndex(),

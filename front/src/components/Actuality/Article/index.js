@@ -1,5 +1,10 @@
 import React from "react";
 
+import parse from 'html-react-parser';
+
+import Moment from 'moment';
+import 'moment/locale/fr';
+
 import './article.scss';
 
 import defi_voile from "../../../assets/img/defi_voile.jpg";
@@ -12,6 +17,11 @@ import { picture } from "../../../data";
 const Article = ({ oneActuality }) => {
     const { slug } = useParams();
     const article = oneActuality.find(article => article.url === slug);
+
+    function paragraph() {
+        const paragraphs = article.paragraphe1;
+        return { __html: paragraphs };
+    }
     return (
         <main className="article">
             <article>
@@ -27,11 +37,11 @@ const Article = ({ oneActuality }) => {
                     <p className="article_overview">
                         {article.overview}
                     </p>
-                    <p className="article_content">
-                        {article.paragraphe1}
-                    </p>
+                    <p className="article_content">{parse(article.paragraphe1)}</p>
                     <div className="article_sign">
-                        <p className="article_date">Article du {article.createdAt}</p>
+                        <p className="article_date">Article du <> </>
+                            {Moment(article.date).format('dddd DD MMMM YYYY')}
+                        </p>
                         <p className="article_author">Par<> </>
                             <span className="firstname">Jonathan</span><> </>
                             <span className="lastname">Turpin</span>
