@@ -6,7 +6,7 @@ import { url, DEV_URL } from '../data';
 const nationalMiddleware = (store) => (next) => (action) => {
     switch (action.type) {
         case FETCH_NATIONAL: {
-            axios.get(`${DEV_URL}avhNational/list`)
+            axios.get(`${url}avhNational/list`)
                 .then((response) => {
                     console.log('Middleware national : ' + response.data);
                     console.log(response.data);
