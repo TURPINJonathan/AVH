@@ -11,6 +11,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TelephoneField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class UserCrudController extends AbstractCrudController
@@ -24,11 +26,11 @@ class UserCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm()->hideOnIndex(),
-            TextField::new('email'),
+            EmailField::new('email'),
             TextField::new('nom'),
             TextField::new('prenom'),
             TextField::new('fonction'),
-            IntegerField::new('telephone'),
+            TelephoneField::new('telephone'),
             BooleanField::new('bureau'),
             ChoiceField::new('roles')->setChoices([
                 'ROLE_SUPERADMIN' => 'ROLE_SUPERADMIN',
@@ -37,8 +39,8 @@ class UserCrudController extends AbstractCrudController
                 'ROLE_USER' => 'ROLE_USER',
             ])->allowMultipleChoices(),
             TextField::new('password')->hideOnIndex(),
-            TextField::new('imageFile')->setLabel('Photo de profil')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
-            ImageField::new('file')->setBasePath('/uploads/user_image')->onlyOnIndex()->setLabel('Image'),
+            // TextField::new('imageFile')->setLabel('Photo de profil')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
+            // ImageField::new('file')->setBasePath('/uploads/user_image')->onlyOnIndex()->setLabel('Image'),
             // ImageField::new('file')->setBasePath('https://avhcaen.fr/back/uploads/user_image')->onlyOnIndex()->setLabel('Image'),
         ];
     }
