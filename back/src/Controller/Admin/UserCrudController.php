@@ -37,9 +37,9 @@ class UserCrudController extends AbstractCrudController
                 'ROLE_USER' => 'ROLE_USER',
             ])->allowMultipleChoices(),
             TextField::new('password')->hideOnIndex(),
-            // TextField::new('imageFile')->setLabel('Photo de profil')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
+            TextField::new('imageFile')->setLabel('Photo de profil')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
             // ImageField::new('file')->setBasePath('/uploads/user_image')->onlyOnIndex()->setLabel('Image'),
-            // ImageField::new('file')->setBasePath('https://avhcaen.fr/back/uploads/user_image')->onlyOnIndex()->setLabel('Image'),
+            ImageField::new('file')->setBasePath('https://avhcaen.fr/back/uploads/user_image')->onlyOnIndex()->setLabel('Image'),
         ];
     }
 }

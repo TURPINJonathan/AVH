@@ -61,13 +61,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Groups(['Actualite_post'])]
     private $avhCompteRendus;
 
-    // #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    // #[Groups(['Actualite_post'])]
-    // private $file;
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_post'])]
+    private $file;
 
-    // #[Vich\UploadableField(mapping: 'user_image', fileNameProperty: 'file')]
-    // #[Groups(['Actualite_post'])]
-    // private $imageFile;
+    #[Vich\UploadableField(mapping: 'user_image', fileNameProperty: 'file')]
+    #[Groups(['Actualite_post'])]
+    private $imageFile;
 
 
     public function __toString()
@@ -262,33 +262,33 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    // public function getFile(): ?string
-    // {
-    //     return $this->file;
-    // }
+    public function getFile(): ?string
+    {
+        return $this->file;
+    }
 
-    // public function setFile(?string $file): self
-    // {
-    //     $this->file = $file;
+    public function setFile(?string $file): self
+    {
+        $this->file = $file;
 
-    //     return $this;
-    // }
+        return $this;
+    }
 
-    // public function getImageFile(): ?File
-    // {
-    //     return $this->imageFile;
-    // }
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
 
-    // public function setImageFile(File $file = null): self
-    // {
-    //     $this->imageFile = $file;
+    public function setImageFile(File $file = null): self
+    {
+        $this->imageFile = $file;
 
-    //     if ($file) {
-    //         $this->updatedAt = new \DateTimeImmutable('now');
-    //     }
+        if ($file) {
+            $this->updatedAt = new \DateTimeImmutable('now');
+        }
 
-    //     return $this;
-    // }
+        return $this;
+    }
 
     
     
