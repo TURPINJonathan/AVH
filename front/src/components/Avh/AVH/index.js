@@ -2,7 +2,7 @@ import React from "react";
 import Pin from "../../../assets/img/list_style.png"
 import './avh.scss';
 
-const AVH = () => {
+const AVH = ({ loadNational, national }) => {
     return (
         <main className="avh">
             <h2>Présentation de l'AVH</h2>
@@ -16,31 +16,27 @@ const AVH = () => {
                         défendre les droits des déficients visuels
                     </li>
                     <li>
-
                         <img src={Pin} alt="Pin" className="pin" />
                         assurer leur formation et l’accès à l’emploi
 
                     </li>
                     <li>
-
                         <img src={Pin} alt="Pin" className="pin" />
                         restaurer et développer leur autonomie
 
                     </li>
                     <li>
-
                         <img src={Pin} alt="Pin" className="pin" />
                         promouvoir l’accès à l’écrit
 
                     </li>
                     <li>
-
                         <img src={Pin} alt="Pin" className="pin" />
                         proposer des activités culturelles, sportives et de loisirs accessibles
 
                     </li>
                 </ul>
-                <img src="https://via.placeholder.com/728x90.png" alt="Paris" />
+                {/* <img src="https://via.placeholder.com/728x90.png" alt="Paris" /> */}
                 <p>
                     Depuis plus de 130 ans, l'association Valentin Haüy poursuit l'objectif de son fondateur en s’appuyant sur ses nombreuses implantations locales, ses établissements et ses services adaptés pour répondre au mieux aux besoins des personnes déficientes visuelles.
                 </p>

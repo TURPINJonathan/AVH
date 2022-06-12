@@ -14,6 +14,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 
 class ActualiteCrudController extends AbstractCrudController
 {
@@ -22,13 +24,17 @@ class ActualiteCrudController extends AbstractCrudController
         return Actualite::class;
     }
 
-    // public function configureCrud(Crud $crud): Crud
-    // {
-    //     return $crud
-    //         ->setEntityLabelInSingular('Actualité')
-    //         ->setEntityLabelInPlural('Actualités')
-    //         ->setSearchFields(['nom', 'overview', 'detail', 'show_main', 'slug']);
-    // }
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setEntityLabelInSingular('Actualité')
+            ->setEntityLabelInPlural('Actualités')
+            ->setHelp('detail', 'Quelques particularités :')
+            ->setHelp('edit', 'Les images de l\'actualité sont stockées dans le dossier "uploads/actualite_image"')
+            ->setSearchFields(['titre', 'sous-titre', 'lieu', 'url'])
+            ->setDefaultSort(['id' => 'DESC'])
+            ->setPaginatorPageSize('20');
+    }
 
     public function configureFields(string $pageName): iterable
     {
@@ -38,7 +44,7 @@ class ActualiteCrudController extends AbstractCrudController
             TextField::new('sous_titre')->setLabel('Sous-titre de l\'actualité')->setHelp('255 caractères maximum')->setMaxLength(255)->hideOnIndex(),
             TextField::new('lieu')->setLabel('Lieu de l\'actualité')->setHelp('255 caractères maximum')->setMaxLength(255)->hideOnIndex(),
             TextField::new('overview')->setLabel('Courte description de l\'actualité.')->setHelp('Sera visible dans la page des actualités et sur l\'actualité en elle-même. 255 caractères maximum')->setMaxLength(255)->hideOnIndex(),
-            BooleanField::new('focus')->setLabel('Mettre l\'article en avant l\'actualité ?')->setHelp('Si oui, elle sera affichée en haut de la page d\'actualités.'),
+            BooleanField::new('focus')->setLabel('Mettre l\'article en avant l\'actualité ?')->setHelp('Si oui, elle sera affichée en haut de la page d\'actualités. ! ATTENTION ! UNE SEULE ACTUALITE DOIT ÊTRE MISE EN AVANT.')->hideOnIndex(),
             TextField::new('imageFile')->setLabel('Image de l\'actualité')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),
             ImageField::new('file')->setBasePath('https://avhcaen.fr/back/uploads/actualite_image')->onlyOnIndex()->setLabel('Image'),
             TextField::new('liseuse')->setLabel('Description de l\'image')->setHelp('Sera lu par les liseuses d\'écran. 255 caractères maximum')->setMaxLength(255),
