@@ -62,11 +62,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $avhCompteRendus;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    #[Groups(['User_get'])]
+    #[Groups(['Actualite_post'])]
     private $file;
 
     #[Vich\UploadableField(mapping: 'user_image', fileNameProperty: 'file')]
-    #[Groups(['User_get'])]
+    #[Groups(['Actualite_post'])]
     private $imageFile;
 
 
