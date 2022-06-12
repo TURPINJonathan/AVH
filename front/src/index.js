@@ -22,7 +22,8 @@ import Legal from './components/Layout/Footer/Legal';
 // Navigate components
 import Rh from './components/Avh/Caen/RH';
 import Volunteers from './components/Avh/Caen/Volunteers';
-import AVH from './components/Avh/AVH';
+import AVH from './containers/Avh/AVH';
+// import AVH from './components/Avh/AVH';
 // import Actuality from './components/Actuality';
 import Actuality from './containers/Actuality';
 import Article from './containers/Actuality/Article';
