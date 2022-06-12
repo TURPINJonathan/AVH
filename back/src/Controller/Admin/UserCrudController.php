@@ -11,6 +11,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TelephoneField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class UserCrudController extends AbstractCrudController
@@ -24,11 +26,11 @@ class UserCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm()->hideOnIndex(),
-            TextField::new('email'),
+            EmailField::new('email'),
             TextField::new('nom'),
             TextField::new('prenom'),
             TextField::new('fonction'),
-            IntegerField::new('telephone'),
+            TelephoneField::new('telephone'),
             BooleanField::new('bureau'),
             ChoiceField::new('roles')->setChoices([
                 'ROLE_SUPERADMIN' => 'ROLE_SUPERADMIN',
