@@ -53,13 +53,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Groups(['Actualite_post'])]
     private $bureau;
 
-    #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
-    #[Groups(['Actualite_post'])]
-    private $actualite;
+    // #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
+    // #[Groups(['Actualite_post'])]
+    // private $actualite;
 
-    #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
-    #[Groups(['Actualite_post'])]
-    private $avhCompteRendus;
+    // #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
+    // #[Groups(['Actualite_post'])]
+    // private $avhCompteRendus;
 
     // #[ORM\Column(type: 'string', length: 255, nullable: true)]
     // #[Groups(['Actualite_post'])]
@@ -211,56 +211,56 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * @return Collection<int, Actualite>
-     */
-    public function getActualite(): Collection
-    {
-        return $this->actualite;
-    }
+    // /**
+    //  * @return Collection<int, Actualite>
+    //  */
+    // public function getActualite(): Collection
+    // {
+    //     return $this->actualite;
+    // }
 
-    public function addActualite(Actualite $actualite): self
-    {
-        if (!$this->actualite->contains($actualite)) {
-            $this->actualite[] = $actualite;
-        }
+    // public function addActualite(Actualite $actualite): self
+    // {
+    //     if (!$this->actualite->contains($actualite)) {
+    //         $this->actualite[] = $actualite;
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function removeActualite(Actualite $actualite): self
-    {
-        $this->actualite->removeElement($actualite);
+    // public function removeActualite(Actualite $actualite): self
+    // {
+    //     $this->actualite->removeElement($actualite);
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    /**
-     * @return Collection<int, AvhCompteRendu>
-     */
-    public function getAvhCompteRendus(): Collection
-    {
-        return $this->avhCompteRendus;
-    }
+    // /**
+    //  * @return Collection<int, AvhCompteRendu>
+    //  */
+    // public function getAvhCompteRendus(): Collection
+    // {
+    //     return $this->avhCompteRendus;
+    // }
 
-    public function addAvhCompteRendu(AvhCompteRendu $avhCompteRendu): self
-    {
-        if (!$this->avhCompteRendus->contains($avhCompteRendu)) {
-            $this->avhCompteRendus[] = $avhCompteRendu;
-            $avhCompteRendu->addUser($this);
-        }
+    // public function addAvhCompteRendu(AvhCompteRendu $avhCompteRendu): self
+    // {
+    //     if (!$this->avhCompteRendus->contains($avhCompteRendu)) {
+    //         $this->avhCompteRendus[] = $avhCompteRendu;
+    //         $avhCompteRendu->addUser($this);
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function removeAvhCompteRendu(AvhCompteRendu $avhCompteRendu): self
-    {
-        if ($this->avhCompteRendus->removeElement($avhCompteRendu)) {
-            $avhCompteRendu->removeUser($this);
-        }
+    // public function removeAvhCompteRendu(AvhCompteRendu $avhCompteRendu): self
+    // {
+    //     if ($this->avhCompteRendus->removeElement($avhCompteRendu)) {
+    //         $avhCompteRendu->removeUser($this);
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     // public function getFile(): ?string
     // {
@@ -290,6 +290,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     //     return $this;
     // }
 
-    
-    
+
+
 }
