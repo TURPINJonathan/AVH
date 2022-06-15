@@ -18,9 +18,13 @@ const Article = ({ oneActuality }) => {
     const { slug } = useParams();
     const article = oneActuality.find(article => article.url === slug);
 
-    function paragraph() {
-        const paragraphs = article.paragraphe1;
-        return { __html: paragraphs };
+    // Gestion des différents articles
+    if (article.paragraphe2 != null) {
+        var paragraphe2 = parse(article.paragraphe2);
+    }
+
+    if (article.paragraphe3 != null) {
+        var paragraphe3 = parse(article.paragraphe2);
     }
     return (
         <main className="article">
@@ -38,6 +42,16 @@ const Article = ({ oneActuality }) => {
                         {article.overview}
                     </p>
                     <p className="article_content">{parse(article.paragraphe1)}</p>
+                    <p className="article_content" id="paragraphe2">{paragraphe2}</p>
+                    <p className="article_content" id="paragraphe2">{paragraphe2}</p>
+
+                    <iframe
+                        src="https://www.youtube.com/embed/E7wJTI-1dvQ"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        title="video"
+                    />
                     <div className="article_sign">
                         <p className="article_date">Article du <> </>
                             {Moment(article.date).format('dddd DD MMMM YYYY')}
