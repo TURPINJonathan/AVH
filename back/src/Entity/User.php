@@ -286,7 +286,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         if ($file) {
             $this->updatedAt = new \DateTimeImmutable('now');
         }
-
         return $this;
     }
 }
