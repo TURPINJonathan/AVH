@@ -67,7 +67,8 @@ class ActualiteCrudController extends AbstractCrudController
                 ->setMaxLength(255)
                 ->hideOnIndex(),
             BooleanField::new('focus')
-                ->setLabel('Afficher l\'articleen page d\'accueil ?')
+                ->setLabel('Afficher l\'article<br />en page d\'accueil ?')
+                ->setLabel('Afficher l\'article en page d\'accueil ?')
                 ->setHelp('Si oui, elle sera affichée en haut de la page d\'accueil. ! ATTENTION ! UNE SEULE ACTUALITE DOIT ÊTRE MISE EN AVANT SUR TOUT LE SITE.'),
 
             //! PREMIER PARAGRAPHE OBLIGATOIRE
@@ -147,14 +148,12 @@ class ActualiteCrudController extends AbstractCrudController
             // AssociationField::new('tags')
             // ->setLabel('Tags')
             // ->setHelp('Choisissez les tags qui apparaîtront sur l\'actualité.'),
-
-            FormField::addPanel('Qui êtes-vous ?'),
-            AssociationField::new('User')
-                ->setLabel('Auteurs')
-                ->setHelp('Choisissez l\'auteur de l\'actualité.')
-                ->autocomplete()
-                ->hideOnForm(),
-            // ->hideOnIndex(),
+            // AssociationField::new('users')
+            //     ->setLabel('Auteurs')
+            //     ->setHelp('Choisissez l\'auteur de l\'actualité.')
+            //     ->autocomplete()
+            //     ->hideOnForm()
+            //     ->hideOnIndex(),
 
             //! SLUG
             FormField::addPanel('<i class="fa-solid fa-ban" style="color: red"></i> ESPACE RESERVE AU DEVELOPPEUR <i class="fa-solid fa-ban" style="color: red"></i>'),
