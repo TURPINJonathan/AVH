@@ -147,12 +147,12 @@ class ActualiteCrudController extends AbstractCrudController
             // AssociationField::new('tags')
             // ->setLabel('Tags')
             // ->setHelp('Choisissez les tags qui apparaîtront sur l\'actualité.'),
-            // AssociationField::new('users')
-            //     ->setLabel('Auteurs')
-            //     ->setHelp('Choisissez l\'auteur de l\'actualité.')
-            //     ->autocomplete()
-            //     ->hideOnForm()
-            //     ->hideOnIndex(),
+            AssociationField::new('users')
+                ->setLabel('Auteurs')
+                ->setHelp('Choisissez l\'auteur de l\'actualité.')
+                ->autocomplete()
+                ->hideOnForm(),
+            // ->hideOnIndex(),
 
             //! SLUG
             FormField::addPanel('<i class="fa-solid fa-ban" style="color: red"></i> ESPACE RESERVE AU DEVELOPPEUR <i class="fa-solid fa-ban" style="color: red"></i>'),
