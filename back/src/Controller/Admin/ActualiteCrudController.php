@@ -149,7 +149,7 @@ class ActualiteCrudController extends AbstractCrudController
             // ->setHelp('Choisissez les tags qui apparaîtront sur l\'actualité.'),
 
             FormField::addPanel('Qui êtes-vous ?'),
-            AssociationField::new('users')
+            AssociationField::new('User')
                 ->setLabel('Auteurs')
                 ->setHelp('Choisissez l\'auteur de l\'actualité.')
                 ->autocomplete()
