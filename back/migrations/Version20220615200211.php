@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20220615190127 extends AbstractMigration
+final class Version20220615200211 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -20,12 +20,14 @@ final class Version20220615190127 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE actualite DROP paragraphe4, DROP paragraphe5, DROP paragraphe6, DROP paragraphe7, DROP paragraphe8, DROP paragraphe9, DROP paragraphe10');
+        $this->addSql('ALTER TABLE actualite ADD file2 VARCHAR(255) DEFAULT NULL, ADD file3 VARCHAR(255) DEFAULT NULL, ADD liseuse2 VARCHAR(255) DEFAULT NULL, ADD liseuse3 VARCHAR(255) DEFAULT NULL, ADD youtube VARCHAR(255) DEFAULT NULL');
+        $this->addSql('ALTER TABLE user ADD file VARCHAR(255) DEFAULT NULL');
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE actualite ADD paragraphe4 LONGTEXT DEFAULT NULL, ADD paragraphe5 LONGTEXT DEFAULT NULL, ADD paragraphe6 LONGTEXT DEFAULT NULL, ADD paragraphe7 LONGTEXT DEFAULT NULL, ADD paragraphe8 LONGTEXT DEFAULT NULL, ADD paragraphe9 LONGTEXT DEFAULT NULL, ADD paragraphe10 LONGTEXT DEFAULT NULL');
+        $this->addSql('ALTER TABLE actualite DROP file2, DROP file3, DROP liseuse2, DROP liseuse3, DROP youtube');
+        $this->addSql('ALTER TABLE user DROP file');
     }
 }
