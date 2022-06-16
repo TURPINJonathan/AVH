@@ -67,8 +67,7 @@ class ActualiteCrudController extends AbstractCrudController
                 ->setMaxLength(255)
                 ->hideOnIndex(),
             BooleanField::new('focus')
-                ->setLabel('Afficher l\'article<br />en page d\'accueil ?')
-                ->setLabel('Afficher l\'article en page d\'accueil ?')
+                ->setLabel('Afficher l\'articleen page d\'accueil ?')
                 ->setHelp('Si oui, elle sera affichée en haut de la page d\'accueil. ! ATTENTION ! UNE SEULE ACTUALITE DOIT ÊTRE MISE EN AVANT SUR TOUT LE SITE.'),
 
             //! PREMIER PARAGRAPHE OBLIGATOIRE
