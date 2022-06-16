@@ -23,7 +23,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $id;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $email;
 
     #[ORM\Column(type: 'json')]
@@ -42,32 +42,32 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $prenom;
 
     #[ORM\Column(type: 'string', length: 40)]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $fonction;
 
     #[ORM\Column(type: 'integer')]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $telephone;
 
     #[ORM\Column(type: 'boolean', nullable: true)]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $bureau;
 
     #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $actualite;
 
     #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $avhCompteRendus;
 
-    // #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    // #[Groups(['Actualite_post'])]
-    // private $file;
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_post, Actualite_get'])]
+    private $file;
 
-    // #[Vich\UploadableField(mapping: 'user_image', fileNameProperty: 'file')]
-    // #[Groups(['Actualite_post'])]
-    // private $imageFile;
+    #[Vich\UploadableField(mapping: 'user_image', fileNameProperty: 'file')]
+    #[Groups(['Actualite_post, Actualite_get'])]
+    private $imageFile;
 
 
     public function __toString()
@@ -262,34 +262,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    // public function getFile(): ?string
-    // {
-    //     return $this->file;
-    // }
+    public function getFile(): ?string
+    {
+        return $this->file;
+    }
 
-    // public function setFile(?string $file): self
-    // {
-    //     $this->file = $file;
+    public function setFile(?string $file): self
+    {
+        $this->file = $file;
 
-    //     return $this;
-    // }
+        return $this;
+    }
 
-    // public function getImageFile(): ?File
-    // {
-    //     return $this->imageFile;
-    // }
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
 
-    // public function setImageFile(File $file = null): self
-    // {
-    //     $this->imageFile = $file;
+    public function setImageFile(File $file = null): self
+    {
+        $this->imageFile = $file;
 
-    //     if ($file) {
-    //         $this->updatedAt = new \DateTimeImmutable('now');
-    //     }
-
-    //     return $this;
-    // }
-
-
-
+        if ($file) {
+            $this->updatedAt = new \DateTimeImmutable('now');
+        }
+        return $this;
+    }
 }

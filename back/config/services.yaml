@@ -7,7 +7,7 @@ parameters:
     mission_image: /uploads/mission_image
     actualite_image: /uploads/actualite_image
     partenaire_image: /uploads/partenaire_image
-    # user_image: /uploads/user_image
+    user_image: /uploads/user_image
     
 services:
     # default configuration for services in *this* file

@@ -28,5 +28,4 @@ class ActualiteController extends AbstractController
         $Actualite = $doctrine->getManager()->getRepository(Actualite::class)->find($id);
         return $this->json($Actualite, Response::HTTP_OK, [], ['groups' => 'Actualite_get']);
     }
-
 }
