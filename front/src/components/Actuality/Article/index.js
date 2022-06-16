@@ -53,7 +53,8 @@ const Article = ({ oneActuality }) => {
                         {article.overview}
                     </p>
                     <p className="article_content">{parse(article.paragraphe1)}</p>
-                    <p className="article_content" id="paragraphe2">{paragraphe2}</p>
+
+                    {/* SECOND PARAGRAPHE */}
                     <div className="article_picture" >
                         <img src={picture + 'actualite_image/' + article.file2} alt={article.liseuse2} />
                         {/* <p className="article_picture--photograph">Photographie de<> </>
@@ -61,7 +62,9 @@ const Article = ({ oneActuality }) => {
                         <span className="lastname">Turpin</span>
                     </p> */}
                     </div>
-                    <p className="article_content" id="paragraphe2">{paragraphe3}</p>
+                    <p className="article_content" id="paragraphe2">{paragraphe2}</p>
+
+                    {/* TROISIEME PARAGRAPHE */}
                     <div className="article_picture">
                         <img src={picture + 'actualite_image/' + article.file3} alt={article.liseuse3} />
                         {/* <p className="article_picture--photograph">Photographie de<> </>
@@ -69,8 +72,12 @@ const Article = ({ oneActuality }) => {
                         <span className="lastname">Turpin</span>
                     </p> */}
                     </div>
+                    <p className="article_content" id="paragraphe2">{paragraphe3}</p>
 
+                    {/* YOUTUBE */}
                     <ReactPlayer url={youtubeurl} controls="true" id="youtube" />
+
+
                     <div className="article_sign">
                         <p className="article_date">Article du <> </>
                             {Moment(article.date).format('dddd DD MMMM YYYY')}
