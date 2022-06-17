@@ -119,8 +119,12 @@ class ActualiteCrudController extends AbstractCrudController
                 ->setHelp('Sera lue par les liseuses d\'écran. 255 caractères maximum')
                 ->setMaxLength(255),
             TextEditorField::new('paragraphe2')
+                ->hideOnIndex()
                 ->setLabel('Second paragraphe')
-                ->hideOnIndex(),
+                ->setFormType(CKEditorType::class),
+            // TextEditorField::new('paragraphe2')
+            //     ->setLabel('Second paragraphe')
+            //     ->hideOnIndex(),
 
             //! TROISIEME PARAGRAPHE
             FormField::addPanel('<i class="fa-solid fa-indent" style="color: yellow"></i> Gestion du troisième paragraphe (optionnel)'),
@@ -139,8 +143,12 @@ class ActualiteCrudController extends AbstractCrudController
                 ->setHelp('Sera lue par les liseuses d\'écran. 255 caractères maximum')
                 ->setMaxLength(255),
             TextEditorField::new('paragraphe3')
+                ->hideOnIndex()
                 ->setLabel('Troisième paragraphe')
-                ->hideOnIndex(),
+                ->setFormType(CKEditorType::class),
+            // TextEditorField::new('paragraphe3')
+            //     ->setLabel('Troisième paragraphe')
+            //     ->hideOnIndex(),
 
             //! YOUTUBE
             FormField::addPanel('<i class="fa-brands fa-youtube" style="color: red"></i> YOUTUBE'),
