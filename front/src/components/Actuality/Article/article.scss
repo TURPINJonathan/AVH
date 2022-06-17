@@ -18,6 +18,12 @@
             margin: 1rem;
         }
 
+        #youtube {
+            display: block;
+            margin: auto;
+            margin-top: 2rem;
+        }
+
         .article_picture {
             margin: 0;
             display: flex;
@@ -28,6 +34,7 @@
                 width: auto;
                 max-width: 50rem;
                 height: auto;
+                max-height: 30rem;
                 border-radius: 10px;
                 box-shadow: 0px -1px 22px 0px rgba(0, 0, 0, 0.75);
                 -webkit-box-shadow: 0px -1px 22px 0px rgba(0, 0, 0, 0.75);

@@ -4,31 +4,33 @@
 {% endblock %}
 
 {% block body %}
-	<div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-item: center; flex-direction: column;
-    background-image: url('https://avhcaen.fr/static/media/logo.d272c8bbb18a1edb56ad.png'); background-repeat: no-repeat; background-size: cover; overflow: hidden !important;">
+	<div
+		style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-item: center; flex-direction: column;
+																											    background-image: url('https://avhcaen.fr/static/media/logo.d272c8bbb18a1edb56ad.png'); background-repeat: no-repeat; background-size: cover; overflow: hidden !important;">
 		{# <img src="https://avhcaen.fr/static/media/logo.d272c8bbb18a1edb56ad.png" alt="logo AVH Caen" class="img-responsive center-block" style="width: 10vw; height: auto; min-width: 200px; display: block; align-self: center; margin-top: 2rem"> #}
 		<form method="post" style="
-                margin-top: 4rem;
-                width: 35rem;
-                min-width: 300px;
-                align-self: center;
-                padding: 3rem;
-                {# border: solid 1px #4b0a9a; #}
-                border-radius: 50px;
-                display: flex;
-                flex-direction: column;
-                {# box-shadow: 0px 0px 29px 8px rgba(75,10,154,0.75);
-                -webkit-box-shadow: 0px 0px 29px 8px rgba(75,10,154,0.75);
-                -moz-box-shadow: 0px 0px 29px 8px rgba(75,10,154,0.75); #}
-                background: rgba( 255, 255, 255, 0.4 );
-                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                backdrop-filter: blur( 9.5px );
-                -webkit-backdrop-filter: blur( 9.5px );
-                border-radius: 10px;"
-        >
+																																				                margin-top: 4rem;
+																																				                width: 35rem;
+																																				                min-width: 300px;
+																																				                align-self: center;
+																																				                padding: 3rem;
+																																				                {# border: solid 1px #4b0a9a; #}
+																																				                border-radius: 50px;
+																																				                display: flex;
+																																				                flex-direction: column;
+																																				                {# box-shadow: 0px 0px 29px 8px rgba(75,10,154,0.75);
+																																				                -webkit-box-shadow: 0px 0px 29px 8px rgba(75,10,154,0.75);
+																																				                -moz-box-shadow: 0px 0px 29px 8px rgba(75,10,154,0.75); #}
+																																				                background: rgba( 255, 255, 255, 0.4 );
+																																				                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+																																				                backdrop-filter: blur( 9.5px );
+																																				                -webkit-backdrop-filter: blur( 9.5px );
+																																				                border-radius: 10px;">
 			<h1 style="margin: 0; text-align: center;">Connexion à l'administration du site</h1>
+			{# <h2 style="margin: 0; text-align: center; color: red; font-weight: bold">EN MAINTENANCE, MERCI DE NE PAS UTILISER<br/>POUR PLUS D'INFORMATIONS OU URGENCES, CONTACTEZ JONATHAN TURPIN</h2> #}
 			{# <label style="text-align: center; margin-top: 1.5rem; margin-bottom: 0.5rem" for="inputEmail">Email</label> #}
-			<input placeholder="email" style=" margin-top: 1.5rem; text-align: center; padding: 1rem; border-radius: 25px; border: solid 2px #dd4814;" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+			<input
+			placeholder="email" style=" margin-top: 1.5rem; text-align: center; padding: 1rem; border-radius: 25px; border: solid 2px #dd4814;" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
 			{# <label style="text-align: center; margin-top: 1.5rem; margin-bottom: 0.5rem" for="inputPassword">Mot de passe</label> #}
 			<input placeholder="mot de passe" style=" margin-top: 1.5rem; text-align: center; margin-bottom: 1.5rem; padding: 1rem; border-radius: 25px; border: solid 2px #dd4814;" type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
 
@@ -36,36 +38,37 @@
 			type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
 			{#
-															        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-															        See https://symfony.com/doc/current/security/remember_me.html
-															
-															        <div class="checkbox mb-3">
-															            <label>
-															                <input type="checkbox" name="_remember_me"> Remember me
-															            </label>
-															        </div>
-															    #}
+																																										        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+																																										        See https://symfony.com/doc/current/security/remember_me.html
+																																										
+																																										        <div class="checkbox mb-3">
+																																										            <label>
+																																										                <input type="checkbox" name="_remember_me"> Remember me
+																																										            </label>
+																																										        </div>
+																																										    #}
 
 			<button type="submit" style="
-                    width: 50%;
-                    align-self: center;
-                    border: none;
-                    border-radius: 25px;
-                    padding: 1rem;
-                    font-weight: bold">
+																																													                    width: 50%;
+																																													                    align-self: center;
+																																													                    border: none;
+																																													                    border-radius: 25px;
+																																													                    padding: 1rem;
+																																													                    font-weight: bold">
 				SE CONNECTER
 			</button>
-		{% if error %}
-			<div style="text-align: center; margin: 1rem; background-color: red; border-radius: 25px; color: white; font-weight: bold; padding: 1rem">{{ error.messageKey|trans(error.messageData, 'security') }}<p>Si vous avez oublié votre mot de passe, veuillez vous rapprocher de Jonathan TURPIN</p> </div>
-		{% endif %}
+			{% if error %}
+				<div style="text-align: center; margin: 1rem; background-color: red; border-radius: 25px; color: white; font-weight: bold; padding: 1rem">{{ error.messageKey|trans(error.messageData, 'security') }}<p>Si vous avez oublié votre mot de passe, veuillez vous rapprocher de Jonathan TURPIN</p>
+				</div>
+			{% endif %}
 
-		{% if app.user %}
-			<div style="text-align: center; margin: 1rem; background-color: #118811; border-radius: 25px; color: white; font-weight: bold; padding: 1rem">
-				Vous êtes connecté en tant que
-				{{ app.user.userIdentifier }},<br />
-				<a href="{{ path('app_logout') }}">Déconnection</a>
-			</div>
-		{% endif %}
+			{% if app.user %}
+				<div style="text-align: center; margin: 1rem; background-color: #118811; border-radius: 25px; color: white; font-weight: bold; padding: 1rem">
+					Vous êtes connecté en tant que
+					{{ app.user.userIdentifier }},<br/>
+					<a href="{{ path('app_logout') }}">Déconnection</a>
+				</div>
+			{% endif %}
 		</form>
 
 	</div>

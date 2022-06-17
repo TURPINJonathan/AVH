@@ -48,27 +48,6 @@ class Actualite
     #[Groups(['Actualite_get'])]
     private $paragraphe3;
 
-    #[ORM\Column(type: 'text', nullable: true)]
-    private $paragraphe4;
-
-    #[ORM\Column(type: 'text', nullable: true)]
-    private $paragraphe5;
-
-    #[ORM\Column(type: 'text', nullable: true)]
-    private $paragraphe6;
-
-    #[ORM\Column(type: 'text', nullable: true)]
-    private $paragraphe7;
-
-    #[ORM\Column(type: 'text', nullable: true)]
-    private $paragraphe8;
-
-    #[ORM\Column(type: 'text', nullable: true)]
-    private $paragraphe9;
-
-    #[ORM\Column(type: 'text', nullable: true)]
-    private $paragraphe10;
-
     #[ORM\Column(type: 'boolean')]
     #[Groups(['Actualite_get'])]
     private $focus;
@@ -105,6 +84,7 @@ class Actualite
     #[Groups(['Actualite_get'])]
     private $tag;
 
+    // PREMIERE IMAGE
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     #[Groups(['Actualite_get'])]
     private $file;
@@ -112,6 +92,36 @@ class Actualite
     #[Vich\UploadableField(mapping: 'actualite_image', fileNameProperty: 'file')]
     #[Groups(['Actualite_get'])]
     private $imageFile;
+
+    // SECONDE IMAGE
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
+    private $file2;
+
+    #[Vich\UploadableField(mapping: 'actualite_image', fileNameProperty: 'file2')]
+    #[Groups(['Actualite_get'])]
+    private $imageFile2;
+
+    // TROISIEME IMAGE
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
+    private $file3;
+
+    #[Vich\UploadableField(mapping: 'actualite_image', fileNameProperty: 'file3')]
+    #[Groups(['Actualite_get'])]
+    private $imageFile3;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
+    private $liseuse2;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
+    private $liseuse3;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
+    private $youtube;
 
     public function __construct()
     {
@@ -142,6 +152,62 @@ class Actualite
         $this->imageFile = $file;
 
         if ($file) {
+            $this->updatedAt = new \DateTimeImmutable('now');
+        }
+
+        return $this;
+    }
+
+    public function getFile2(): ?string
+    {
+        return $this->file2;
+    }
+
+    public function setFile2(?string $file2): self
+    {
+        $this->file2 = $file2;
+
+        return $this;
+    }
+
+    public function getImageFile2(): ?File
+    {
+        return $this->imageFile2;
+    }
+
+    public function setImageFile2(File $file2 = null): self
+    {
+        $this->imageFile2 = $file2;
+
+        if ($file2) {
+            $this->updatedAt = new \DateTimeImmutable('now');
+        }
+
+        return $this;
+    }
+
+    public function getFile3(): ?string
+    {
+        return $this->file3;
+    }
+
+    public function setFile3(?string $file3): self
+    {
+        $this->file3 = $file3;
+
+        return $this;
+    }
+
+    public function getImageFile3(): ?File
+    {
+        return $this->imageFile3;
+    }
+
+    public function setImageFile3(File $file3 = null): self
+    {
+        $this->imageFile3 = $file3;
+
+        if ($file3) {
             $this->updatedAt = new \DateTimeImmutable('now');
         }
 
@@ -233,90 +299,6 @@ class Actualite
     public function setParagraphe3(?string $paragraphe3): self
     {
         $this->paragraphe3 = $paragraphe3;
-
-        return $this;
-    }
-
-    public function getParagraphe4(): ?string
-    {
-        return $this->paragraphe4;
-    }
-
-    public function setParagraphe4(?string $paragraphe4): self
-    {
-        $this->paragraphe4 = $paragraphe4;
-
-        return $this;
-    }
-
-    public function getParagraphe5(): ?string
-    {
-        return $this->paragraphe5;
-    }
-
-    public function setParagraphe5(?string $paragraphe5): self
-    {
-        $this->paragraphe5 = $paragraphe5;
-
-        return $this;
-    }
-
-    public function getParagraphe6(): ?string
-    {
-        return $this->paragraphe6;
-    }
-
-    public function setParagraphe6(?string $paragraphe6): self
-    {
-        $this->paragraphe6 = $paragraphe6;
-
-        return $this;
-    }
-
-    public function getParagraphe7(): ?string
-    {
-        return $this->paragraphe7;
-    }
-
-    public function setParagraphe7(?string $paragraphe7): self
-    {
-        $this->paragraphe7 = $paragraphe7;
-
-        return $this;
-    }
-
-    public function getParagraphe8(): ?string
-    {
-        return $this->paragraphe8;
-    }
-
-    public function setParagraphe8(?string $paragraphe8): self
-    {
-        $this->paragraphe8 = $paragraphe8;
-
-        return $this;
-    }
-
-    public function getParagraphe9(): ?string
-    {
-        return $this->paragraphe9;
-    }
-
-    public function setParagraphe9(?string $paragraphe9): self
-    {
-        $this->paragraphe9 = $paragraphe9;
-
-        return $this;
-    }
-
-    public function getParagraphe10(): ?string
-    {
-        return $this->paragraphe10;
-    }
-
-    public function setParagraphe10(?string $paragraphe10): self
-    {
-        $this->paragraphe10 = $paragraphe10;
 
         return $this;
     }
@@ -443,7 +425,7 @@ class Actualite
 
         return $this;
     }
-    
+
     public function __toString()
     {
         return $this->titre;
@@ -457,6 +439,42 @@ class Actualite
     public function setTag(?string $tag): self
     {
         $this->tag = $tag;
+
+        return $this;
+    }
+
+    public function getLiseuse2(): ?string
+    {
+        return $this->liseuse2;
+    }
+
+    public function setLiseuse2(?string $liseuse2): self
+    {
+        $this->liseuse2 = $liseuse2;
+
+        return $this;
+    }
+
+    public function getLiseuse3(): ?string
+    {
+        return $this->liseuse3;
+    }
+
+    public function setLiseuse3(?string $liseuse3): self
+    {
+        $this->liseuse3 = $liseuse3;
+
+        return $this;
+    }
+
+    public function getYoutube(): ?string
+    {
+        return $this->youtube;
+    }
+
+    public function setYoutube(?string $youtube): self
+    {
+        $this->youtube = $youtube;
 
         return $this;
     }

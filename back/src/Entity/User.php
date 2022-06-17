@@ -23,7 +23,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $id;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $email;
 
     #[ORM\Column(type: 'json')]
@@ -42,31 +42,31 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $prenom;
 
     #[ORM\Column(type: 'string', length: 40)]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $fonction;
 
     #[ORM\Column(type: 'integer')]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $telephone;
 
     #[ORM\Column(type: 'boolean', nullable: true)]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $bureau;
 
     #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $actualite;
 
     #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
-    #[Groups(['Actualite_post'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $avhCompteRendus;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    #[Groups(['User_get'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $file;
 
     #[Vich\UploadableField(mapping: 'user_image', fileNameProperty: 'file')]
-    #[Groups(['User_get'])]
+    #[Groups(['Actualite_post, Actualite_get'])]
     private $imageFile;
 
 
@@ -286,10 +286,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         if ($file) {
             $this->updatedAt = new \DateTimeImmutable('now');
         }
-
         return $this;
     }
-
-    
-    
 }

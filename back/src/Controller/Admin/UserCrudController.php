@@ -3,15 +3,18 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
+use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TelephoneField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class UserCrudController extends AbstractCrudController
 {
@@ -23,18 +26,18 @@ class UserCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id')->hideOnForm()->hideOnIndex(),
-            TextField::new('email'),
+            IdField::new('id')->hideOnForm(),
+            EmailField::new('email'),
             TextField::new('nom'),
             TextField::new('prenom'),
             TextField::new('fonction'),
-            IntegerField::new('telephone'),
+            TelephoneField::new('telephone'),
             BooleanField::new('bureau'),
             ChoiceField::new('roles')->setChoices([
-                'ROLE_SUPERADMIN' => 'ROLE_SUPERADMIN',
-                'ROLE_ADMIN' => 'ROLE_ADMIN',
-                'ROLE_MODERATEUR' => 'ROLE_MODERATEUR',
-                'ROLE_USER' => 'ROLE_USER',
+                'SUPERADMIN' => 'ROLE_SUPERADMIN',
+                'ADMINISTRATEUR' => 'ROLE_ADMIN',
+                'MODERATEUR' => 'ROLE_MODERATEUR',
+                'UTILISATEUR' => 'ROLE_USER',
             ])->allowMultipleChoices(),
             TextField::new('password')->hideOnIndex(),
             TextField::new('imageFile')->setLabel('Photo de profil')->setFormType(VichImageType::class)->hideOnIndex()->setHelp('Pour une meilleure visibilité, l\'image doit être au format jpg, jpeg, png ou gif et doit faire moins de 2Mo.'),

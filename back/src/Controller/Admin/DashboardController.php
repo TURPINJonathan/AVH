@@ -54,12 +54,12 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Accueil', 'fa fa-home')->setPermission('ROLE_SUPERADMIN', 'ROLE_ADMIN', 'ROLE_MODERATEUR', 'ROLE_USER');
+        yield MenuItem::linkToDashboard('Accueil', 'fa fa-home')->setPermission('ROLE_USER');
         yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-duotone fa-user', User::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToCrud('Actualités', 'fa fa-newspaper', Actualite::class)->setPermission('ROLE_SUPERADMIN', 'ROLE_ADMIN', 'ROLE_MODERATEUR', 'ROLE_USER');
+        yield MenuItem::linkToCrud('Actualités', 'fa fa-newspaper', Actualite::class)->setPermission('ROLE_USER');
         yield MenuItem::linkToCrud('Boutique', 'fa fa-duotone fa-shop', Boutique::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToCrud('Missions', 'fa fa-duotone fa-user-secret', Mission::class)->setPermission('ROLE_SUPERADMIN', 'ROLE_ADMIN', 'ROLE_MODERATEUR');
-        yield MenuItem::linkToCrud('Partenaires', 'fa fa-duotone fa-handshake', Partenaire::class)->setPermission('ROLE_SUPERADMIN', 'ROLE_ADMIN', 'ROLE_MODERATEUR');
+        yield MenuItem::linkToCrud('Missions', 'fa fa-duotone fa-user-secret', Mission::class)->setPermission('ROLE_MODERATEUR');
+        yield MenuItem::linkToCrud('Partenaires', 'fa fa-duotone fa-handshake', Partenaire::class)->setPermission('ROLE_MODERATEUR');
         yield MenuItem::linkToCrud('AVH Caen', 'fa fa-duotone fa-location-crosshairs', AvhCaen::class)->setPermission('ROLE_SUPERADMIN');
         yield MenuItem::linkToCrud('AVH Compte Rendu', 'fa fa-duotone fa-file-pen', AvhCompteRendu::class)->setPermission('ROLE_SUPERADMIN');
         yield MenuItem::linkToCrud('AVH National', 'fa fa-duotone fa-earth-europe', AvhNational::class)->setPermission('ROLE_SUPERADMIN');
