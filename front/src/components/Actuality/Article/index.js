@@ -24,12 +24,12 @@ const Article = ({ oneActuality }) => {
         var paragraphe2 = parse(article.paragraphe2);
     }
 
-    if (article.file2 != null) {
-        var file2 = parse(article.file2);
-    }
-
     if (article.paragraphe3 != null) {
         var paragraphe3 = parse(article.paragraphe3);
+    }
+
+    if (article.file3 != null) {
+        var file3 = parse(article.file3);
     }
 
     if (article.youtube != null) {
@@ -56,27 +56,52 @@ const Article = ({ oneActuality }) => {
 
                     {/* SECOND PARAGRAPHE */}
                     <div className="article_picture" >
-                        <img src={picture + 'actualite_image/' + article.file2} alt={article.liseuse2} />
+                        {article.file2 != null ? (
+                            <img src={picture + 'actualite_image/' + article.file2} alt={article.liseuse2} />
+                        ) : (
+                            <div></div>
+                        )}
+                        {/* <img src={picture + 'actualite_image/' + file2} alt={article.liseuse2} id="secondPicture" /> */}
                         {/* <p className="article_picture--photograph">Photographie de<> </>
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
                     </p> */}
                     </div>
-                    <p className="article_content" id="paragraphe2">{paragraphe2}</p>
+                    {article.paragraphe2 != null ? (
+                        <p className="article_content">{paragraphe2}</p>
+                    ) : (
+                        <div></div>
+                    )}
 
                     {/* TROISIEME PARAGRAPHE */}
                     <div className="article_picture">
-                        <img src={picture + 'actualite_image/' + article.file3} alt={article.liseuse3} />
+                        {article.file3 != null ? (
+                            <img src={picture + 'actualite_image/' + article.file3} alt={article.liseuse3} />
+                        ) : (
+                            <div></div>
+                        )}
+                        {/* <img src={picture + 'actualite_image/' + file3} alt={article.liseuse3} /> */}
                         {/* <p className="article_picture--photograph">Photographie de<> </>
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
                     </p> */}
                     </div>
-                    <p className="article_content" id="paragraphe2">{paragraphe3}</p>
+                    {article.paragraphe3 != null ? (
+                        <p className="article_content">{paragraphe3}</p>
+                    ) : (
+                        <div></div>
+                    )}
+                    {/* <p className="article_content">{paragraphe3}</p> */}
 
                     {/* YOUTUBE */}
-                    <ReactPlayer url={youtubeurl} controls="true" id="youtube" />
-
+                    {article.youtube != null ? (
+                        <ReactPlayer
+                            url={youtubeurl}
+                            controls="true"
+                        />
+                    ) : (
+                        <div></div>
+                    )}
 
                     <div className="article_sign">
                         <p className="article_date">Article du <> </>
