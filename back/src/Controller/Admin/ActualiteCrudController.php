@@ -19,6 +19,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class ActualiteCrudController extends AbstractCrudController
 {
@@ -36,7 +37,8 @@ class ActualiteCrudController extends AbstractCrudController
             ->setHelp('edit', 'Les images de l\'actualité sont stockées dans le dossier "uploads/actualite_image"')
             ->setSearchFields(['titre', 'sous-titre', 'lieu', 'url'])
             ->setDefaultSort(['id' => 'DESC'])
-            ->setPaginatorPageSize('20');
+            ->setPaginatorPageSize('20')
+            ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig');
     }
 
     public function configureFields(string $pageName): iterable
@@ -90,9 +92,15 @@ class ActualiteCrudController extends AbstractCrudController
                 ->hideOnIndex()
                 ->setHelp('Sera lue par les liseuses d\'écran. 255 caractères maximum')
                 ->setMaxLength(255),
+
             TextEditorField::new('paragraphe1')
+                ->hideOnIndex()
                 ->setLabel('Premier paragraphe')
-                ->hideOnIndex(),
+                ->setFormType(CKEditorType::class),
+
+            // TextEditorField::new('paragraphe1')
+            //     ->setLabel('Premier paragraphe')
+            //     ->hideOnIndex(),
 
             //! SECOND PARAGRAPHE
             FormField::addPanel('<i class="fa-solid fa-indent" style="color: yellow"></i> Gestion du second paragraphe (optionnel)'),
