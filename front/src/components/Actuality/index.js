@@ -11,8 +11,6 @@ import { Link } from "react-router-dom";
 const Actuality = ({ loadActuality, actuality }) => {
     useEffect(() => {
         loadActuality();
-        console.log(loadActuality());
-        console.log(actuality);
     }, []);
     return (
         <main className="actuality">

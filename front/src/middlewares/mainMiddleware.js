@@ -8,7 +8,6 @@ const mainMiddleware = (store) => (next) => (action) => {
         case FETCH_MISSION:
             axios.get(`${url}mission/list`)
                 .then((response) => {
-                    // console.log('Middleware : ' + response.data);
                     store.dispatch(saveMission(response.data));
                 })
                 .catch((error) => {
@@ -19,7 +18,6 @@ const mainMiddleware = (store) => (next) => (action) => {
         case FETCH_ACTUALITY:
             axios.get(`${url}actualite/list`)
                 .then((response) => {
-                    console.log('Middleware main.actuality : ' + response.data);
                     store.dispatch(saveActuality(response.data));
                 })
                 .catch((error) => {

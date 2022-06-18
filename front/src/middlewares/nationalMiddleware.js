@@ -8,8 +8,6 @@ const nationalMiddleware = (store) => (next) => (action) => {
         case FETCH_NATIONAL: {
             axios.get(`${url}avhNational/list`)
                 .then((response) => {
-                    console.log('Middleware national : ' + response.data);
-                    console.log(response.data);
                     store.dispatch(saveNational(response.data));
                 })
                 .catch((error) => {

@@ -19,7 +19,7 @@ const Article = ({ oneActuality }) => {
     const { slug } = useParams();
     const article = oneActuality.find(article => article.url === slug);
 
-    // Gestion des différents articles
+    // Gestion des différents paragraphes
     if (article.paragraphe2 != null) {
         var paragraphe2 = parse(article.paragraphe2);
     }
@@ -28,15 +28,10 @@ const Article = ({ oneActuality }) => {
         var paragraphe3 = parse(article.paragraphe3);
     }
 
-    if (article.file3 != null) {
-        var file3 = parse(article.file3);
-    }
-
+    // Gestion de la video youtube
     if (article.youtube != null) {
         var youtubeurl = parse(article.youtube);
     }
-    console.log(youtubeurl)
-    // console.log(youtube);
     return (
         <main className="article">
             <article>
@@ -106,7 +101,7 @@ const Article = ({ oneActuality }) => {
 
                     <div className="article_sign">
                         <p className="article_date">Article du <> </>
-                            {Moment(article.date).format('dddd DD MMMM YYYY')}
+                            {Moment(article.createdAt).format('dddd DD MMMM YYYY')}
                         </p>
                         {/* <p className="article_author">Par<> </>
                             <span className="firstname">Jonathan</span><> </>
