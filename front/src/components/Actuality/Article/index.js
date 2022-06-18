@@ -95,12 +95,11 @@ const Article = ({ oneActuality }) => {
 
                     {/* YOUTUBE */}
                     {article.youtube != null ? (
-                        <div id="youtube">
-                            <ReactPlayer
-                                url={youtubeurl}
-                                controls="true"
-                            />
-                        </div>
+                        <ReactPlayer
+                            url={youtubeurl}
+                            controls="true"
+                            id="youtube"
+                        />
                     ) : (
                         <div></div>
                     )}
