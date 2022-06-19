@@ -55,6 +55,11 @@ main {
                 margin: auto 2rem;
                 text-align: justify;
                 text-justify: inter-word;
+
+                a {
+                    color: blue;
+                    text-decoration: underline;
+                }
             }
 
             .article_paragraph--option {
@@ -74,12 +79,44 @@ main {
                 display: flex;
             }
 
-
             #youtube {
                 display: block;
                 margin: auto;
                 margin-top: 5rem;
                 max-width: 80vw !important;
+            }
+        }
+
+
+        #article_share {
+            p {
+                font-size: 1.2rem;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+                margin: 1rem;
+            }
+
+            div {
+                a {
+                    margin: 0.5rem;
+                    width: 5rem;
+                }
+            }
+        }
+
+        .actuality_button {
+            border: vars.$violet solid 1px;
+            border-radius: 25px;
+            width: 10rem;
+            height: 2rem;
+            font-size: 1rem;
+            margin: auto auto;
+
+            &:hover {
+                background-color: vars.$orange;
+                border: vars.$orange;
+                color: vars.$lightGrey;
             }
         }
     }

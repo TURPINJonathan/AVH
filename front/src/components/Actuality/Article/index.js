@@ -118,19 +118,19 @@ const Article = ({ oneActuality }) => {
                     )}
 
                 </aside>
-                <aside>
-                    <p>Partager sur les réseaux sociaux</p>
+                <aside id="article_share">
+                    <p>Partagez sur les réseaux sociaux</p>
                     <div>
-                        <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer"><Facebook /></a>
-                        <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer"><Twitter /></a>
-                        <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer"><Instagram /></a>
+                        <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer"><Facebook className="article_share--picture" /></a>
+                        <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer"><Twitter className="article_share--picture" /></a>
+                        <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer"><Instagram className="article_share--picture" /></a>
                     </div>
                 </aside>
-                <NavLink to="/actualites">
-                    <button>Retour aux articles</button>
-                </NavLink>
+                <Link className="actuality_link" to="/actualites">
+                    <button className="actuality_button">Retour aux articles</button>
+                </Link>
             </article>
-        </main>
+        </main >
     );
 }
 
