@@ -4,6 +4,8 @@
 .actuality {
     .actuality_content {
         display: flex;
+        justify-content: center;
+        align-items: center;
 
         .search {
             width: 20%;
@@ -74,6 +76,8 @@
             height: auto;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
 
 
             .actuality_article {
@@ -128,8 +132,11 @@
 
 @media screen and (max-width: 1200px) {
     .actuality {
+
         .actuality_content {
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             .search {
                 width: 100%;
@@ -141,6 +148,24 @@
 
             .actuality_section {
                 width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .actuality {
+        .actuality_content {
+            .actuality_section {
+                justify-content: center;
+                align-items: center;
+
+                .actuality_article {
+                    .actuality_picture {
+                        max-width: 100%;
+                        max-height: 40%;
+                    }
+                }
             }
         }
     }
