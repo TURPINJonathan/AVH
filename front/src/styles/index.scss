@@ -170,6 +170,8 @@ body {
 
 @media screen and (min-width: 500px) {
   #root {
+    width: 100vw;
+
     main {
       margin-left: 0;
       padding-right: 2rem !important;

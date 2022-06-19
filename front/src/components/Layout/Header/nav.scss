@@ -1,6 +1,8 @@
 @use 'src/styles/vars';
 
 #header-nav {
+    width: 100vw !important;
+
     ul {
         display: flex;
         justify-content: space-evenly;
@@ -27,24 +29,24 @@
             &:hover {
                 background-color: vars.$lightGrey;
                 color: vars.$violet;
-                
+
                 span {
                     height: 100%;
                     margin: auto 0.5rem;
                     display: flex;
                     align-items: center;
                 }
-                
+
             }
-            
-                span {
-                    height: 100%;
-                    margin: auto 0.5rem;
-                    display: flex;
-                    align-items: center;
-                    color: vars.$lightGrey;
-                }
-            
+
+            span {
+                height: 100%;
+                margin: auto 0.5rem;
+                display: flex;
+                align-items: center;
+                color: vars.$lightGrey;
+            }
+
 
             .subnav {
                 position: absolute;
@@ -61,17 +63,17 @@
 
                 .subnav-link {
                     width: 100%;
-                    
+
                     &:hover {
                         width: 100%;
                         background-color: transparent;
                         color: vars.$lightGrey;
                         border-top: vars.$lightGrey solid 1px;
                         border-bottom: vars.$lightGrey solid 1px;
-                        box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
-                        -webkit-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
-                        -moz-box-shadow: 0px 1px 22px 0px rgba(0,0,0,0.75);
-                    } 
+                        box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75);
+                        -webkit-box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75);
+                        -moz-box-shadow: 0px 1px 22px 0px rgba(0, 0, 0, 0.75);
+                    }
 
                     // .subsubnav-link {
                     //     font-size: 0.5rem;
