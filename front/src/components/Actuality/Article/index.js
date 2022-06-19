@@ -33,26 +33,41 @@ const Article = ({ oneActuality }) => {
         var youtubeurl = parse(article.youtube);
     }
     return (
-        <main className="article">
+        <main>
             <article>
-                <h3 className="article-title">{article.titre}</h3>
-                <div className="article_picture">
-                    <img src={picture + 'actualite_image/' + article.file} alt="defi voile" />
+                <h1>{article.titre}</h1>
+                <time id="article_date">Article du <> </>
+                    {Moment(article.createdAt).format('dddd DD MMMM YYYY')}
+                </time>
+                {/* <p className="article_author">Par<> </>
+                            <span className="firstname">Jonathan</span><> </>
+                            <span className="lastname">Turpin</span>
+                        </p> */}
+                <div>
+                    <img
+                        src={picture + 'actualite_image/' + article.file}
+                        alt="defi voile"
+                        className="article_pictures"
+                    />
                     {/* <p className="article_picture--photograph">Photographie de<> </>
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
                     </p> */}
                 </div>
+                <p id="article_overview">
+                    {article.overview}
+                </p>
                 <aside>
-                    <p className="article_overview">
-                        {article.overview}
-                    </p>
-                    <p className="article_content">{parse(article.paragraphe1)}</p>
+                    <p className="article_paragraph">{parse(article.paragraphe1)}</p>
 
                     {/* SECOND PARAGRAPHE */}
-                    <div className="article_picture" >
+                    <div className="article_part">
                         {article.file2 != null ? (
-                            <img src={picture + 'actualite_image/' + article.file2} alt={article.liseuse2} />
+                            <img
+                                src={picture + 'actualite_image/' + article.file2}
+                                alt={article.liseuse2}
+                                className="article_pictures article_picture--option"
+                            />
                         ) : (
                             <div></div>
                         )}
@@ -61,17 +76,25 @@ const Article = ({ oneActuality }) => {
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
                     </p> */}
+                        {article.paragraphe2 != null ? (
+                            <p className="article_paragraph article_paragraph--option">{paragraphe2}</p>
+                        ) : (
+                            <div></div>
+                        )}
                     </div>
-                    {article.paragraphe2 != null ? (
-                        <p className="article_content">{paragraphe2}</p>
-                    ) : (
-                        <div></div>
-                    )}
-
                     {/* TROISIEME PARAGRAPHE */}
-                    <div className="article_picture">
+                    <div className="article_part" id="third_paragraph">
+                        {article.paragraphe3 != null ? (
+                            <p className="article_paragraph article_paragraph--option">{paragraphe3}</p>
+                        ) : (
+                            <div></div>
+                        )}
                         {article.file3 != null ? (
-                            <img src={picture + 'actualite_image/' + article.file3} alt={article.liseuse3} />
+                            <img
+                                src={picture + 'actualite_image/' + article.file3}
+                                alt={article.liseuse3}
+                                className="article_pictures article_picture--option"
+                            />
                         ) : (
                             <div></div>
                         )}
@@ -81,11 +104,6 @@ const Article = ({ oneActuality }) => {
                         <span className="lastname">Turpin</span>
                     </p> */}
                     </div>
-                    {article.paragraphe3 != null ? (
-                        <p className="article_content">{paragraphe3}</p>
-                    ) : (
-                        <div></div>
-                    )}
                     {/* <p className="article_content">{paragraphe3}</p> */}
 
                     {/* YOUTUBE */}
@@ -99,26 +117,17 @@ const Article = ({ oneActuality }) => {
                         <div></div>
                     )}
 
-                    <div className="article_sign">
-                        <p className="article_date">Article du <> </>
-                            {Moment(article.createdAt).format('dddd DD MMMM YYYY')}
-                        </p>
-                        {/* <p className="article_author">Par<> </>
-                            <span className="firstname">Jonathan</span><> </>
-                            <span className="lastname">Turpin</span>
-                        </p> */}
-                    </div>
                 </aside>
-                <aside className="article_social">
-                    <p className="article_social--title">Partager sur les réseaux sociaux</p>
-                    <div className="article_social--icons">
+                <aside>
+                    <p>Partager sur les réseaux sociaux</p>
+                    <div>
                         <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer"><Facebook /></a>
                         <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer"><Twitter /></a>
                         <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer"><Instagram /></a>
                     </div>
                 </aside>
-                <NavLink className="back" to="/actualites">
-                    <button className="back-button">Retour aux articles</button>
+                <NavLink to="/actualites">
+                    <button>Retour aux articles</button>
                 </NavLink>
             </article>
         </main>
