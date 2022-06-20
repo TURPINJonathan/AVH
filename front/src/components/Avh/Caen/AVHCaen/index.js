@@ -30,7 +30,6 @@ const AVHCaen = () => {
                     Apprentissage du braille
                 </p>
                 <div className="double_picture">
-                    <img src={Perkins} alt="Machine PERKINS" />
                     <img src={BrailleReading} alt="Lecture d'un livre en braille" />
                 </div>
             </article>
@@ -39,6 +38,7 @@ const AVHCaen = () => {
                 <p>
                     Les six touches correspondent aux six touches du domino Braille.
                 </p>
+                <img src={Perkins} alt="Machine PERKINS" />
                 <p>
                     Apprentissage de l’informatique et de logiciels adaptés aux déficients visuels ;
                 </p>

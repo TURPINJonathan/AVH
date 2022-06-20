@@ -1,6 +1,9 @@
 @use 'src/styles/vars';
 
 .braille {
+    display: flex;
+    flex-direction: column;
+
     #josiannePerkins {
         display: block;
         margin: auto;
@@ -8,9 +11,17 @@
         margin-bottom: 1rem;
     }
 
+    // .barille_article {
+    //     max-width: 100vw !important;
+    // }
+
     article {
         // margin: 2rem 0 2rem 2rem;
         display: inline-block;
+        max-width: 100vw !important;
+        width: 90%;
+        align-self: center;
+        // min-width: 100vw !important;
 
         #biography,
         #know,
@@ -122,7 +133,12 @@
 
 @media screen and (max-width: 500px) {
     .braille {
-        padding-right: 2rem !important;
+        // padding-right: 2rem !important;
+        // width: 90vw !important;
+
+        .braille_article {
+            max-width: 90vw !important;
+        }
 
         #josiannePerkins {
             width: 15rem;
