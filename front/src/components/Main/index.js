@@ -124,51 +124,54 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                 <h2 className="main-follow-title">Suivez-nous !</h2>
                 <div className="main-follow-container">
                     <article className="main-follow-article">
-                        <aside className="main-follow-article-aside">
-                            <Facebook className="main-follow-article-aside-icon" />
-                            <div className="main-follow-article-aside-content">
-                                {/* <NavLink to="/actualites" className="main-follow-article-aside-content-link">
+                        <div className="main-follow-article-content">
+                            <aside className="main-follow-article-aside">
+                                <Facebook className="main-follow-article-aside-icon" />
+                                <div className="main-follow-article-aside-content">
+                                    {/* <NavLink to="/actualites" className="main-follow-article-aside-content-link">
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                         Mauris euismod, lectus eget consectetur vehicula,
                                     </p>
                                 </NavLink> */}
-                                <NavLink to="/actualites" className="main-follow-article-aside-link">
-                                    <p className="main-follow-article-aside-link-text">
-                                        <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Facebook</a>
-                                    </p>
-                                </NavLink>
-                            </div>
-                        </aside>
-                        <aside className="main-follow-article-aside">
-                            <Instagram className="main-follow-article-aside-icon" />
-                            <div className="main-follow-article-aside-content">
-                                {/* <p>
+                                    <NavLink to="/actualites" className="main-follow-article-aside-link">
+                                        <p className="main-follow-article-aside-link-text">
+                                            <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Facebook</a>
+                                        </p>
+                                    </NavLink>
+                                </div>
+                            </aside>
+                            <aside className="main-follow-article-aside">
+                                <Instagram className="main-follow-article-aside-icon" />
+                                <div className="main-follow-article-aside-content">
+                                    {/* <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Mauris euismod, lectus eget consectetur vehicula,
                                 </p> */}
-                                <NavLink to="/actualites" className="main-follow-article-aside-link">
-                                    <p className="main-follow-article-aside-link-text">
-                                        <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Instagram</a>
-                                    </p>
-                                </NavLink>
-                            </div>
-                        </aside>
-                        <aside className="main-follow-article-aside">
-                            <Twitter className="main-follow-article-aside-icon" />
-                            <div className="main-follow-article-aside-content">
-                                {/* <p>
+                                    <NavLink to="/actualites" className="main-follow-article-aside-link">
+                                        <p className="main-follow-article-aside-link-text">
+                                            <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Instagram</a>
+                                        </p>
+                                    </NavLink>
+                                </div>
+                            </aside>
+                        </div>
+                        <div className="main-follow-article-content">
+                            <aside className="main-follow-article-aside">
+                                <Twitter className="main-follow-article-aside-icon" />
+                                <div className="main-follow-article-aside-content">
+                                    {/* <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Mauris euismod, lectus eget consectetur vehicula,
                                 </p> */}
-                                <NavLink to="/actualites" className="main-follow-article-aside-link">
-                                    <p className="main-follow-article-aside-link-text">
-                                        <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Twitter</a>
-                                    </p>
-                                </NavLink>
-                            </div>
-                        </aside>
-                        {/* <aside className="main-follow-article-aside">
+                                    <NavLink to="/actualites" className="main-follow-article-aside-link">
+                                        <p className="main-follow-article-aside-link-text">
+                                            <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer">suivez-nous sur Twitter</a>
+                                        </p>
+                                    </NavLink>
+                                </div>
+                            </aside>
+                            {/* <aside className="main-follow-article-aside">
                             <Youtube className="main-follow-article-aside-icon" />
                             <div className="main-follow-article-aside-content">
                                 <p>
@@ -182,6 +185,7 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
                                 </NavLink>
                             </div>
                         </aside> */}
+                        </div>
                     </article>
                 </div>
             </section>
