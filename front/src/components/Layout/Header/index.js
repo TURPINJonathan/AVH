@@ -12,7 +12,7 @@ import { ChevronDown, ChevronUp, Facebook, Instagram, Linkedin, Mail, Twitter, Y
 
 // functions
 import dropdown from "../../../functions/dropdown";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // TODO: add Human Ressources && volunteers on burger menu
 
@@ -206,7 +206,8 @@ const Header = () => {
                     </li>
 
                     <li>
-                        <NavLink to="/boutique/catalogue">La boutique</NavLink>
+                        <a href="https://magasin.avh.asso.fr/" target="_blank" rel="noreferrer">La boutique</a>
+                        {/* <NavLink to="/boutique/catalogue">La boutique</NavLink> */}
                     </li>
                     {/*
                     <li

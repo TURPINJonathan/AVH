@@ -97,10 +97,10 @@ const History = () => {
                         </article>
                         <div className="divider" />
                     </div>
-                    <aside className="pub">
+                    {/* <aside className="pub">
                         <img src={pub} alt="defi_voile" className="pub--img" />
                         <button className="pub--button">En savoir plus</button>
-                    </aside>
+                    </aside> */}
                 </div>
             </section>
             <section>
