@@ -91,7 +91,7 @@ ReactDOM.render(
           <Route
             path="actualites"
             element={<Actuality />}
-            exact
+          // exact
           >
             <Route
               path=":slug"
