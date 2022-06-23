@@ -92,14 +92,12 @@ ReactDOM.render(
             path="actualites"
             element={<Actuality />}
           // exact
-          >
-            <Outlet />
-            <Route
-              path=":slug"
-              element={<Article />}
-            // exact
-            />
-          </Route>
+          />
+          <Route
+            path="actualites/:slug"
+            element={<Article />}
+          // exact
+          />
           <Route
             path="/activites/braille"
             element={<Braille />}
