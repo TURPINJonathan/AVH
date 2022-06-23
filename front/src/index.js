@@ -49,7 +49,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       {/* <Router basename='avhcaen.fr/' > */}
-      <HashRouter basename='/'>
+      <HashRouter basename={'/'} >
         <Header />
         <RightNav />
         <Routes>
