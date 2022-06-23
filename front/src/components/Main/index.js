@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
 
+// STYLE
 import './main.scss';
 
-// import picture URL
+// URL
 import { picture } from "../../data";
 
-// pictures
+// PICTURES
 import president from "../../assets/img/desk/jeanPierreLeclercq.jpg";
 import { NavLink } from "react-router-dom";
 import { ArrowRightCircle, Facebook, Instagram, Twitter } from "react-feather";
 
+// MAPBOX
 import ReactMapboxGl, { Layer, Feature, Popup } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 

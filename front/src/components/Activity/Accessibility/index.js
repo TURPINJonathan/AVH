@@ -1,10 +1,11 @@
 import React from "react";
 
+// STYLE
 import './accessibility.scss';
 
+// PICTURES
 import Pin from "../../../assets/img/list_style.png"
 import Daisy from "../../../assets/img/accessibility/daisy.png"
-import loading from '../../../assets/img/page_developping.png';
 
 const Accessibility = () => {
     return (

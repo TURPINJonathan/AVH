@@ -1,6 +1,9 @@
 import React from "react";
 
+// STYLE
 import './sensibilisation.scss';
+
+// PICTURES
 import Pin from "../../../assets/img/list_style.png"
 import Orange from "../../../assets/img//partnership/orange_logo.png"
 import Keolis from "../../../assets/img//partnership/keolis_logo.png"

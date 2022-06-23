@@ -1,7 +1,9 @@
 import React from "react";
 
+// STYLE
 import './book.scss';
 
+// PICTURE
 import loading from '../../../assets/img/page_developping.png';
 
 const Book = () => {

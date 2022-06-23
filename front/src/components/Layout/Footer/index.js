@@ -1,8 +1,9 @@
 import React from "react";
 
+// STYLE
 import "./footer.scss";
 
-// pictures
+// PICTURES
 import Logo from "../../../assets/img/logo.png";
 import { Heart, Mail, MessageCircle, Phone } from "react-feather";
 import { NavLink } from "react-router-dom";

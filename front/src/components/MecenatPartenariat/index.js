@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 
+// STYLE
 import './mp.scss';
 
+// URL
 import { picture } from "../../data";
 
 const Mp = ({ loadPartner, partner }) => {

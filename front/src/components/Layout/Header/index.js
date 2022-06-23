@@ -1,16 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 
+// STYLES
 import "./header.scss";
 import "./nav.scss";
 import './burger.scss';
 
-// pictures
+// PICTURES
 import Logo from "../../../assets/img/logo.png";
-
-// Feather
 import { ChevronDown, ChevronUp, Facebook, Instagram, Linkedin, Mail, Twitter, Youtube } from "react-feather";
 
-// functions
+// FUNCTIONS
 import dropdown from "../../../functions/dropdown";
 import { Link, NavLink } from "react-router-dom";
 

@@ -1,10 +1,9 @@
 import React from "react";
 
+// STYLE
 import './avhCaen.scss';
 
-import loading from '../../../../assets/img/page_developping.png';
-
-//pictures
+// PICTURES
 import Perkins from '../../../../assets/img/caen/perkins.jpg';
 import BrailleReading from '../../../../assets/img/caen/braille_reading.jpg';
 import Archery from '../../../../assets/img/caen/archery.jpg';

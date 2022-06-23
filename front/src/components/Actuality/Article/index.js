@@ -1,18 +1,19 @@
 import React from "react";
-
 import ReactPlayer from 'react-player';
-
 import parse from 'html-react-parser';
 
+// MOMENT
 import Moment from 'moment';
 import 'moment/locale/fr';
 
+// STYLE
 import './article.scss';
 
+// PICTURES
+import { Facebook, Instagram, Twitter } from "react-feather";
+import { Link, useParams } from "react-router-dom";
 
-import { Facebook, Instagram, Twitter, Youtube } from "react-feather";
-import { Link, NavLink, useParams } from "react-router-dom";
-
+// URL
 import { picture } from "../../../data";
 
 const Article = ({ oneActuality }) => {
@@ -71,7 +72,6 @@ const Article = ({ oneActuality }) => {
                         ) : (
                             <div></div>
                         )}
-                        {/* <img src={picture + 'actualite_image/' + file2} alt={article.liseuse2} id="secondPicture" /> */}
                         {/* <p className="article_picture--photograph">Photographie de<> </>
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
@@ -98,13 +98,11 @@ const Article = ({ oneActuality }) => {
                         ) : (
                             <div></div>
                         )}
-                        {/* <img src={picture + 'actualite_image/' + file3} alt={article.liseuse3} /> */}
                         {/* <p className="article_picture--photograph">Photographie de<> </>
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
                     </p> */}
                     </div>
-                    {/* <p className="article_content">{paragraphe3}</p> */}
 
                     {/* YOUTUBE */}
                     {article.youtube != null ? (

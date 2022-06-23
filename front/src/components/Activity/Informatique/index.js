@@ -1,9 +1,10 @@
 import React from "react";
 
+// STYLE
 import './informatique.scss';
-import Pin from "../../../assets/img/list_style.png"
 
-import loading from '../../../assets/img/page_developping.png';
+// PICTURES
+import Pin from "../../../assets/img/list_style.png"
 import InformatiqueBlind from "../../../assets/img/informatique/informatique_blind.png";
 
 const Informatique = () => {

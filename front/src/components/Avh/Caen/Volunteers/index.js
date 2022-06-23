@@ -1,8 +1,10 @@
 import React from "react";
 
+// STYLE
 import './volunteers.scss';
 
-import loading from '../../../../assets/img/page_developping.png';
+// PICTURE
+import loading from '../../../assets/img/page_developping.png';
 
 const Volunteers = () => {
     return (

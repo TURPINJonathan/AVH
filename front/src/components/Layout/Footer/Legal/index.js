@@ -1,11 +1,10 @@
 import React from "react";
 
+// STYLE
 import "./legal.scss";
 
-// pictures
+// PICTURES
 import Pin from "../../../../assets/img/list_style.png"
-// import { Heart, Mail, MessageCircle, Phone } from "react-feather";
-// import { NavLink } from "react-router-dom";
 
 const Legal = () => {
     return (

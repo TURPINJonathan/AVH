@@ -1,7 +1,9 @@
 import React from "react";
 
+// STYLE
 import './history.scss';
 
+// PICTURES
 import Museum from '../../../assets/img/musee.jpg';
 import MauriceDeLaSizeranne from '../../../assets/img/MauricedeLaSizeranne .jpg';
 import pub from "../../../assets/img/defi_voile.jpg";
@@ -97,7 +99,8 @@ const History = () => {
                         </article>
                         <div className="divider" />
                     </div>
-                    {/* <aside className="pub">
+                    {/* MISE EN PLACE DE LA PUB
+                    <aside className="pub">
                         <img src={pub} alt="defi_voile" className="pub--img" />
                         <button className="pub--button">En savoir plus</button>
                     </aside> */}

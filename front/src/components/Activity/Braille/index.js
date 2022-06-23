@@ -1,7 +1,9 @@
 import React from "react";
 
+// STYLE
 import './braille.scss';
 
+// PICTURES
 import LouisBrailleEnfant from "../../../assets/img/louisBraille_enfant.jpg";
 import firstBraille from "../../../assets/img/firstBraille.jpg";
 import secondBraille from "../../../assets/img/secondBraille.jpg";

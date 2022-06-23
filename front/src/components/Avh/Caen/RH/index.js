@@ -1,12 +1,10 @@
 import React from "react";
 
+// STYLE
 import './rh.scss';
 
-// pictures
-import President from "../../../../assets/img/president.jpg";
+// PICTURES
 import Logo from "../../../../assets/img/logo.png";
-
-//photos
 import jeanPierreLeclercq from "../../../../assets/img/desk/jeanPierreLeclercq.jpg";
 import josianePacary from "../../../../assets/img/desk/josianePacary.jpg";
 import damienGuillemette from "../../../../assets/img/desk/damienGuillemette.jpg";
@@ -38,7 +36,6 @@ const Rh = () => {
                         <p className="name">Phavady AUK</p>
                         <p className="function">Trésorière / Comptable</p>
                         <a href="pauk@avhcaen.fr" className="mail">pauk@avhcaen.fr</a>
-                        {/* <p className="phone">06 29 36 49 28</p> */}
                     </aside>
                     <div className="img-container">
                         <img src={Logo} alt="Phavady AUK, trésorière et comptable de l'association Valentin Haüy Caen Calvados" />
@@ -133,8 +130,6 @@ const Rh = () => {
                     <aside>
                         <p className="name">Catherine BONDERLIANG</p>
                         <p className="function">Secrétaire</p>
-                        {/* <a href="fthomas@avhcaen.fr" className="mail">fthomas@avhcaen.fr</a>
-                        <p className="phone">06 15 30 88 96</p> */}
                     </aside>
                     <div className="img-container">
                         <img src={Logo} alt="Catherine BONDERLIANG, secrétaire de l'association Valentin Haüy Caen Calvados" />

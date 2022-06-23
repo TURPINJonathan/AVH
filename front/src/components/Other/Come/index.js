@@ -1,7 +1,9 @@
 import React from "react";
 
+// STYLE
 import './come.scss';
 
+// PICTURE
 import loading from '../../../assets/img/page_developping.png';
 
 const Come = () => {

@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-
-import { picture } from "../../data";
-
-import './actuality.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/fontawesome-free-solid'
-
 import { Link } from "react-router-dom";
+
+// STYLE
+import './actuality.scss';
+
+// URL
+import { picture } from "../../data";
 
 const Actuality = ({ loadActuality, actuality }) => {
     useEffect(() => {
@@ -63,15 +62,6 @@ const Actuality = ({ loadActuality, actuality }) => {
                             </Link>
                         </article>
                     ))}
-                    {/* <article className="actuality_article">
-                        <h4>13ème édition de la Norland's Cup</h4>
-                        <img className="actuality_picture" src={defi_voile} alt="defi voile" />
-                        <p className="actuality_overview">La 13ème édition de la Norlanda's Cup approche à grands pas ...
-                        </p>
-                        <Link to="/actualites/norlanda_cup_2022" className="actuality_link">
-                            <input className="actuality_button" type="button" value="Lire la suite" />
-                        </Link>
-                    </article> */}
                 </section>
             </div>
         </main>
