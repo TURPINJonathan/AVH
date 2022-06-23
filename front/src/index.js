@@ -48,8 +48,8 @@ import AVHCaen from './components/Avh/Caen/AVHCaen';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router basename='/' >
-        {/* <HashRouter basename={'/'} > */}
+      {/* <Router basename='/' > */}
+      <HashRouter basename={'/'} >
         <Header />
         <RightNav />
         <Routes>
@@ -162,8 +162,8 @@ ReactDOM.render(
           />
         </Routes>
         <Footer />
-      </Router>
-      {/* </HashRouter> */}
+        {/* </Router> */}
+      </HashRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
