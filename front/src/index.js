@@ -91,12 +91,12 @@ ReactDOM.render(
           <Route
             path="/actualites"
             element={<Actuality />}
-          // exact
+            exact
           />
           <Route
-            path="/actualites/:slug"
+            path="actualites/:slug"
             element={<Article />}
-            exact
+          // exact
           />
           <Route
             path="/activites/braille"
