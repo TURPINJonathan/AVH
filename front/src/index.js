@@ -48,7 +48,7 @@ import AVHCaen from './components/Avh/Caen/AVHCaen';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router basename='/' >
+      <Router basename='avhcaen.fr/' >
         <Header />
         <RightNav />
         <Routes>
