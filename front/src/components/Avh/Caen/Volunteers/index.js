@@ -4,7 +4,7 @@ import React from "react";
 import './volunteers.scss';
 
 // PICTURE
-import loading from '../../../assets/img/page_developping.png';
+import loading from '../../../../assets/img/page_developping.png';
 
 const Volunteers = () => {
     return (
