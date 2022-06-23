@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Outlet, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 
@@ -92,12 +92,14 @@ ReactDOM.render(
             path="actualites"
             element={<Actuality />}
           // exact
-          />
-          <Route
-            path="actualites/:slug"
-            element={<Article />}
-          // exact
-          />
+          >
+            <Outlet />
+            <Route
+              path=":slug"
+              element={<Article />}
+            // exact
+            />
+          </Route>
           <Route
             path="/activites/braille"
             element={<Braille />}
