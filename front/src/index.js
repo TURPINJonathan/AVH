@@ -94,7 +94,7 @@ ReactDOM.render(
           // exact
           />
           <Route
-            path="/actualites/:slug"
+            path="/actualites/#/:slug"
             element={<Article />}
             exact
           />
