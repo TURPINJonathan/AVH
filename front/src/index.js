@@ -48,15 +48,15 @@ import AVHCaen from './components/Avh/Caen/AVHCaen';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router basename={'/'} >
-        {/* <HashRouter basename={'/'} > */}
+      {/* <Router basename='avhcaen.fr/' > */}
+      <HashRouter basename={'/'} >
         <Header />
         <RightNav />
         <Routes>
           <Route
             path="/"
             element={<Main />}
-          // exact
+            exact
           />
           <Route
             path="/mentions-legales"
@@ -89,14 +89,14 @@ ReactDOM.render(
           // exact
           />
           <Route
-            path={'/actualites'}
+            path="/actualites"
             element={<Actuality />}
           // exact
           />
           <Route
-            path={'/actualites/:slug'}
+            path="/actualites/:slug"
             element={<Article />}
-          // exact
+            exact
           />
           <Route
             path="/activites/braille"
@@ -160,8 +160,8 @@ ReactDOM.render(
           />
         </Routes>
         <Footer />
-      </Router>
-      {/* </HashRouter> */}
+        {/* </Router> */}
+      </HashRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
