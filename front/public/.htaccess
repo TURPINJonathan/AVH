@@ -10,3 +10,5 @@ RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1
 # /index.xxx → /
 RewriteCond %{REQUEST_URI}^.*/index.[A-Za-z]+
 RewriteRule ^(.*)index.[A-Za-z]+$ /$1 [R=301,L]
+
+Redirect permanent avhcaen.fr/actualites avhcaen.fr
