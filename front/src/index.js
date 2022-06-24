@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Outlet, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 
@@ -48,7 +48,8 @@ import AVHCaen from './components/Avh/Caen/AVHCaen';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router basename='/' >
+      {/* <Router basename='/' > */}
+      <HashRouter basename={'/'} >
         <Header />
         <RightNav />
         <Routes>
@@ -88,12 +89,12 @@ ReactDOM.render(
           // exact
           />
           <Route
-            path="/actualites"
+            path="actualites"
             element={<Actuality />}
           // exact
           />
           <Route
-            path="/actualites/:slug"
+            path="actualites/:slug"
             element={<Article />}
           // exact
           />
@@ -159,7 +160,8 @@ ReactDOM.render(
           />
         </Routes>
         <Footer />
-      </Router>
+        {/* </Router> */}
+      </HashRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

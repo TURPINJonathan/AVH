@@ -1,5 +1,6 @@
 import React from "react";
 
+// STYLE
 import './map.scss';
 
 const Map = () => {

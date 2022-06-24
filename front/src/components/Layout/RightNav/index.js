@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+
 import ReactTooltip from "react-tooltip";
 
-// logos
-import { Facebook, Heart, Instagram, Twitter, Youtube } from "react-feather";
-import Give from "../../../assets/img/give.png";
+// PICTURES
+import { Facebook, Heart, Instagram, Twitter } from "react-feather";
 
 import "./rightNav.scss";
 

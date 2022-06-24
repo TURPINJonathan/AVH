@@ -1,106 +1,138 @@
 import React from "react";
-
 import ReactPlayer from 'react-player';
-
 import parse from 'html-react-parser';
 
+// MOMENT
 import Moment from 'moment';
 import 'moment/locale/fr';
 
+// STYLE
 import './article.scss';
 
+// PICTURES
+import { Facebook, Instagram, Twitter } from "react-feather";
+import { Link, useParams } from "react-router-dom";
 
-import { Facebook, Instagram, Twitter, Youtube } from "react-feather";
-import { Link, NavLink, useParams } from "react-router-dom";
-
+// URL
 import { picture } from "../../../data";
 
 const Article = ({ oneActuality }) => {
     const { slug } = useParams();
     const article = oneActuality.find(article => article.url === slug);
 
-    // Gestion des différents articles
+    // Gestion des différents paragraphes
     if (article.paragraphe2 != null) {
         var paragraphe2 = parse(article.paragraphe2);
-    }
-
-    if (article.file2 != null) {
-        var file2 = parse(article.file2);
     }
 
     if (article.paragraphe3 != null) {
         var paragraphe3 = parse(article.paragraphe3);
     }
 
+    // Gestion de la video youtube
     if (article.youtube != null) {
         var youtubeurl = parse(article.youtube);
     }
-    console.log(youtubeurl)
-    // console.log(youtube);
     return (
-        <main className="article">
+        <main>
             <article>
-                <h3 className="article-title">{article.titre}</h3>
-                <div className="article_picture">
-                    <img src={picture + 'actualite_image/' + article.file} alt="defi voile" />
+                <h1>{article.titre}</h1>
+                <time id="article_date">Article du <> </>
+                    {Moment(article.createdAt).format('dddd DD MMMM YYYY')}
+                </time>
+                {/* <p className="article_author">Par<> </>
+                            <span className="firstname">Jonathan</span><> </>
+                            <span className="lastname">Turpin</span>
+                        </p> */}
+                <div>
+                    <img
+                        src={picture + 'actualite_image/' + article.file}
+                        alt="defi voile"
+                        className="article_pictures"
+                    />
                     {/* <p className="article_picture--photograph">Photographie de<> </>
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
                     </p> */}
                 </div>
+                <p id="article_overview">
+                    {article.overview}
+                </p>
                 <aside>
-                    <p className="article_overview">
-                        {article.overview}
-                    </p>
-                    <p className="article_content">{parse(article.paragraphe1)}</p>
+                    <p className="article_paragraph">{parse(article.paragraphe1)}</p>
 
                     {/* SECOND PARAGRAPHE */}
-                    <div className="article_picture" >
-                        <img src={picture + 'actualite_image/' + article.file2} alt={article.liseuse2} />
+                    <div className="article_part">
+                        {article.file2 != null ? (
+                            <img
+                                src={picture + 'actualite_image/' + article.file2}
+                                alt={article.liseuse2}
+                                className="article_pictures article_picture--option"
+                            />
+                        ) : (
+                            <div></div>
+                        )}
                         {/* <p className="article_picture--photograph">Photographie de<> </>
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
                     </p> */}
+                        {article.paragraphe2 != null ? (
+                            <p className="article_paragraph article_paragraph--option">{paragraphe2}</p>
+                        ) : (
+                            <div></div>
+                        )}
                     </div>
-                    <p className="article_content" id="paragraphe2">{paragraphe2}</p>
-
                     {/* TROISIEME PARAGRAPHE */}
-                    <div className="article_picture">
-                        <img src={picture + 'actualite_image/' + article.file3} alt={article.liseuse3} />
+                    <div className="article_part" id="third_paragraph">
+                        {article.paragraphe3 != null ? (
+                            <p className="article_paragraph article_paragraph--option">{paragraphe3}</p>
+                        ) : (
+                            <div></div>
+                        )}
+                        {article.file3 != null ? (
+                            <img
+                                src={picture + 'actualite_image/' + article.file3}
+                                alt={article.liseuse3}
+                                className="article_pictures article_picture--option"
+                            />
+                        ) : (
+                            <div></div>
+                        )}
                         {/* <p className="article_picture--photograph">Photographie de<> </>
                         <span className="firstname">Jonathan</span><> </>
                         <span className="lastname">Turpin</span>
                     </p> */}
                     </div>
-                    <p className="article_content" id="paragraphe2">{paragraphe3}</p>
 
                     {/* YOUTUBE */}
-                    <ReactPlayer url={youtubeurl} controls="true" id="youtube" />
+                    {article.youtube != null ? (
+                        <div id="youtube_wrapper">
+                            <ReactPlayer
+                                url={youtubeurl}
+                                controls="true"
+                                id="youtube_player"
+                                width={'100%'}
+                                height={'100%'}
+                            />
+                        </div>
+                    ) : (
+                        <div></div>
+                    )}
 
-
-                    <div className="article_sign">
-                        <p className="article_date">Article du <> </>
-                            {Moment(article.date).format('dddd DD MMMM YYYY')}
-                        </p>
-                        {/* <p className="article_author">Par<> </>
-                            <span className="firstname">Jonathan</span><> </>
-                            <span className="lastname">Turpin</span>
-                        </p> */}
+                </aside>
+                <aside id="article_share">
+                    <p>Partagez sur les réseaux sociaux</p>
+                    <div>
+                        <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer"><Facebook className="article_share--picture" /></a>
+                        <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer"><Twitter className="article_share--picture" /></a>
+                        <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer"><Instagram className="article_share--picture" /></a>
                     </div>
                 </aside>
-                <aside className="article_social">
-                    <p className="article_social--title">Partager sur les réseaux sociaux</p>
-                    <div className="article_social--icons">
-                        <a href="https://www.facebook.com/avhcaen" target="_blank" rel="noreferrer"><Facebook /></a>
-                        <a href="https://twitter.com/avhcaen" target="_blank" rel="noreferrer"><Twitter /></a>
-                        <a href="https://www.instagram.com/avhcaen" target="_blank" rel="noreferrer"><Instagram /></a>
-                    </div>
-                </aside>
-                <NavLink className="back" to="/actualites">
-                    <button className="back-button">Retour aux articles</button>
-                </NavLink>
+                <Link className="actuality_link" to="/actualites">
+                    <button className="actuality_button">Retour aux articles</button>
+                </Link>
             </article>
-        </main>
+        </main >
     );
 }
 

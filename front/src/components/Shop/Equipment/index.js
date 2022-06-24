@@ -1,5 +1,6 @@
 import React from "react";
 
+// STYLE
 import './equipment.scss';
 
 const Equipment = () => {

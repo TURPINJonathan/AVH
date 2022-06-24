@@ -45,15 +45,18 @@
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+                margin: 0;
 
                 .main-association-article-aside-title {
                     color: white;
                     font-size: 2rem;
                     font-weight: bold;
                 }
-#test {
-    color: black !important;
-}
+
+                #test {
+                    color: black !important;
+                }
+
                 .main-association-article-aside-button {
                     display: flex;
                     justify-content: center;

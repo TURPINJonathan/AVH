@@ -1,10 +1,9 @@
 import React from "react";
 
+// STYLE
 import './avhCaen.scss';
 
-import loading from '../../../../assets/img/page_developping.png';
-
-//pictures
+// PICTURES
 import Perkins from '../../../../assets/img/caen/perkins.jpg';
 import BrailleReading from '../../../../assets/img/caen/braille_reading.jpg';
 import Archery from '../../../../assets/img/caen/archery.jpg';
@@ -30,7 +29,6 @@ const AVHCaen = () => {
                     Apprentissage du braille
                 </p>
                 <div className="double_picture">
-                    <img src={Perkins} alt="Machine PERKINS" />
                     <img src={BrailleReading} alt="Lecture d'un livre en braille" />
                 </div>
             </article>
@@ -39,6 +37,7 @@ const AVHCaen = () => {
                 <p>
                     Les six touches correspondent aux six touches du domino Braille.
                 </p>
+                <img src={Perkins} alt="Machine PERKINS" />
                 <p>
                     Apprentissage de l’informatique et de logiciels adaptés aux déficients visuels ;
                 </p>

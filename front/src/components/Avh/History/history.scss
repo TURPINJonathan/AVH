@@ -11,6 +11,10 @@
 
         article {
 
+            p {
+                text-align: justify;
+            }
+
             #museum {
                 margin: 1rem auto;
                 display: block;
@@ -22,7 +26,7 @@
             display: flex;
 
             article {
-                margin: 1rem;
+                // margin: 1rem;
 
                 img:hover {
                     filter: brightness(75%);
@@ -37,6 +41,7 @@
 
             .history__ourHistory__articleRight {
                 display: flex;
+                flex-direction: row;
                 justify-content: space-evenly;
                 align-items: center;
 
@@ -65,11 +70,14 @@
                     }
                 }
 
-                .text {}
+                .text {
+                    width: 100% !important;
+                }
             }
 
             .history__ourHistory__articleLeft {
                 display: flex;
+                flex-direction: row;
                 justify-content: space-evenly;
                 align-items: center;
 
@@ -96,8 +104,7 @@
                 }
 
                 .text {
-                    // margin: 1rem;
-                    // max-width: 60vw;
+                    width: 100% !important;
                 }
             }
         }
@@ -110,6 +117,20 @@
             .article--container {
                 .pub {
                     display: none !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .history {
+        section {
+            .article--container {
+
+                .history__ourHistory__articleRight,
+                .history__ourHistory__articleLeft {
+                    flex-direction: column;
                 }
             }
         }
@@ -149,11 +170,19 @@
 
 @media screen and (max-width: 500px) {
     .history {
-        padding-right: 2rem !important;
+        // padding-right: 2rem !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         section {
             margin-left: 1rem;
             margin-right: 1rem;
+
+            .history__ourHistory__articleLeft {
+                flex-direction: column-reverse !important;
+            }
 
             #museum {
                 width: 15rem !important;

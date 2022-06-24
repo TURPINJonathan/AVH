@@ -1,6 +1,10 @@
 import React from "react";
-import Pin from "../../../assets/img/list_style.png"
+
+// STYLE
 import './avh.scss';
+
+// PICTURES
+import Pin from "../../../assets/img/list_style.png"
 
 const AVH = ({ loadNational, national }) => {
     return (
@@ -36,7 +40,6 @@ const AVH = ({ loadNational, national }) => {
 
                     </li>
                 </ul>
-                {/* <img src="https://via.placeholder.com/728x90.png" alt="Paris" /> */}
                 <p>
                     Depuis plus de 130 ans, l'association Valentin Haüy poursuit l'objectif de son fondateur en s’appuyant sur ses nombreuses implantations locales, ses établissements et ses services adaptés pour répondre au mieux aux besoins des personnes déficientes visuelles.
                 </p>

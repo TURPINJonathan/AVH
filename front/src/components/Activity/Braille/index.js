@@ -1,7 +1,9 @@
 import React from "react";
 
+// STYLE
 import './braille.scss';
 
+// PICTURES
 import LouisBrailleEnfant from "../../../assets/img/louisBraille_enfant.jpg";
 import firstBraille from "../../../assets/img/firstBraille.jpg";
 import secondBraille from "../../../assets/img/secondBraille.jpg";
@@ -13,7 +15,7 @@ const Braille = () => {
         <main className="braille">
             <h2>Le braille</h2>
             {/* Biographie Braille */}
-            <article>
+            <article className="braille_article">
                 <h3>Biographie Braille</h3>
                 <div id="biography">
                     <img src={LouisBrailleEnfant} alt="Louis Braille enfant" />
@@ -51,7 +53,7 @@ const Braille = () => {
             </article>
             <div className="divider" />
             {/* Un système novateur */}
-            <article>
+            <article className="braille_article">
                 <h3>Un système novateur</h3>
                 <div id="firstSystem">
                     <img src={firstBraille} alt="Alphabet braille" />
@@ -83,7 +85,7 @@ const Braille = () => {
             </article>
             <div className="divider" />
             {/* Tout savoir sur le braille */}
-            <article>
+            <article className="braille_article">
                 <h3>Tout savoir sur le braille</h3>
                 <div id="know">
                     <img src={brailleTouch} alt="lecture du braille au touché" />
@@ -97,7 +99,7 @@ const Braille = () => {
             </article>
             <div className="divider" />
             {/* Quand et comment apprendre le braille ? */}
-            <article>
+            <article className="braille_article">
                 <h3>Quand et comment apprendre le braille ?</h3>
                 <div>
                     <p>
@@ -107,7 +109,7 @@ const Braille = () => {
             </article>
             <div className="divider" />
             {/* Le braille dans le monde */}
-            <article>
+            <article className="braille_article">
                 <h3>Le braille dans le monde</h3>
                 <div id="world">
                     <p>
@@ -129,7 +131,7 @@ const Braille = () => {
             </article>
             <div className="divider" />
             {/* Le CEBF */}
-            <article>
+            <article className="braille_article">
                 <h3>Le CEBF</h3>
                 <div id="cebf">
                     <p>
