@@ -19,54 +19,54 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    #[Groups(['Actualite_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $id;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
-    #[Groups(['Actualite_post, Actualite_get'])]
+    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $email;
 
     #[ORM\Column(type: 'json')]
-    #[Groups(['Actualite_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $roles = [];
 
     #[ORM\Column(type: 'string')]
     private $password;
 
     #[ORM\Column(type: 'string', length: 20)]
-    #[Groups(['Actualite_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $nom;
 
     #[ORM\Column(type: 'string', length: 20)]
-    #[Groups(['Actualite_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $prenom;
 
     #[ORM\Column(type: 'string', length: 40)]
-    #[Groups(['Actualite_post, Actualite_get'])]
+    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $fonction;
 
     #[ORM\Column(type: 'integer')]
-    #[Groups(['Actualite_post, Actualite_get'])]
+    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $telephone;
 
     #[ORM\Column(type: 'boolean', nullable: true)]
-    #[Groups(['Actualite_post, Actualite_get'])]
+    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $bureau;
 
     #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
-    #[Groups(['Actualite_post, Actualite_get'])]
+    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $actualite;
 
     #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
-    #[Groups(['Actualite_post, Actualite_get'])]
+    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $avhCompteRendus;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    #[Groups(['Actualite_post, Actualite_get'])]
+    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $file;
 
     #[Vich\UploadableField(mapping: 'user_image', fileNameProperty: 'file')]
-    #[Groups(['Actualite_post, Actualite_get'])]
+    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $imageFile;
 
 
