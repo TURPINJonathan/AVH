@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ActualiteRepository;
 use Doctrine\Common\Collections\Collection;
@@ -76,10 +77,6 @@ class Actualite
     #[Groups(['Actualite_get'])]
     private $categorie;
 
-    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'actualite', cascade: ['persist'])]
-    #[Groups(['Actualite_get'])]
-    private $users;
-
     #[ORM\Column(type: 'string', length: 50, nullable: true)]
     #[Groups(['Actualite_get'])]
     private $tag;
@@ -123,11 +120,18 @@ class Actualite
     #[Groups(['Actualite_get'])]
     private $youtube;
 
+    #[ORM\ManyToMany(targetEntity: User::class, inversedBy: 'actualites', cascade: ['persist'])]
+    #[ORM\JoinTable(name: 'actualite_user')]
+    // #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    #[Groups(['Actualite_get'])]
+    private $User;
+
     public function __construct()
     {
         $this->categorie = new ArrayCollection();
         $this->users = new ArrayCollection();
         $this->createdAt = new \DateTimeImmutable();
+        $this->User = new ArrayCollection();
     }
 
     public function getFile(): ?string
@@ -399,33 +403,6 @@ class Actualite
         return $this;
     }
 
-    /**
-     * @return Collection<int, User>
-     */
-    public function getUsers(): Collection
-    {
-        return $this->users;
-    }
-
-    public function addUser(User $user): self
-    {
-        if (!$this->users->contains($user)) {
-            $this->users[] = $user;
-            $user->addActualite($this);
-        }
-
-        return $this;
-    }
-
-    public function removeUser(User $user): self
-    {
-        if ($this->users->removeElement($user)) {
-            $user->removeActualite($this);
-        }
-
-        return $this;
-    }
-
     public function __toString()
     {
         return $this->titre;
@@ -475,6 +452,30 @@ class Actualite
     public function setYoutube(?string $youtube): self
     {
         $this->youtube = $youtube;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, User>
+     */
+    public function getUser(): Collection
+    {
+        return $this->User;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->User->contains($user)) {
+            $this->User[] = $user;
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        $this->User->removeElement($user);
 
         return $this;
     }

@@ -49,6 +49,12 @@ class ActualiteCrudController extends AbstractCrudController
             IdField::new('id')
                 ->hideOnForm()
                 ->hideOnIndex(),
+            AssociationField::new('User')
+                ->setLabel('Auteur')
+                ->setHelp('Choisissez l\'auteur de l\'actualité.')
+                ->autocomplete()
+                // ->hideOnForm(),
+                ->hideOnIndex(),
             TextField::new('titre')
                 ->setLabel('Titre de l\'actualité')
                 ->setHelp('255 caractères maximum')
@@ -169,6 +175,12 @@ class ActualiteCrudController extends AbstractCrudController
             //     ->setHelp('Choisissez l\'auteur de l\'actualité.')
             //     ->autocomplete()
             //     ->hideOnForm()
+            //     ->hideOnIndex(),
+            // AssociationField::new('User')
+            //     ->setLabel('Auteur')
+            //     ->setHelp('Choisissez l\'auteur de l\'actualité.')
+            //     ->autocomplete()
+            //     ->hideOnForm(),
             //     ->hideOnIndex(),
 
             //! SLUG

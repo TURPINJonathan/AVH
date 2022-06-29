@@ -53,9 +53,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $bureau;
 
-    #[ORM\ManyToMany(targetEntity: Actualite::class, inversedBy: 'users')]
-    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
-    private $actualite;
 
     #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
     #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
@@ -69,6 +66,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
     private $imageFile;
 
+    #[ORM\ManyToMany(targetEntity: Actualite::class, mappedBy: 'User')]
+    private $actualites;
+
 
     public function __toString()
     {
@@ -79,6 +79,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $this->actualite = new ArrayCollection();
         $this->avhCompteRendus = new ArrayCollection();
+        $this->actualites = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -211,29 +212,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * @return Collection<int, Actualite>
-     */
-    public function getActualite(): Collection
-    {
-        return $this->actualite;
-    }
-
-    public function addActualite(Actualite $actualite): self
-    {
-        if (!$this->actualite->contains($actualite)) {
-            $this->actualite[] = $actualite;
-        }
-
-        return $this;
-    }
-
-    public function removeActualite(Actualite $actualite): self
-    {
-        $this->actualite->removeElement($actualite);
-
-        return $this;
-    }
 
     /**
      * @return Collection<int, AvhCompteRendu>
@@ -286,6 +264,33 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         if ($file) {
             $this->updatedAt = new \DateTimeImmutable('now');
         }
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Actualite>
+     */
+    public function getActualites(): Collection
+    {
+        return $this->actualites;
+    }
+
+    public function addActualite(Actualite $actualite): self
+    {
+        if (!$this->actualites->contains($actualite)) {
+            $this->actualites[] = $actualite;
+            $actualite->addUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeActualite(Actualite $actualite): self
+    {
+        if ($this->actualites->removeElement($actualite)) {
+            $actualite->removeUser($this);
+        }
+
         return $this;
     }
 }
