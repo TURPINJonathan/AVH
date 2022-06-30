@@ -2,19 +2,20 @@
 
 namespace App\Entity;
 
+use Serializable as Serializable;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[Vich\Uploadable]
-class User implements UserInterface, PasswordAuthenticatedUserInterface
+class User implements UserInterface, PasswordAuthenticatedUserInterface, Serializable
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -69,6 +70,45 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\ManyToMany(targetEntity: Actualite::class, mappedBy: 'User')]
     private $actualites;
 
+    /** @see \Serializable::serialize() */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->email,
+            $this->roles,
+            $this->password,
+            $this->nom,
+            $this->prenom,
+            $this->fonction,
+            $this->telephone,
+            $this->bureau,
+            $this->avhCompteRendus,
+            $this->file,
+            $this->imageFile,
+            $this->actualites,
+        ));
+    }
+
+    /** @see \Serializable::unserialize() */
+    public function unserialize($serialized)
+    {
+        list(
+            $this->id,
+            $this->email,
+            $this->roles,
+            $this->password,
+            $this->nom,
+            $this->prenom,
+            $this->fonction,
+            $this->telephone,
+            $this->bureau,
+            $this->avhCompteRendus,
+            $this->file,
+            $this->imageFile,
+            $this->actualites,
+        ) = unserialize($serialized);
+    }
 
     public function __toString()
     {
