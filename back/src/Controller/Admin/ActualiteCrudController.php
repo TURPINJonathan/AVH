@@ -52,6 +52,7 @@ class ActualiteCrudController extends AbstractCrudController
             AssociationField::new('User')
                 ->setLabel('Auteur')
                 ->setHelp('Choisissez l\'auteur de l\'actualité.')
+                ->setRequired(true)
                 // ->setTargetEntity(User::class)
                 // ->setTargetField(IdField::new('id'))
                 // ->setFormType(AssociationFieldType::class)
@@ -62,7 +63,6 @@ class ActualiteCrudController extends AbstractCrudController
                 //         return $user->getNom() . ' ' . $user->getPrenom();
                 //     },
                 // ])
-
                 ->autocomplete()
                 // ->hideOnForm(),
                 ->hideOnIndex(),
