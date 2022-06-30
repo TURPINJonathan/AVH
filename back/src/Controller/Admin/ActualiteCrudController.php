@@ -52,6 +52,17 @@ class ActualiteCrudController extends AbstractCrudController
             AssociationField::new('User')
                 ->setLabel('Auteur')
                 ->setHelp('Choisissez l\'auteur de l\'actualité.')
+                // ->setTargetEntity(User::class)
+                // ->setTargetField(IdField::new('id'))
+                // ->setFormType(AssociationFieldType::class)
+                // ->setFormTypeOptions([
+                //     // 'em' => $this->getDoctrine()->getManager(),
+                //     'class' => User::class,
+                //     'choice_label' => function (User $user) {
+                //         return $user->getNom() . ' ' . $user->getPrenom();
+                //     },
+                // ])
+
                 ->autocomplete()
                 // ->hideOnForm(),
                 ->hideOnIndex(),
@@ -104,10 +115,6 @@ class ActualiteCrudController extends AbstractCrudController
                 ->setLabel('Premier paragraphe')
                 ->setFormType(CKEditorType::class),
 
-            // TextEditorField::new('paragraphe1')
-            //     ->setLabel('Premier paragraphe')
-            //     ->hideOnIndex(),
-
             //! SECOND PARAGRAPHE
             FormField::addPanel('<i class="fa-solid fa-indent" style="color: yellow"></i> Gestion du second paragraphe (optionnel)'),
             TextField::new('imageFile2')
@@ -128,9 +135,6 @@ class ActualiteCrudController extends AbstractCrudController
                 ->hideOnIndex()
                 ->setLabel('Second paragraphe')
                 ->setFormType(CKEditorType::class),
-            // TextEditorField::new('paragraphe2')
-            //     ->setLabel('Second paragraphe')
-            //     ->hideOnIndex(),
 
             //! TROISIEME PARAGRAPHE
             FormField::addPanel('<i class="fa-solid fa-indent" style="color: yellow"></i> Gestion du troisième paragraphe (optionnel)'),
@@ -152,9 +156,6 @@ class ActualiteCrudController extends AbstractCrudController
                 ->hideOnIndex()
                 ->setLabel('Troisième paragraphe')
                 ->setFormType(CKEditorType::class),
-            // TextEditorField::new('paragraphe3')
-            //     ->setLabel('Troisième paragraphe')
-            //     ->hideOnIndex(),
 
             //! YOUTUBE
             FormField::addPanel('<i class="fa-brands fa-youtube" style="color: red"></i> YOUTUBE'),

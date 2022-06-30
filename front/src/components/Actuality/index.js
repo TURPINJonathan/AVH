@@ -11,6 +11,10 @@ const Actuality = ({ loadActuality, actuality }) => {
     useEffect(() => {
         loadActuality();
     }, []);
+
+    const actualitySort = actuality.sort((first, last) => {
+        return new Date(last.createdAt) - new Date(first.createdAt);
+    });
     return (
         <main className="actuality">
             <h2>Actualités</h2>
@@ -52,7 +56,7 @@ const Actuality = ({ loadActuality, actuality }) => {
                     </div>
                 </section> */}
                 <section className="actuality_section">
-                    {actuality.map(actu => (
+                    {actualitySort.map(actu => (
                         <article className="actuality_article" key={actu.id}>
                             <h4>{actu.titre}</h4>
                             <img className="actuality_picture" src={picture + 'actualite_image/' + actu.file} alt="defi voile" />

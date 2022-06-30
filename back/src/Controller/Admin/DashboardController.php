@@ -66,7 +66,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('FAQ', 'fa fa-duotone fa-question', Faq::class)->setPermission('ROLE_SUPERADMIN');
         yield MenuItem::linkToCrud('Législation', 'fa fa-duotone fa-scale-balanced', Legal::class)->setPermission('ROLE_SUPERADMIN');
         yield MenuItem::linkToRoute('Guide d\'utilisation', 'fa fa-duotone fa-book', 'guide')->setPermission('ROLE_SUPERADMIN');
-
+        yield MenuItem::linkToLogout('Déconnexion', 'fa fa-sign-out-alt');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }
