@@ -56,16 +56,27 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Accueil', 'fa fa-home')->setPermission('ROLE_USER');
         yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-duotone fa-user', User::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToCrud('Actualités', 'fa fa-newspaper', Actualite::class)->setPermission('ROLE_USER');
-        yield MenuItem::linkToCrud('Boutique', 'fa fa-duotone fa-shop', Boutique::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToCrud('Missions', 'fa fa-duotone fa-user-secret', Mission::class)->setPermission('ROLE_MODERATEUR');
-        yield MenuItem::linkToCrud('Partenaires', 'fa fa-duotone fa-handshake', Partenaire::class)->setPermission('ROLE_MODERATEUR');
-        yield MenuItem::linkToCrud('AVH Caen', 'fa fa-duotone fa-location-crosshairs', AvhCaen::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToCrud('AVH Compte Rendu', 'fa fa-duotone fa-file-pen', AvhCompteRendu::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToCrud('AVH National', 'fa fa-duotone fa-earth-europe', AvhNational::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToCrud('FAQ', 'fa fa-duotone fa-question', Faq::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToCrud('Législation', 'fa fa-duotone fa-scale-balanced', Legal::class)->setPermission('ROLE_SUPERADMIN');
-        yield MenuItem::linkToRoute('Guide d\'utilisation', 'fa fa-duotone fa-book', 'guide')->setPermission('ROLE_SUPERADMIN');
+
+        yield MenuItem::subMenu('Gestion', 'fa fa-list-check')->setSubItems([
+            MenuItem::linkToCrud('Actualités', 'fa fa-newspaper', Actualite::class)->setPermission('ROLE_USER'),
+            MenuItem::linkToCrud('Boutique', 'fa fa-duotone fa-shop', Boutique::class)->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToCrud('Missions', 'fa fa-duotone fa-user-secret', Mission::class)->setPermission('ROLE_MODERATEUR'),
+            MenuItem::linkToCrud('Partenaires', 'fa fa-duotone fa-handshake', Partenaire::class)->setPermission('ROLE_MODERATEUR'),
+        ]);
+
+        yield MenuItem::subMenu('AVH', 'fa fa-building-flag')->setSubItems([
+            MenuItem::linkToCrud('AVH Caen', 'fa fa-duotone fa-location-crosshairs', AvhCaen::class)->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToCrud('AVH Compte Rendu', 'fa fa-duotone fa-file-pen', AvhCompteRendu::class)->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToCrud('AVH National', 'fa fa-duotone fa-earth-europe', AvhNational::class)->setPermission('ROLE_SUPERADMIN'),
+        ]);
+
+        yield MenuItem::subMenu('Légal', 'fa fa-scale-balanced')->setSubItems([
+            MenuItem::linkToCrud('FAQ', 'fa fa-duotone fa-question', Faq::class)->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToCrud('Législation', 'fa fa-duotone fa-scale-balanced', Legal::class)->setPermission('ROLE_SUPERADMIN'),
+        ]);
+
+        // yield MenuItem::section('Outils');
+        yield MenuItem::linkToUrl('Guide d\'utilisation', 'fa fa-duotone fa-book', 'guide')->setPermission('ROLE_SUPERADMIN');
         yield MenuItem::linkToLogout('Déconnexion', 'fa fa-sign-out-alt');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
