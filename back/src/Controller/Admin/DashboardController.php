@@ -55,7 +55,6 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Accueil', 'fa fa-home')->setPermission('ROLE_USER');
-        yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-duotone fa-user', User::class)->setPermission('ROLE_SUPERADMIN');
 
         yield MenuItem::subMenu('Gestion', 'fa fa-list-check')->setSubItems([
             MenuItem::linkToCrud('Actualités', 'fa fa-newspaper', Actualite::class)->setPermission('ROLE_USER'),
@@ -75,8 +74,35 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Législation', 'fa fa-duotone fa-scale-balanced', Legal::class)->setPermission('ROLE_SUPERADMIN'),
         ]);
 
-        // yield MenuItem::section('Outils');
-        yield MenuItem::linkToUrl('Guide d\'utilisation', 'fa fa-duotone fa-book', 'guide')->setPermission('ROLE_SUPERADMIN');
+        yield MenuItem::subMenu('Mises à jour', 'fa fa-spinner')->setSubItems([
+            MenuItem::linkToRoute('Juillet 2022', 'fa fa-calendar-days', 'app_juillet2022')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Juin 2022', 'fa fa-calendar-days', 'app_juin2022')->setPermission('ROLE_SUPERADMIN'),
+        ]);
+
+        yield MenuItem::subMenu('Guide d\'utilisation', 'fa fa-book')->setSubItems([
+            MenuItem::linkToRoute('Informations générales : en cours', 'fa fa-circle-info', 'app_guide')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Accueil : en cours', 'fa fa-duotone fa-home', 'app_dashboard')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Utilisateurs : en cours', 'fa fa-duotone fa-user', 'app_utilisateurs')->setPermission('ROLE_SUPERADMIN'),
+
+            MenuItem::section('Gestion'),
+            MenuItem::linkToRoute('Actualités : en cours', 'fa fa-duotone fa-newspaper', 'app_actualites')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Boutique : fonctionnalité non disponible', 'fa fa-duotone fa-shop', 'app_boutique')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Missions : en cours', 'fa fa-duotone fa-user-secret', 'app_missions')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Partenaires : en cours', 'fa fa-duotone fa-handshake', 'app_partenaires')->setPermission('ROLE_SUPERADMIN'),
+
+            MenuItem::section('AVH'),
+            MenuItem::linkToRoute('AVH Caen : fonctionnalité non disponible', 'fa fa-duotone fa-location-crosshairs', 'app_avhcaen')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('AVH Compte Rendu : fonctionnalité non disponible', 'fa fa-duotone fa-file-pen', 'app_avhcompterendu')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('AVH National : fonctionnalité non disponible', 'fa fa-duotone fa-earth-europe', 'app_avhnational')->setPermission('ROLE_SUPERADMIN'),
+
+            MenuItem::section('Légal'),
+            MenuItem::linkToRoute('FAQ : fonctionnalité non disponible', 'fa fa-duotone fa-question', 'app_faq')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Législation : fonctionnalité non disponible', 'fa fa-duotone fa-scale-balanced', 'app_legislation')->setPermission('ROLE_SUPERADMIN'),
+        ]);
+
+        // yield MenuItem::linkToRoute('Guide d\'utilisation', 'fa fa-duotone fa-book', 'app_guide')->setPermission('ROLE_SUPERADMIN');
+        // yield MenuItem::linkToRoute('Dashboard', 'fa fa-duotone fa-book', 'app_dashboard')->setPermission('ROLE_SUPERADMIN');
+        yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-duotone fa-user', User::class)->setPermission('ROLE_SUPERADMIN');
         yield MenuItem::linkToLogout('Déconnexion', 'fa fa-sign-out-alt');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }

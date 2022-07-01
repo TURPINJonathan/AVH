@@ -1,0 +1,41 @@
+{% extends '@!EasyAdmin/layout.html.twig'%}
+
+{% block content_title %}
+	<h1 class="text-center" style="margin:3rem; text-transform: uppercase; border-bottom: 2px solid; padding-bottom: 10px">
+		Mises à jour<br/>Juin 2022
+	</h1>
+{% endblock %}
+{% block main %}
+	<div style="max-width: 85%; margin: auto">
+		<div>
+			<div style="border: 1px solid gray; padding: 20px; border-radius: 25px; margin: 1rem 0">
+				<h5 style="border-bottom: 1px solid; text-align:center; width:100%">Jeudi 30 Juin 2022</h5>
+				<ul>
+					<li style="font-style:italic; font-size: 16px; text-transform: uppercase; text-decoration: underline">
+						BACK OFFICE
+					</li>
+					<ul>
+						<li>Bouton de déconnexion dans le menu latéral</li>
+						<li>Remaniement de la table User</li>
+					</ul>
+					<li style="font-style:italic; font-size: 16px; text-transform: uppercase; text-decoration: underline">
+						FRONT
+					</li>
+					<ul>
+						<li>Affichage de l'auteur sur les articles</li>
+						<li>Articles rangés par ordre de date (du plus récent au plus ancien)</li>
+					</ul>
+				</ul>
+				<h5 style="border-bottom: 1px solid; text-align:center; width:100%">Mercredi 29 Juin 2022</h5>
+				<ul>
+					<li style="font-style:italic; font-size: 16px; text-transform: uppercase; text-decoration: underline">BACK OFFICE</li>
+					<ul>
+						<li>Page d'accueil montre les dernières mises à jours</li>
+						<li>Les articles sont liés aux utilisateurs</li>
+						<li>Préparation du guide d'utilisateurs (pas encore disponible pour le moment)</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}
