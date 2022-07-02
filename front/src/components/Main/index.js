@@ -15,10 +15,18 @@ import { ArrowRightCircle, Facebook, Instagram, Twitter } from "react-feather";
 import ReactMapboxGl, { Layer, Feature, Popup } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const Main = ({ loadMission, mission, loadActuality, actuality }) => {
+// TOASTIFY
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const Main = ({ loadMission, mission, loadActuality, actuality, flash, showFlash }) => {
     useEffect(() => {
         loadMission();
         loadActuality();
+        if (flash === 'success') {
+            flashSuccess();
+            showFlash(null);
+        }
     }, []);
 
     // Mapbox
@@ -32,8 +40,40 @@ const Main = ({ loadMission, mission, loadActuality, actuality }) => {
     const Style = 'mapbox://styles/mapbox/outdoors-v11';
     const Zoom = [16];
 
+
+    function flashSuccess() {
+        toast.success('Votre message a été envoyé avec succès. Nous vous répondrons dès que possible.', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+        });
+    }
+
+    useEffect(() => {
+        if (flash === 'success') {
+            flashSuccess();
+            showFlash(null);
+        }
+    }, [flash]);
+
     return (
         <main className="main">
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
 
             {/* Actualités */}
             <section className="main-actuality">
