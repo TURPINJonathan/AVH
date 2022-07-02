@@ -5,9 +5,16 @@
     height: 20rem;
     margin-bottom: 3rem;
 
+    .mapboxgl-ctrl-bottom-right {
+        display: none !important;
+        // z-index: 0;
+    }
+
+    .mapboxgl-popup-anchor-bottom,
     .mapboxgl-popup-content {
         font-weight: bold;
         font-size: 1rem;
+        z-index: 0 !important;
 
         p {
             font-size: 0.8rem;
