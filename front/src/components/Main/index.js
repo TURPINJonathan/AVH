@@ -42,7 +42,7 @@ const Main = ({ loadMission, mission, loadActuality, actuality, flash, showFlash
 
 
     function flashSuccess() {
-        toast.success('Votre message a été envoyé avec succès', {
+        toast.success('Votre message a été envoyé avec succès. Nous vous répondrons dès que possible.', {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
