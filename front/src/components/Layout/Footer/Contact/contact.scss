@@ -1,0 +1,133 @@
+@use 'src/styles/vars';
+
+#modal {
+    padding: 1rem;
+    width: 70vw;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    text-align: center;
+
+    #contactTitle {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: vars.$violet solid 1px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #overview {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        // font-size: 1.2rem;
+        font-style: italic;
+        line-height: 1.5rem;
+    }
+
+    form {
+        fieldset {
+            border: 1px solid vars.$violet;
+            border-radius: 25px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+
+            legend {
+                font-size: 1.3rem;
+                width: 50%;
+                background-color: vars.$violet;
+                border-radius: 25px;
+                text-align: center;
+                color: vars.$lightGrey;
+                padding: 0.5rem;
+            }
+
+            label {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: vars.$violet;
+            }
+
+            input,
+            textarea {
+                width: 85%;
+                border: none;
+                border-radius: 25px;
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                vertical-align: middle;
+                text-align: center;
+                margin: auto;
+                margin-bottom: 0.5rem;
+                outline: none;
+                font-family: Roboto, Helvetica, Arial, sans-serif;
+
+                &:focus {
+                    box-shadow: inset 0 0 5px vars.$violet;
+                }
+            }
+
+            .displayInput {
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                margin-bottom: 1rem;
+                width: 100%;
+
+                .coordinates {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: 1rem;
+
+                    .coordinates_content {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                border-radius: 25px;
+                width: 13rem;
+                height: 2rem;
+                color: vars.$lightGrey;
+                font-size: 1.2rem;
+                margin: auto;
+                text-transform: uppercase;
+            }
+
+            #reset {
+                color: vars.$violet;
+                border: 1px solid vars.$violet;
+
+                &:hover {
+                    background-color: vars.$violet;
+                    color: vars.$lightGrey;
+                }
+            }
+
+            #send {
+                color: vars.$orange;
+                border: 1px solid vars.$orange;
+
+                &:hover {
+                    background-color: vars.$orange;
+                    color: vars.$lightGrey;
+                }
+            }
+        }
+    }
+}

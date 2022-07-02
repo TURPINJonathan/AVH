@@ -18,6 +18,7 @@ import Header from './components/Layout/Header';
 import Main from './containers/Main';
 // import Main from './components/Main';
 import Legal from './components/Layout/Footer/Legal';
+import Contact from './components/Layout/Footer/Contact';
 
 // Navigate components
 import Rh from './components/Avh/Caen/RH';
@@ -39,7 +40,7 @@ import Book from './components/Shop/Book';
 import Equipment from './components/Shop/Equipment';
 import Come from './components/Other/Come';
 import Give from './components/Other/Give';
-import Contact from './components/Other/Contact';
+// import Contact from './components/Other/Contact';
 import Map from './components/Map';
 import RightNav from './components/Layout/RightNav';
 import History from './components/Avh/History';
