@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Heart, Mail, MessageCircle, Phone } from "react-feather";
 import Modal from 'react-modal';
+import emailjs from '@emailjs/browser';
 
 // STYLE
 import "./footer.scss";
@@ -38,9 +39,9 @@ const Footer = ({
     message,
     contact,
 }) => {
+    var form = useRef();
 
-    const form = useRef();
-    // MODAL
+    //? MODAL
     let subtitle;
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -56,6 +57,20 @@ const Footer = ({
     function closeModal() {
         setIsOpen(false);
     }
+
+    //? EMAILJS
+    function sendEmail(e) {
+        e.preventDefault();
+        emailjs.sendForm('avh_contact', 'contact_template', e.target, '_YsYqOdnEsIYTolQg')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                closeModal();
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+        e.target.reset();
+    }
+
     return (
         <footer>
             <div id="footer">
@@ -117,7 +132,12 @@ const Footer = ({
                                 <p>Veuillez renseigner le formulaire ci-dessous, nous vous répondrons dès que possible</p>
                             </div>
                             <form
+                                id="formContact"
                                 ref={form}
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    sendEmail(e);
+                                }}
                             >
                                 <fieldset>
                                     <legend>Vos coordonnées</legend>
@@ -165,7 +185,7 @@ const Footer = ({
                                                     type="tel"
                                                     id="telephone"
                                                     name="telephone"
-                                                    pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}"
+                                                    // pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}"
                                                     value={telephone}
                                                     onChange={(e) => {
                                                         contact(e.target.value, 'telephone');
@@ -248,8 +268,8 @@ const Footer = ({
                                     </div>
                                 </fieldset>
                                 <div className="buttons">
-                                    <button id="reset" onClick={closeModal}>Annuler</button>
-                                    <button id="send">Envoyer</button>
+                                    <button id="reset" type="exit" onClick={closeModal}>Annuler</button>
+                                    <button id="send" type="submit" >Envoyer</button>
                                 </div>
                             </form>
                         </div>
