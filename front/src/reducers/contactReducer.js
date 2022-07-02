@@ -1,4 +1,4 @@
-import { CONTACT } from "../actions/contact";
+import { CONTACT, SHOW_FLASH } from "../actions/contact";
 
 const initialState = {
     nom: "",
@@ -8,6 +8,7 @@ const initialState = {
     entreprise: "",
     objet: "",
     message: "",
+    flash: null,
 };
 
 function contactReducer(state = initialState, action) {
@@ -53,6 +54,19 @@ function contactReducer(state = initialState, action) {
                     return state;
 
             }
+
+        case SHOW_FLASH:
+            return {
+                ...state,
+                nom: "",
+                prenom: "",
+                telephone: "",
+                email: "",
+                entreprise: "",
+                objet: "",
+                message: "",
+                flash: action.newvalue,
+            };
         default:
             return state;
     }

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Heart, Mail, MessageCircle, Phone } from "react-feather";
 import Modal from 'react-modal';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 // STYLE
 import "./footer.scss";
@@ -38,8 +39,31 @@ const Footer = ({
     objet,
     message,
     contact,
+    flash,
+    showFlash,
 }) => {
     var form = useRef();
+
+    //? FLASH MESSAGE
+    function flashError() {
+        toast.error('Une erreur est survenue. Avez-vous rempli l\'ensemble des champs obligatoires', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+
+    if (flash === 'error') {
+        flashError();
+    }
+
+    if (flash === 'redirect') {
+        showFlash('success');
+    }
 
     //? MODAL
     let subtitle;
@@ -65,8 +89,10 @@ const Footer = ({
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 closeModal();
+                showFlash('redirect');
             }, (error) => {
-                console.log('FAILED...', error);
+                console.log('Message error', error);
+                showFlash('error');
             });
         e.target.reset();
     }
