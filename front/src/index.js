@@ -13,7 +13,8 @@ import './styles/index.scss';
 //? imports components
 
 // Main components
-import Footer from './components/Layout/Footer';
+// import Footer from './components/Layout/Footer';
+import Footer from './containers/Tools';
 import Header from './components/Layout/Header';
 import Main from './containers/Main';
 // import Main from './components/Main';

@@ -5,9 +5,11 @@
     height: 20rem;
     margin-bottom: 3rem;
 
+    .mapboxgl-popup-anchor-bottom,
     .mapboxgl-popup-content {
         font-weight: bold;
         font-size: 1rem;
+        z-index: 0 !important;
 
         p {
             font-size: 0.8rem;
