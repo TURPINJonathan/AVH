@@ -19,7 +19,8 @@ import { picture } from "../../../data";
 const Article = ({ oneActuality }) => {
     const { slug } = useParams();
     const article = oneActuality.find(article => article.url === slug);
-
+    console.log(article);
+    console.log(picture + 'user_image/' + article.User[0].file);
     // Gestion des différents paragraphes
     if (article.paragraphe2 != null) {
         var paragraphe2 = parse(article.paragraphe2);
@@ -40,10 +41,11 @@ const Article = ({ oneActuality }) => {
                 <time id="article_date">Article du <> </>
                     {Moment(article.createdAt).format('dddd DD MMMM YYYY')}
                 </time>
-                {/* <p className="article_author">Par<> </>
-                            <span className="firstname">Jonathan</span><> </>
-                            <span className="lastname">Turpin</span>
-                        </p> */}
+                <author className="article_author">Par<> </>
+                    <span className="firstname">{article.User[0].nom}</span><> </>
+                    <span className="lastname">{article.User[0].prenom}</span>
+                    {/* <img id="user_picture" src={picture + 'user_image/' + article.User[0].file} alt="" /> */}
+                </author>
                 <div>
                     <img
                         src={picture + 'actualite_image/' + article.file}

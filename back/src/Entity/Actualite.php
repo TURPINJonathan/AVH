@@ -122,17 +122,16 @@ class Actualite
 
     #[ORM\ManyToMany(targetEntity: User::class, inversedBy: 'actualites', cascade: ['persist'])]
     #[ORM\JoinTable(name: 'actualite_user')]
-    // #[ORM\Column(type: 'string', length: 255, nullable: true)]
     #[Groups(['Actualite_get'])]
     private $User;
 
     public function __construct()
     {
         $this->categorie = new ArrayCollection();
-        $this->users = new ArrayCollection();
         $this->createdAt = new \DateTimeImmutable();
         $this->User = new ArrayCollection();
     }
+
 
     public function getFile(): ?string
     {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // STYLE
 import './avh.scss';
@@ -7,6 +7,12 @@ import './avh.scss';
 import Pin from "../../../assets/img/list_style.png"
 
 const AVH = ({ loadNational, national }) => {
+    useEffect(() => {
+        loadNational();
+    }, []);
+    // const benevoles = national[0].nb_benevoles;
+    // console.log(benevoles);
+
     return (
         <main className="avh">
             <h2>Présentation de l'AVH</h2>

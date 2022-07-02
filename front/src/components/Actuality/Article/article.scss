@@ -9,7 +9,8 @@ main {
         max-width: 70vw;
         margin: 2rem auto;
 
-        #article_date {
+        #article_date,
+        .article_author {
             font-size: 0.8rem;
             text-align: center;
             font-style: italic;
