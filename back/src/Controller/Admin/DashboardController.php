@@ -75,12 +75,12 @@ class DashboardController extends AbstractDashboardController
         ]);
 
         yield MenuItem::subMenu('Mises à jour', 'fa fa-spinner')->setSubItems([
-            MenuItem::linkToRoute('Juillet 2022', 'fa fa-calendar-days', 'app_juillet2022')->setPermission('ROLE_SUPERADMIN'),
-            MenuItem::linkToRoute('Juin 2022', 'fa fa-calendar-days', 'app_juin2022')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Juillet 2022', 'fa fa-calendar-days', 'app_juillet2022')->setPermission('ROLE_USER'),
+            MenuItem::linkToRoute('Juin 2022', 'fa fa-calendar-days', 'app_juin2022')->setPermission('ROLE_USER'),
         ]);
 
         yield MenuItem::subMenu('Guide d\'utilisation', 'fa fa-book')->setSubItems([
-            MenuItem::linkToRoute('Informations générales : en cours', 'fa fa-circle-info', 'app_guide')->setPermission('ROLE_SUPERADMIN'),
+            MenuItem::linkToRoute('Informations générales : en cours', 'fa fa-circle-info', 'app_guide')->setPermission('ROLE_USER'),
             MenuItem::linkToRoute('Accueil : en cours', 'fa fa-duotone fa-home', 'app_dashboard')->setPermission('ROLE_SUPERADMIN'),
             MenuItem::linkToRoute('Utilisateurs : en cours', 'fa fa-duotone fa-user', 'app_utilisateurs')->setPermission('ROLE_SUPERADMIN'),
 
