@@ -46,6 +46,7 @@ import Map from './components/Map';
 import RightNav from './components/Layout/RightNav';
 import History from './components/Avh/History';
 import AVHCaen from './components/Avh/Caen/AVHCaen';
+import Error from './components/Other/error';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -158,6 +159,11 @@ ReactDOM.render(
           <Route
             path="/find-us"
             element={<Map />}
+          // exact
+          />
+          <Route
+            path="*"
+            element={<Error />}
           // exact
           />
         </Routes>
