@@ -77,7 +77,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::subMenu('Mises à jour', 'fa fa-spinner')->setSubItems([
             MenuItem::linkToRoute('Juillet 2022', 'fa fa-calendar-days', 'app_juillet2022')->setPermission('ROLE_USER'),
             MenuItem::linkToRoute('Juin 2022', 'fa fa-calendar-days', 'app_juin2022')->setPermission('ROLE_USER'),
-        ]);
+        ])->setPermission('ROLE_USER');
 
         yield MenuItem::subMenu('Guide d\'utilisation', 'fa fa-book')->setSubItems([
             MenuItem::linkToRoute('Informations générales : en cours', 'fa fa-circle-info', 'app_guide')->setPermission('ROLE_USER'),
