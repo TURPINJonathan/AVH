@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 
 // STYLE
 import './main.scss';
@@ -262,6 +263,64 @@ const Main = ({ loadMission, mission, loadActuality, actuality, flash, showFlash
             </section>
         </main >
     );
+};
+
+Main.propTypes = {
+    // MISSION
+    loadMission: PropTypes.func.isRequired,
+    mission: PropTypes.objectOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            nom: PropTypes.string.isRequired,
+            overview: PropTypes.string.isRequired,
+            detail: PropTypes.string.isRequired,
+            show_main: PropTypes.bool.isRequired,
+            file: PropTypes.string.isRequired,
+            imageFile: PropTypes.string,
+            slug: PropTypes.string.isRequired,
+        }).isRequired,
+    ).isRequired,
+
+    // ACTUALITY
+    loadActuality: PropTypes.func.isRequired,
+    actuality: PropTypes.objectOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            titre: PropTypes.string.isRequired,
+            sous_titre: PropTypes.string.isRequired,
+            lieu: PropTypes.string.isRequired,
+            overview: PropTypes.string.isRequired,
+            paragraphe1: PropTypes.string.isRequired,
+            paragraphe2: PropTypes.string,
+            paragraphe3: PropTypes.string,
+            focus: PropTypes.bool.isRequired,
+            liseuse: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
+            aside: PropTypes.string.isRequired,
+            createdAt: PropTypes.string.isRequired,
+            updatedAt: PropTypes.string,
+            categorie: PropTypes.array,
+            tag: PropTypes.string,
+            file: PropTypes.string.isRequired,
+            imageFile: PropTypes.string.isRequired,
+            file2: PropTypes.string,
+            imageFile2: PropTypes.string,
+            file3: PropTypes.string,
+            imageFile3: PropTypes.string,
+            liseuse2: PropTypes.string,
+            liseuse3: PropTypes.string,
+            youtube: PropTypes.string,
+            // User: PropTypes.objectOf(
+            //     PropTypes.shape({
+            //         id: PropTypes.number.isRequired,
+            //         nom: PropTypes.string.isRequired,
+            //         prenom: PropTypes.string.isRequired,
+            //         email: PropTypes.string.isRequired,
+            //         fonction: PropTypes.string.isRequired,
+            //     }).isRequired
+            // ).isRequired,
+        }).isRequired,
+    ).isRequired,
 };
 
 export default Main;
