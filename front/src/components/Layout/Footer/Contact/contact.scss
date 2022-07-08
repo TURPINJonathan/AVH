@@ -132,3 +132,29 @@
         }
     }
 }
+
+@media (max-width: 950px) {
+    #modal {
+        form {
+            fieldset {
+                .displayInput {
+                    .coordinates {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                    }
+                }
+            }
+
+            .buttons {
+                flex-direction: column;
+
+                button {
+                    // width: 100%;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
