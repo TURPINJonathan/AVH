@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // STYLE
 import './accessibility.scss';
@@ -86,5 +87,10 @@ const Accessibility = () => {
         </main>
     );
 }
+
+// Accessibility.propTypes = {
+//     // isOpen: PropTypes.bool.isRequired,
+//     // onClose: PropTypes.func.isRequired,
+// };
 
 export default Accessibility;

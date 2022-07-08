@@ -1,0 +1,58 @@
+{% extends '@!EasyAdmin/layout.html.twig'%}
+
+{% block content_title %}
+	<h1 class="text-center" style="margin:3rem; text-transform: uppercase; border-bottom: 2px solid; padding-bottom: 10px">
+		Mises à jour<br/>Juillet 2022
+	</h1>
+{% endblock %}
+{% block main %}
+	<div style="max-width: 85%; margin: auto">
+		<div>
+			<div style="border: 1px solid gray; padding: 20px; border-radius: 25px; margin: 1rem 0">
+				<h5 style="border-bottom: 1px solid; text-align:center; width:100%">Samedi 2 Juillet 2022</h5>
+				<ul>
+					<li style="font-style:italic; font-size: 16px; text-transform: uppercase; text-decoration: underline">
+						FRONT
+					</li>
+					<ul>
+						<li>Ajout d'un formaulaire de contact en modal depuis le footer</li>
+						<li>Ajout de la bibliothèque
+							<em>react-modal</em>
+						</li>
+						<li>Ajout de la bibliothèque
+							<em>react-toastify</em>
+						</li>
+						<li>Ajout de la bibliothèque
+							<em>emailJS</em>
+						</li>
+					</ul>
+				</ul>
+				<h5 style="border-bottom: 1px solid; text-align:center; width:100%">Vendredi 1<sup>er</sup>
+					Juillet 2022</h5>
+				<ul>
+					<li style="font-style:italic; font-size: 16px; text-transform: uppercase; text-decoration: underline">
+						BACK OFFICE
+					</li>
+					<ul>
+						<li>Réorganisation du menu latéral</li>
+						<li>Ajout du menu et de ses sous-menus
+							<em>Mises à jour</em>.<br/>
+							Il sera organisé par année et mois. Chaque mise à jour sera listée de la plus récente à la plus ancienne.
+						</li>
+						<li>Ajout du menu et de ses sous-menus
+							<em>Guide d'utilisation</em>.<br/>
+							Il est organisé en respectant l'ordre du menu latéral avec les mêmes icônes.<br/>
+							Il montrera, à terme, chaque utilisation de chaque menu du back office et ses impacts sur le site.
+						</li>
+						<li>&Eacute;criture de la section
+							<em>Informations générales</em>
+							du
+							<em>Guide d'utilisation</em>
+						</li>
+					</ul>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+{% endblock %}

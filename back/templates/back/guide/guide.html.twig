@@ -1,0 +1,146 @@
+{% extends '@!EasyAdmin/layout.html.twig'%}
+
+{% block content_title %}
+	<h1 class="text-center" style="margin:3rem; text-transform: uppercase">
+		Informations générales
+	</h1>
+{% endblock %}
+{% block main %}
+	<div style="max-width: 85%; margin: auto">
+		<section>
+			<h4 style="font-style: italic; border-bottom: 2px solid;">Préambule</h4>
+			<p>Le site de l'<em>AVH Caen Calvados</em>
+				a été pensé et développé afin de le rendre accéssible au plus grand nombre.<br/>C'est pourquoi il est souvent demandé sur le back office, et notamment dans la gestion des éléments intéractifs, de remplir des champs obligatoires, dans le but de pouvoir faciliter la lecture de l'aplication par des outils de navigations, tels que les liseuses d'écrans.
+			</p>
+			<p>
+				Le back office permet de pouvoir intéragir avec le site de l'AVH Caen Calvados sur différents items.
+				<br/>
+				Afin de pouvoir y accéder, il faut avant tout faire une demande d'accès auprès du développeur. Il sera alors demandé les éléments suivants :
+			</p>
+			<ul>
+				<li>
+					<strong>Email</strong>
+					: il permettra de vous connecter sur le back office de l'AVH Caen Calvados.
+				</li>
+				<li>
+					<strong>Mot de passe</strong>
+					: il permettra de vous connecter sur le back office de l'AVH Caen Calvados.
+				</li>
+				<li>
+					<strong>Nom</strong>
+					: sera utilisé à différents endroits du site.
+				</li>
+				<li>
+					<strong>Prénom</strong>
+					: sera utilisé à différents endroits du site.
+				</li>
+				<li>
+					<strong>Fonction</strong>
+					au sein de l'AVH Caen Calvados
+				</li>
+				<li>
+					<strong>Membre du bureau</strong>
+				</li>
+				<li>
+					<strong>Rôle</strong>
+					: voir le détail des rôle plus bas.
+				</li>
+				<li>
+					<strong>Photo</strong>
+					: sera potentiellement utilisé à différents endroits du site.
+				</li>
+			</ul>
+			<p>
+				Afin de pouvoir y accéder, il faut avant tout faire une demande d'accès auprès du développeur.
+			</p>
+		</section>
+		<section>
+			<h4 style="font-style: italic; border-bottom: 2px solid;">Les technologies et environnements de
+				<em>avhcaen.fr</em>
+			</h4>
+			<ol>
+				<li style="margin-bottom: 1rem">
+					<h5>Le serveur</h5>
+					<span>L'application web est hébergée depuis le
+						<em>Mercredi 11 mai 2022</em>
+						chez
+						<em>OVH</em>, sur l'IPV4
+						<em>152.228.172.66</em>.<br/>
+					</span>
+					<span>Les VPS est localisé à
+						<em>Gravelines</em>
+						en France, avec une distribution
+						<em>Ubuntu 20.04</em>.<br/>
+					</span>
+				</li>
+				<li style="margin-bottom: 1rem">
+					<h5>Le domaine</h5>
+					<span>Le DNS est assuré par la société
+						<em>IONOS</em>.<br/></span>
+				</li>
+				<li style="margin-bottom: 1rem">
+					<h5>Les technologies du back</h5>
+					<span>Le back est développé en
+						<em>API REST</em>
+						sous l'<em>ORM Doctrine</em>
+						avec
+						<em>Symfony 6.0.8</em>
+						et
+						<em>PHP 8.0</em>.<br/></span>
+					<span>De nombreux bundles sont utilisés, notamment :
+						<ul>
+							<li>
+								Sensio
+							</li>
+							<li>
+								Twig
+							</li>
+							<li>
+								Nelmio
+							</li>
+							<li>
+								VichUploader
+							</li>
+							<li>
+								LexikJWT
+							</li>
+							<li>
+								FOSCKEditor
+							</li>
+							<li>
+								EasyAdmin 4
+							</li>
+						</ul>
+					</span>
+				</li>
+			</li>
+			<li style="margin-bottom: 1rem">
+				<h5>Les technologies du front</h5>
+				<span>Le front est développé sous
+					<em>ReactJS 17.0.2</em>
+					avec l'utilisation de
+					<em>Redux 8.0.2</em>
+					pour sa gestion des
+					<em>states</em>.<br/>
+					De nombreuses libraires sont utilisées, notamment :
+					<ul>
+						<li>redux-devtools 3.2.2</li>
+						<li>axios 0.27.2</li>
+						<li>font-awesome 4.7.0</li>
+						<li>html-react-parser 1.4.14</li>
+						<li>mapbox-gl 2.7.0</li>
+						<li>moment 2.29.3</li>
+						<li>react-router-dom 6.2.1</li>
+						<li>react-feather 2.0.9</li>
+						<li>react-player 2.10.1</li>
+						<li>react-tooltip 4.2.21</li>
+						<li>SASS 1.49.7</li>
+						<li>emailJS 3.6.2</li>
+						<li>react-modal 3.15.1</li>
+						<li>react-toastify 9.0.5</li>
+					</ul>
+				</span>
+			</li>
+		</ol>
+	</section>
+</div>{% endblock %}
