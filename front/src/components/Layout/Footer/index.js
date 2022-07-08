@@ -27,6 +27,8 @@ const customStyles = {
         padding: '0',
         widht: 'auto',
         height: 'auto',
+        maxWidth: '95vw',
+        maxHeight: '80vh',
     },
 };
 

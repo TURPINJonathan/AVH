@@ -11,6 +11,7 @@
         font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
+        margin-top: 1rem;
         padding-bottom: 0.5rem;
         border-bottom: vars.$violet solid 1px;
         text-align: center;
@@ -127,6 +128,31 @@
                 &:hover {
                     background-color: vars.$orange;
                     color: vars.$lightGrey;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    #modal {
+        form {
+            fieldset {
+                .displayInput {
+                    .coordinates {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                    }
+                }
+            }
+
+            .buttons {
+                flex-direction: column;
+
+                button {
+                    margin-bottom: 0.5rem;
                 }
             }
         }
