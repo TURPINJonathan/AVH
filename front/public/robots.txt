@@ -1,3 +1,19 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Allow: /#
+Allow: /#/AVH
+Allow: /#/history
+Allow: /#/caen/AVH
+Allow: /#/caen/rh
+Allow: /#/caen/benevoles
+Allow: /#/actualites$
+Allow: /#/actualites/*
+Allow: /#/activites/braille
+Allow: /#/activites/informatique
+Allow: /#/activites/accessibility
+Allow: /#/activites/sensibilisation
+Allow: /#/activites/cls
+Allow: /#/activites/mecenat-partenariat
+Allow: /#/mentions-legales
+
