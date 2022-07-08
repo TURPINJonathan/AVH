@@ -169,15 +169,14 @@ Article.propTypes = {
             liseuse2: PropTypes.string,
             liseuse3: PropTypes.string,
             youtube: PropTypes.string,
-            // User: PropTypes.objectOf(
-            //     PropTypes.shape({
-            //         id: PropTypes.number.isRequired,
-            //         nom: PropTypes.string.isRequired,
-            //         prenom: PropTypes.string.isRequired,
-            //         email: PropTypes.string.isRequired,
-            //         fonction: PropTypes.string.isRequired,
-            //     }).isRequired
-            // ).isRequired,
+            User: PropTypes.objectOf(
+                PropTypes.shape({
+                    id: PropTypes.number.isRequired,
+                    roles: PropTypes.array.isRequired,
+                    nom: PropTypes.string.isRequired,
+                    prenom: PropTypes.string.isRequired,
+                }).isRequired
+            ).isRequired,
         }).isRequired,
     ).isRequired,
 };
