@@ -283,12 +283,12 @@ Main.propTypes = {
 
     // ACTUALITY
     loadActuality: PropTypes.func.isRequired,
-    actuality: PropTypes.objectOf(
+    actuality: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
             titre: PropTypes.string.isRequired,
-            sous_titre: PropTypes.string.isRequired,
-            lieu: PropTypes.string.isRequired,
+            sous_titre: PropTypes.string,
+            lieu: PropTypes.string,
             overview: PropTypes.string.isRequired,
             paragraphe1: PropTypes.string.isRequired,
             paragraphe2: PropTypes.string,
@@ -296,13 +296,13 @@ Main.propTypes = {
             focus: PropTypes.bool.isRequired,
             liseuse: PropTypes.string.isRequired,
             url: PropTypes.string.isRequired,
-            aside: PropTypes.string.isRequired,
+            aside: PropTypes.bool.isRequired,
             createdAt: PropTypes.string.isRequired,
             updatedAt: PropTypes.string,
             categorie: PropTypes.array,
             tag: PropTypes.string,
             file: PropTypes.string.isRequired,
-            imageFile: PropTypes.string.isRequired,
+            imageFile: PropTypes.string,
             file2: PropTypes.string,
             imageFile2: PropTypes.string,
             file3: PropTypes.string,
