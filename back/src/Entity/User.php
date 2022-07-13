@@ -24,7 +24,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, Seriali
     private $id;
 
     #[ORM\Column(type: 'string', length: 180, unique: true)]
-    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $email;
 
     #[ORM\Column(type: 'json')]
@@ -43,28 +43,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, Seriali
     private $prenom;
 
     #[ORM\Column(type: 'string', length: 40)]
-    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $fonction;
 
     #[ORM\Column(type: 'integer')]
-    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $telephone;
 
     #[ORM\Column(type: 'boolean', nullable: true)]
-    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $bureau;
 
 
     #[ORM\ManyToMany(targetEntity: AvhCompteRendu::class, mappedBy: 'User')]
-    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $avhCompteRendus;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $file;
 
     #[Vich\UploadableField(mapping: 'user_image', fileNameProperty: 'file')]
-    #[Groups(['Actualite_post, Actualite_get', 'User_get'])]
+    #[Groups(['Actualite_get', 'User_get'])]
     private $imageFile;
 
     #[ORM\ManyToMany(targetEntity: Actualite::class, mappedBy: 'User')]
