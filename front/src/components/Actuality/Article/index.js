@@ -34,6 +34,7 @@ const Article = ({ oneActuality }) => {
     if (article.youtube != null) {
         var youtubeurl = parse(article.youtube);
     }
+    console.log(article.liseuse);
     return (
         <main>
             <article>
