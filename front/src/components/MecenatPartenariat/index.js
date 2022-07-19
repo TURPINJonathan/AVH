@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 
 // STYLE
 import './mp.scss';
@@ -31,4 +32,18 @@ const Mp = ({ loadPartner, partner }) => {
     );
 }
 
+Mp.propTypes = {
+    loadPartner: PropTypes.func.isRequired,
+    partner: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            nom: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
+            file: PropTypes.string.isRequired,
+            actif: PropTypes.bool.isRequired,
+            imageFile: PropTypes.string,
+            liseuse: PropTypes.string.isRequired,
+        }).isRequired
+    ).isRequired
+};
 export default Mp;

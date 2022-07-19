@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import PropTypes from "prop-types";
 
@@ -74,50 +75,46 @@ const Actuality = ({ loadActuality, actuality }) => {
     );
 }
 
-// Actuality.propTypes = {
-//     loadActuality: PropTypes.func.isRequired,
-//     actuality: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             id: PropTypes.number.isRequired,
-//             titre: PropTypes.string.isRequired,
-//             sous_titre: PropTypes.string,
-//             lieu: PropTypes.string,
-//             overview: PropTypes.string.isRequired,
-//             paragraphe1: PropTypes.string.isRequired,
-//             paragraphe2: PropTypes.string,
-//             paragraphe3: PropTypes.string,
-//             focus: PropTypes.bool.isRequired,
-//             liseuse: PropTypes.string.isRequired,
-//             url: PropTypes.string.isRequired,
-//             aside: PropTypes.bool.isRequired,
-//             createdAt: PropTypes.string.isRequired,
-//             updatedAt: PropTypes.string.isRequired,
-//             categorie: PropTypes.arrayOf(
-//                 PropTypes.shape({
-//                     id: PropTypes.number.isRequired,
-//                     nom: PropTypes.string.isRequired,
-//                     createdAt: PropTypes.string.isRequired,
-//                     updatedAt: PropTypes.string.isRequired
-//                 })
-//             ),
-//             tag: PropTypes.string,
-//             file: PropTypes.string.isRequired,
-//             imageFile: PropTypes.string,
-//             file2: PropTypes.string,
-//             imageFile2: PropTypes.string,
-//             file3: PropTypes.string,
-//             imageFile3: PropTypes.string,
-//             liseuse2: PropTypes.string,
-//             liseuse3: PropTypes.string,
-//             youtube: PropTypes.string,
-//             User: PropTypes.shape({
-//                 id: PropTypes.number.isRequired,
-//                 nom: PropTypes.string.isRequired,
-//                 prenom: PropTypes.string.isRequired,
-//             }).isRequired
-//         })
-
-//     )
-// };
+Actuality.propTypes = {
+    loadActuality: PropTypes.func.isRequired,
+    actuality: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            titre: PropTypes.string.isRequired,
+            sous_titre: PropTypes.string,
+            lieu: PropTypes.string,
+            overview: PropTypes.string.isRequired,
+            paragraphe1: PropTypes.string.isRequired,
+            paragraphe2: PropTypes.string,
+            paragraphe3: PropTypes.string,
+            focus: PropTypes.bool.isRequired,
+            liseuse: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
+            aside: PropTypes.bool.isRequired,
+            createdAt: PropTypes.string.isRequired,
+            updatedAt: PropTypes.string,
+            categorie: PropTypes.array,
+            tag: PropTypes.string,
+            file: PropTypes.string.isRequired,
+            imageFile: PropTypes.string,
+            file2: PropTypes.string,
+            imageFile2: PropTypes.string,
+            file3: PropTypes.string,
+            imageFile3: PropTypes.string,
+            liseuse2: PropTypes.string,
+            liseuse3: PropTypes.string,
+            youtube: PropTypes.string,
+            // User: PropTypes.objectOf(
+            //     PropTypes.shape({
+            //         id: PropTypes.number.isRequired,
+            //         nom: PropTypes.string.isRequired,
+            //         prenom: PropTypes.string.isRequired,
+            //         email: PropTypes.string.isRequired,
+            //         fonction: PropTypes.string.isRequired,
+            //     }).isRequired
+            // ).isRequired,
+        }).isRequired,
+    ).isRequired,
+};
 
 export default Actuality;
