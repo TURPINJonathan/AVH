@@ -49,7 +49,7 @@ const Article = ({ oneActuality }) => {
                 <div>
                     <img
                         src={picture + 'actualite_image/' + article.file}
-                        alt={picture.liseuse}
+                        alt={article.liseuse}
                         className="article_pictures"
                     />
                     {/* <p className="article_picture--photograph">Photographie de<> </>
