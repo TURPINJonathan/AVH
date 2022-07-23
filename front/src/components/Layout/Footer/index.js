@@ -263,22 +263,6 @@ const Footer = ({
                                     <div>
                                         <div className="coordinates">
                                             <label
-                                                for="objet">Objet de votre message
-                                            </label>
-                                            <input
-                                                type="text"
-                                                id="message"
-                                                name="objet"
-                                                placeholder="Je souhaite..."
-                                                value={objet}
-                                                onChange={(e) => {
-                                                    contact(e.target.value, 'objet');
-                                                }}
-                                                required
-                                            />
-                                        </div>
-                                        <div className="coordinates">
-                                            <label
                                                 for="message">Quel est votre message ?
                                             </label>
                                             <textarea
