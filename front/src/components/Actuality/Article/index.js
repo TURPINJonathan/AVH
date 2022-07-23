@@ -22,8 +22,6 @@ import { picture } from "../../../data";
 const Article = ({ oneActuality }) => {
     const { slug } = useParams();
     const article = oneActuality.find(article => article.url === slug);
-    console.log(article);
-    console.log(picture + 'user_image/' + article.User[0].file);
     // Gestion des différents paragraphes
     if (article.paragraphe2 != null) {
         var paragraphe2 = parse(article.paragraphe2);
@@ -69,7 +67,7 @@ const Article = ({ oneActuality }) => {
                 <div>
                     <img
                         src={picture + 'actualite_image/' + article.file}
-                        alt="defi voile"
+                        alt={article.liseuse}
                         className="article_pictures"
                     />
                     {/* <p className="article_picture--photograph">Photographie de<> </>

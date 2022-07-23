@@ -249,7 +249,7 @@ const Main = ({ loadMission, mission, loadActuality, actuality, flash, showFlash
                         }}
                         className="main-map-popup"
                     >
-                        <h1>AVH CAEN</h1>
+                        <span>AVH CAEN</span>
                         <p>5 rue Roger Bastion</p>
                         <p>14000 CAEN</p>
                     </Popup>
