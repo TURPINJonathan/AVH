@@ -16,7 +16,19 @@ const Mp = ({ loadPartner, partner }) => {
             <h2>Mécénat et partenariats</h2>
             <section id="mp_section">
                 {partner.map((partner) => {
-                    if (partner.actif === true) {
+                    if (partner.actif === true && partner.primaire === true) {
+                        return (
+                            <article key={partner.id} className="mp_article">
+                                <a href={partner.url} target="_blanck" rel="noopener noreferrer">
+                                    <img src={picture + 'partenaire_image/' + partner.file} alt={partner.liseuse} className="mp_img" />
+                                    <h4 className="mp_name">{partner.nom}</h4>
+                                </a>
+                            </article>
+                        )
+                    }
+                })}
+                {partner.map((partner) => {
+                    if (partner.actif === true && (partner.primaire === false || partner.primaire === null)) {
                         return (
                             <article key={partner.id} className="mp_article">
                                 <a href={partner.url} target="_blanck" rel="noopener noreferrer">
