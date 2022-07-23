@@ -4,6 +4,7 @@ import { Heart, Mail, MessageCircle, Phone } from "react-feather";
 import Modal from 'react-modal';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import Moment from 'moment';
 
 // STYLE
 import "./footer.scss";
@@ -99,6 +100,8 @@ const Footer = ({
         e.target.reset();
     }
 
+    //?GESTION DE L'ANNEE
+    const year = Moment().format('MMMM YYYY');
     return (
         <footer>
             <div id="footer">
@@ -289,7 +292,7 @@ const Footer = ({
                 </div>
             </div>
             <div id="legal">
-                <p>2022 - Copyright © Association Valentin Haüy Caen Calvados - Tous droits réservés</p>
+                <p><span id="year">{year}</span> - Copyright © Association Valentin Haüy Caen Calvados - Tous droits réservés</p>
                 <NavLink to="/mentions-legales">Mentions légales</NavLink>
             </div>
         </footer>
