@@ -13,7 +13,7 @@ import 'moment/locale/fr';
 import './article.scss';
 
 // PICTURES
-import { Facebook, Instagram, Twitter } from "react-feather";
+import { Facebook, Instagram, Twitter, User } from "react-feather";
 import { Link, useParams } from "react-router-dom";
 
 // URL
@@ -39,14 +39,31 @@ const Article = ({ oneActuality }) => {
         <main>
             <article>
                 <h1>{article.titre}</h1>
-                <time id="article_date">Article du <> </>
-                    {Moment(article.createdAt).format('dddd DD MMMM YYYY')}
-                </time>
-                <author className="article_author">Par<> </>
-                    <span className="firstname">{article.User[0].nom}</span><> </>
-                    <span className="lastname">{article.User[0].prenom}</span>
-                    {/* <img id="user_picture" src={picture + 'user_image/' + article.User[0].file} alt="" /> */}
-                </author>
+                <div className="article-infos">
+                    <time id="article_date">Article du
+                        <span>
+                            {' ' + Moment(article.createdAt).format('dddd DD MMMM YYYY')}
+                        </span>
+                    </time>
+                    <author className="article_author">Par<> </>
+                        <span className="firstname">{article.User[0].nom}</span><> </>
+                        <span className="lastname">{article.User[0].prenom}</span>
+                        <img
+                            id="user_picture"
+                            data-tip={article.User[0].prenom + " " + article.User[0].nom + "<br/>" + article.User[0].email}
+                            src={picture + 'user_image/' + article.User[0].file}
+                            alt=
+                            {
+                                'Image de l\'auteur : ' +
+                                article.User[0].nom +
+                                ' ' +
+                                article.User[0].prenom +
+                                ' ' +
+                                article.User[0].fonction
+                            }
+                        />
+                    </author>
+                </div>
                 <div>
                     <img
                         src={picture + 'actualite_image/' + article.file}
@@ -170,9 +187,10 @@ Article.propTypes = {
             User: PropTypes.objectOf(
                 PropTypes.shape({
                     id: PropTypes.number.isRequired,
-                    roles: PropTypes.array.isRequired,
                     nom: PropTypes.string.isRequired,
                     prenom: PropTypes.string.isRequired,
+                    fonction: PropTypes.string.isRequired,
+                    file: PropTypes.string.isRequired,
                 }).isRequired
             ).isRequired,
         }).isRequired,
