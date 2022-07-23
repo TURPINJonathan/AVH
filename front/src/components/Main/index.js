@@ -143,7 +143,7 @@ const Main = ({ loadMission, mission, loadActuality, actuality, flash, showFlash
             </section>
 
             {/* PRESIDENT SPEAK */}
-            <section className="main-president">
+            {/* <section className="main-president">
                 <div className="main-president-content-img--container">
                     <img className="main-president-content-img" src={president} alt="president" />
                 </div>
@@ -160,7 +160,7 @@ const Main = ({ loadMission, mission, loadActuality, actuality, flash, showFlash
                         </aside>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* FOLLOW US */}
             <section className="main-follow">
