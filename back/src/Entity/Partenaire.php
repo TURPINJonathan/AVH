@@ -42,6 +42,10 @@ class Partenaire
     #[Groups(['Partenaire_get'])]
     private $imageFile;
 
+    #[ORM\Column(type: 'boolean', nullable: true)]
+    #[Groups(['Partenaire_get'])]
+    private $primaire;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -124,6 +128,18 @@ class Partenaire
         if ($file) {
             $this->updatedAt = new \DateTimeImmutable('now');
         }
+
+        return $this;
+    }
+
+    public function isPrimaire(): ?bool
+    {
+        return $this->primaire;
+    }
+
+    public function setPrimaire(?bool $primaire): self
+    {
+        $this->primaire = $primaire;
 
         return $this;
     }
